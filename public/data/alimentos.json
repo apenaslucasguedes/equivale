@@ -1,0 +1,7 @@
+{
+  "versao": 1,
+  "fonte": "nenhuma base carregada",
+  "somenteParaTeste": false,
+  "_leia_me": "Este arquivo está VAZIO de propósito. O Equivale não inclui uma base nutricional própria e não inventa números. Substitua 'alimentos' por uma base real e validada (ex.: TACO/IBGE), mantendo os campos id, nome, aliases, categoria, preparo, kcalPor100g, porcoesCaseiras, fonte, codigoDaFonte e atualizadoEm. Veja README.md, seção 'Como substituir as fixtures pela base validada'.",
+  "alimentos": []
+}

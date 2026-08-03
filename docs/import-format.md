@@ -1,0 +1,301 @@
+# Formato de importação do Equivale (Markdown)
+
+Este documento define, sem ambiguidade, como um arquivo `.md` precisa estar
+escrito para ser importado pelo Equivale.
+
+A importação é **100% local**: o arquivo é lido no próprio aparelho e nada é
+enviado para servidores.
+
+> Precisa de um ponto de partida? Use a ação **Baixar modelo** dentro do
+> aplicativo — ela gera um `.md` já comentado neste formato.
+
+---
+
+## 1. Estrutura geral
+
+```markdown
+---
+equivaleVersion: 1
+planId: <identificador estável do plano>
+planName: <nome do plano>
+suggestedDays: <dias sugeridos>
+---
+
+# Dieta: <título do plano>
+
+## <nome da refeição>
+
+- <alimento> | <quantidade> <unidade> [| peso <n> g] [| <n> kcal] [| obs: <texto>]
+- ...
+
+## <outra refeição>
+
+- ...
+```
+
+| Elemento                     | Sintaxe            | Obrigatório |
+| ---------------------------- | ------------------ | ----------- |
+| Metadados do plano           | `---` … `---`      | Não         |
+| Título da dieta              | `# Dieta: ...`     | Não¹        |
+| Refeição                     | `## ...`           | Sim         |
+| Item (bloco calórico)        | `- ...`            | Sim         |
+
+¹ Se ausente, o título vem de `planName`. Sem os dois, a dieta recebe o nome
+“Dieta importada” e um aviso é exibido na prévia. O prefixo `Dieta:` é
+opcional — `# Meu plano` também funciona.
+
+Cada arquivo `.md` corresponde a **um plano alimentar**. Para manter “Dias
+úteis” e “Fim de semana” ao mesmo tempo, use um arquivo para cada, com
+`planId` diferente.
+
+---
+
+## 1.1. Metadados do plano (front matter)
+
+Um bloco no **topo** do arquivo, delimitado por `---`, no formato
+`chave: valor` (uma por linha). Todo o bloco é **opcional**, e cada campo
+também. Aspas em volta do valor são aceitas e removidas.
+
+| Campo             | Exemplo                          | Para que serve                                                                 |
+| ----------------- | -------------------------------- | ------------------------------------------------------------------------------ |
+| `equivaleVersion` | `1`                              | Versão do formato dos metadados. Hoje: **1**.                                   |
+| `planId`          | `dias-uteis`                     | Identificador **estável** do plano. Permite atualizar este plano depois.        |
+| `planName`        | `Dias úteis`                     | Nome exibido no seletor de planos do cabeçalho.                                 |
+| `suggestedDays`   | `seg, ter, qua, qui, sex`        | Dias sugeridos pela nutricionista. **Anotação apenas.**                         |
+
+```markdown
+---
+equivaleVersion: 1
+planId: dias-uteis
+planName: Dias úteis
+suggestedDays: seg, ter, qua, qui, sex
+---
+```
+
+**Dias aceitos** (sem diferenciar acentos ou maiúsculas), separados por
+vírgula, ponto e vírgula, barra ou espaço:
+
+`dom`/`domingo` · `seg`/`segunda`/`segunda-feira` · `ter`/`terça` ·
+`qua`/`quarta` · `qui`/`quinta` · `sex`/`sexta` · `sáb`/`sábado`.
+Números de `1` (domingo) a `7` (sábado) também funcionam.
+
+Os dias são sempre normalizados para a ordem da semana, começando no domingo.
+
+> **Importante:** `suggestedDays` **não** troca o plano automaticamente. Nesta
+> versão a troca é sempre **manual**, pelo seletor do cabeçalho. Os dias
+> aparecem apenas como legenda.
+
+Metadados desconhecidos, valores inválidos e um bloco que não seja fechado
+geram **avisos** na prévia e são ignorados — nunca invalidam a importação. Os
+números de linha dos avisos e erros continuam correspondendo ao arquivo real.
+
+### Como o `planId` é usado na importação
+
+Ao importar, o Equivale mostra a prévia e oferece:
+
+1. **Adicionar como novo plano** — sempre disponível.
+2. **Substituir o plano “X”** — aparece **só** quando já existe um plano com o
+   mesmo `planId`. Troca **apenas aquele plano**; os demais ficam intactos.
+3. **Cancelar**.
+
+A importação **nunca** substitui todos os planos, e nunca substitui nada sem
+confirmação. Se você escolher “adicionar como novo plano” e o `planId` já
+estiver em uso, o plano novo recebe um identificador local diferente, para não
+sobrescrever o que já existe.
+
+Um arquivo **sem** `planId` sempre vira um plano novo.
+
+---
+
+## 2. Título da dieta
+
+A **primeira** linha iniciada por `#` (um único `#`) define o título.
+
+```markdown
+# Dieta: Plano de manutenção — Ana
+```
+
+O prefixo `Dieta:` (com ou sem dois-pontos) é removido do título final.
+
+Quando o arquivo traz `planName` nos metadados, é ele que nomeia o plano no
+seletor do cabeçalho; o título continua sendo o nome da dieta importada.
+
+---
+
+## 3. Refeições
+
+Qualquer título de nível 2 ou maior (`##`, `###`, …) abre uma refeição. Todos
+os itens seguintes pertencem a ela, até o próximo título.
+
+Nomes reconhecidos (comparação sem acentos e sem diferenciar maiúsculas):
+
+| Refeição canônica | Também aceita                              |
+| ----------------- | ------------------------------------------ |
+| Café da manhã     | `café`, `desjejum`, `primeira refeição`     |
+| Lanche da manhã   | `colação`, `lanche manhã`                   |
+| Almoço            | —                                          |
+| Lanche da tarde   | `lanche`, `merenda`                        |
+| Jantar            | `janta`                                    |
+| Ceia              | `antes de dormir`                          |
+
+Textos entre parênteses são ignorados no reconhecimento, então
+`## Almoço (12h)` é reconhecido como **Almoço**.
+
+Nomes fora dessa lista (por exemplo `## Pré-treino`) **são aceitos** e
+preservados; aparecem depois das refeições canônicas, na ordem do arquivo.
+
+Refeições declaradas sem nenhum item não aparecem na tela principal.
+
+---
+
+## 4. Itens (blocos calóricos)
+
+Cada item é uma linha de lista (`-`, `*` ou `+`) com campos separados por
+barra vertical `|`.
+
+```markdown
+- Pão francês | 1 unidade | peso 50 g | 150 kcal | obs: sem manteiga
+```
+
+### 4.1 Campos posicionais
+
+| Posição | Campo                  | Obrigatório | Exemplos                       |
+| ------- | ---------------------- | ----------- | ------------------------------ |
+| 1º      | Nome do alimento       | **Sim**     | `Arroz branco cozido`          |
+| 2º      | Quantidade + unidade   | **Sim**     | `100 g`, `1 unidade`, `200 ml` |
+
+A quantidade aceita vírgula ou ponto como separador decimal (`1,5` = `1.5`).
+Se a unidade for omitida (`- Aveia | 30`), assume-se **g**.
+
+Unidades aceitas (singular ou plural):
+
+`g` · `gr` · `grama(s)` · `ml` · `mililitro(s)` · `un` · `und` · `uni` ·
+`unidade(s)` · `fatia(s)` · `colher(es)` · `concha(s)` · `copo(s)` ·
+`porção/porções`
+
+Complementos após a unidade são aceitos e usados só como texto:
+`1 colher de sopa` é lido como quantidade `1`, unidade `colher`.
+
+### 4.2 Campos nomeados (opcionais, em qualquer ordem)
+
+| Campo   | Sintaxe                       | Para que serve                                      |
+| ------- | ----------------------------- | --------------------------------------------------- |
+| `peso`  | `peso 50 g` ou `peso: 50g`    | Peso em gramas quando a unidade não é `g`/`ml`.      |
+| `kcal`  | `150 kcal` ou `kcal: 150`     | Calorias prescritas do item.                        |
+| `obs`   | `obs: sem açúcar`             | Observação livre, exibida nos detalhes.             |
+
+Campos não reconhecidos **não invalidam a linha**: geram um aviso na prévia e
+são ignorados.
+
+---
+
+## 5. Como o Equivale determina as calorias do bloco
+
+Cada item vira um **bloco calórico** com energia **fixa**. A origem desse valor
+segue esta ordem:
+
+1. **Informada** — o campo `kcal` existe na linha. Tem prioridade sobre tudo.
+2. **Calculada** — não há `kcal`, mas existe correspondência **confiável** com
+   um alimento da base (nome ou *alias* idêntico após normalização, ou um
+   vínculo manual já registrado) **e** dá para determinar as gramas
+   (campo `peso`, unidade `g`/`ml`, ou uma medida caseira conhecida do
+   alimento). O cálculo é
+   `kcal = gramas × kcalPor100g ÷ 100`.
+3. **Pendente** — nenhuma das duas anteriores. O item **não é descartado**:
+   ele aparece na etapa de **conferência**, onde você o vincula manualmente a
+   um alimento da base ou informa as calorias.
+
+O Equivale nunca adivinha por semelhança aproximada de nome.
+
+---
+
+## 6. Linhas ignoradas
+
+São ignoradas silenciosamente:
+
+- linhas em branco;
+- comentários HTML (`<!-- ... -->`);
+- citações (linhas iniciadas por `>`);
+- linhas horizontais (`---`, `***`);
+- blocos de código delimitados por ` ``` `.
+
+Qualquer outra linha solta gera um **aviso** informando que não virou item.
+
+---
+
+## 7. Prévia antes de adicionar ou substituir um plano
+
+A importação **nunca** substitui nada sem confirmação, e nunca mexe em mais de
+um plano. Antes de qualquer coisa, o aplicativo mostra:
+
+- o nome do plano encontrado (`planName` ou o título);
+- os metadados lidos (`planId`, `planName`, `suggestedDays`, `equivaleVersion`);
+- se já existe um plano com aquele `planId`;
+- as refeições encontradas e quantos itens cada uma tem;
+- quantos itens foram reconhecidos, quantos ficaram pendentes;
+- a lista de **avisos** (com o número da linha);
+- a lista de **erros** (com o número da linha).
+
+Só então você escolhe entre **adicionar como novo plano**, **substituir o
+plano de mesmo `planId`** (com uma segunda confirmação) ou **cancelar**.
+
+Itens com erro não viram blocos. Itens pendentes viram blocos e vão para a
+conferência.
+
+---
+
+## 8. Exemplo completo válido
+
+```markdown
+---
+equivaleVersion: 1
+planId: dias-uteis
+planName: Dias úteis
+suggestedDays: seg, ter, qua, qui, sex
+---
+
+# Dieta: Plano de manutenção
+
+## Café da manhã
+
+- Pão francês | 1 unidade | peso 50 g | 150 kcal | obs: sem manteiga
+- Mamão papaia | 100 g | 40 kcal
+- Café com leite | 200 ml | 90 kcal
+
+## Almoço (12h)
+
+- Arroz branco cozido | 100 g | 128 kcal
+- Feijão carioca cozido | 1 concha | peso 80 g | 61 kcal
+- Peito de frango grelhado | 120 g | 198 kcal
+
+## Pré-treino
+
+- Banana prata | 1 unidade | peso 70 g | 70 kcal
+```
+
+---
+
+## 9. Exemplos de linhas que geram erro
+
+| Linha                                   | Motivo                                    |
+| --------------------------------------- | ----------------------------------------- |
+| `- Arroz`                               | Falta a quantidade.                       |
+| `- Arroz \| muito`                      | Quantidade não numérica.                  |
+| `- Arroz \| 100 g` antes de qualquer `##` | Item fora de refeição.                  |
+| arquivo sem nenhum `##`                 | Nenhuma refeição encontrada.              |
+
+---
+
+## 10. O que o formato **não** tem
+
+Por decisão de produto, o formato não representa — e o aplicativo não cria —
+horários obrigatórios, marcação de refeição feita, metas, déficit calórico,
+diário alimentar nem histórico de adesão. O Equivale organiza e adapta uma
+dieta **já prescrita**.
+
+`suggestedDays` é a única menção a dias da semana, e é **descritiva**: não
+existe troca automática de plano por dia, nem agenda, nem lembrete.
+
+A **lista de substituições da nutricionista** (grupos de trocas equivalentes)
+ainda não faz parte deste formato: a camada de dados existe no código, mas não
+há importação nesta versão. Ver a seção correspondente no `README.md`.
