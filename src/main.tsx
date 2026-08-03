@@ -2,6 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { App } from './App';
 import { Loja } from './estado/Loja';
+import '@fontsource-variable/manrope';
 import './estilos/global.css';
 
 const raiz = document.getElementById('root');

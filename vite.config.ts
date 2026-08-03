@@ -30,8 +30,8 @@ export default defineConfig({
         scope: '/equivale/',
         display: 'standalone',
         orientation: 'portrait',
-        background_color: '#f6f7f9',
-        theme_color: '#2f6f5e',
+        background_color: '#f5f3ee',
+        theme_color: '#3e5368',
         categories: ['health', 'utilities'],
         icons: [
           { src: 'icons/icon-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
