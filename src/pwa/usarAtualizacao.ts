@@ -1,8 +1,8 @@
 /**
- * Registro do service worker e aviso de atualização disponível.
+ * Registro do service worker e fallback de atualização disponível.
  *
  * O app funciona offline depois da primeira visita. Quando uma nova versão é
- * publicada, o usuário decide quando recarregar — nada é trocado por baixo dele.
+ * publicada, o service worker a ativa automaticamente e recarrega uma única vez.
  */
 
 import { useEffect, useState } from 'react';
@@ -24,6 +24,10 @@ export function useAtualizacao(): EstadoDaAtualizacao {
     if (typeof navigator === 'undefined' || !('serviceWorker' in navigator)) return;
     const atualizar = registerSW({
       immediate: true,
+      onRegisteredSW: (_url, registro) => {
+        // Não espera o ciclo periódico do navegador para detectar um novo deploy.
+        void registro?.update().catch(() => undefined);
+      },
       onNeedRefresh: () => setAtualizacaoDisponivel(true),
       onOfflineReady: () => setProntoParaOffline(true),
     });
