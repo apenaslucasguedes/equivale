@@ -5,7 +5,7 @@
  */
 
 import { describe, expect, it } from 'vitest';
-import { render, screen, waitFor, within } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { App } from '../src/App';
 import { Loja } from '../src/estado/Loja';
@@ -60,9 +60,14 @@ describe('fluxo completo', () => {
 
     // -------------------------------------------------- substituição
     await usuario.click(screen.getByRole('button', { name: /^Pão francês, 1 unidade/ }));
-    await usuario.click(screen.getByRole('button', { name: /Substituir alimento/ }));
 
+    await usuario.click(screen.getByRole('button', { name: 'Todas' }));
     await usuario.type(screen.getByLabelText('Pesquisar alimento'), 'tofu');
+    expect(
+      within(screen.getByRole('dialog')).getByRole('button', {
+        name: /Tofu.*150 kcal.*197 g.*aprox\. 5 fatias/i,
+      }),
+    ).toBeInTheDocument();
     await usuario.click(
       within(screen.getByRole('dialog')).getByRole('button', { name: /^Tofu/ }),
     );
@@ -80,7 +85,7 @@ describe('fluxo completo', () => {
     expect(screen.queryByText('Pão francês')).not.toBeInTheDocument();
 
     // As calorias do bloco não podem ter mudado.
-    await usuario.click(cartaoSubstituido);
+    fireEvent.contextMenu(cartaoSubstituido);
     await usuario.click(screen.getByRole('button', { name: /Ver detalhes/ }));
     const detalhes = within(await screen.findByRole('dialog'));
     expect(detalhes.getByText('150 kcal')).toBeInTheDocument();
@@ -88,7 +93,7 @@ describe('fluxo completo', () => {
     await usuario.click(detalhes.getByRole('button', { name: 'Fechar' }));
 
     // ------------------------------------- movimentação pelo botão acessível
-    await usuario.click(screen.getByRole('button', { name: /^Tofu, 197 g/ }));
+    fireEvent.contextMenu(screen.getByRole('button', { name: /^Tofu, 197 g/ }));
     await usuario.click(screen.getByRole('button', { name: /Mover para outra refeição/ }));
     await usuario.click(
       within(await screen.findByRole('dialog')).getByRole('button', { name: /^Jantar/ }),
@@ -143,13 +148,13 @@ describe('fluxo completo', () => {
     await usuario.click(await screen.findByRole('button', { name: 'Importar plano' }));
 
     // Move dois itens e restaura apenas um deles.
-    await usuario.click(await screen.findByRole('button', { name: /^Pão francês/ }));
+    fireEvent.contextMenu(await screen.findByRole('button', { name: /^Pão francês/ }));
     await usuario.click(screen.getByRole('button', { name: /Mover para outra refeição/ }));
     await usuario.click(
       within(await screen.findByRole('dialog')).getByRole('button', { name: /^Ceia/ }),
     );
 
-    await usuario.click(await screen.findByRole('button', { name: /^Mamão papaia/ }));
+    fireEvent.contextMenu(await screen.findByRole('button', { name: /^Mamão papaia/ }));
     await usuario.click(screen.getByRole('button', { name: /Mover para outra refeição/ }));
     await usuario.click(
       within(await screen.findByRole('dialog')).getByRole('button', { name: /^Ceia/ }),
@@ -160,7 +165,7 @@ describe('fluxo completo', () => {
       expect(refeicao('Ceia').getByText('Mamão papaia')).toBeInTheDocument();
     });
 
-    await usuario.click(screen.getByRole('button', { name: /^Pão francês/ }));
+    fireEvent.contextMenu(screen.getByRole('button', { name: /^Pão francês/ }));
     await usuario.click(screen.getByRole('button', { name: /Restaurar item original/ }));
 
     await waitFor(() => {

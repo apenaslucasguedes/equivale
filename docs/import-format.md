@@ -25,7 +25,7 @@ suggestedDays: <dias sugeridos>
 
 ## <nome da refeição>
 
-- <alimento> | <quantidade> <unidade> [| peso <n> g] [| <n> kcal] [| obs: <texto>]
+- <alimento> | <quantidade> <unidade> [| id: <ID da base>] [| peso <n> g] [| <n> kcal] [| obs: <texto>]
 - ...
 
 ## <outra refeição>
@@ -184,6 +184,7 @@ ser determinados. O Equivale nunca inventa o peso.
 | Campo   | Sintaxe                       | Para que serve                                      |
 | ------- | ----------------------------- | --------------------------------------------------- |
 | `peso`  | `peso 50 g` ou `peso: 50g`    | Peso em gramas quando a unidade não é `g`/`ml`.      |
+| `id`    | `id: taco-3`                   | ID exato da base; tem prioridade sobre nome/alias.   |
 | `kcal`  | `150 kcal` ou `kcal: 150`     | Calorias prescritas do item.                        |
 | `obs`   | `obs: sem açúcar`             | Observação livre, exibida nos detalhes.             |
 
@@ -200,7 +201,7 @@ segue esta ordem:
 1. **Informada** — o campo `kcal` existe na linha. Tem prioridade sobre tudo.
 2. **Calculada** — não há `kcal`, mas existe correspondência **confiável** com
    um alimento da base (nome ou *alias* idêntico após normalização, ou um
-   vínculo manual já registrado) **e** dá para determinar as gramas
+   ID exato informado no arquivo, ou um vínculo manual já registrado) **e** dá para determinar as gramas
    (campo `peso`, unidade `g`/`ml`, ou uma medida caseira conhecida do
    alimento). O cálculo é
    `kcal = gramas × kcalPor100g ÷ 100`.

@@ -108,9 +108,9 @@ export function TelaInicio({ aoAbrirImportacao }: PropsDaTelaInicio) {
 
   if (!dieta) return null;
 
-  const abrirItem = (bloco: BlocoCalorico) => {
+  const abrirItem = (bloco: BlocoCalorico, destino: GavetaAberta) => {
     setSelecionadoId(bloco.id);
-    setGaveta('acoes');
+    setGaveta(destino);
   };
 
   const fechar = () => {
@@ -207,7 +207,7 @@ export function TelaInicio({ aoAbrirImportacao }: PropsDaTelaInicio) {
   return (
     <>
       {pendentes.length > 0 ? (
-        <div className="faixa faixa--demonstracao" style={{ borderRadius: 12, marginBottom: 12 }}>
+        <div className="faixa faixa--demonstracao faixa--pendencias" role="status">
           <span aria-hidden="true">⚑</span>
           <span className="faixa__texto">
             {pendentes.length === 1
@@ -236,7 +236,8 @@ export function TelaInicio({ aoAbrirImportacao }: PropsDaTelaInicio) {
               refeicao={refeicao}
               blocos={blocosDaRefeicao(dieta, refeicao.id)}
               configuracoes={estado.configuracoes}
-              aoAbrirItem={abrirItem}
+              aoAbrirItem={(bloco) => abrirItem(bloco, bloco.origemDasCalorias === 'pendente' ? 'conferir' : 'substituir')}
+              aoAbrirAcoesDoItem={(bloco) => abrirItem(bloco, 'acoes')}
               arrastando={blocoAtivoId !== null}
             />
           ))}
@@ -249,7 +250,8 @@ export function TelaInicio({ aoAbrirImportacao }: PropsDaTelaInicio) {
             <CartaoDeItem
               bloco={blocoArrastado}
               configuracoes={estado.configuracoes}
-              aoAbrir={() => undefined}
+              aoAtivar={() => undefined}
+              aoAbrirAcoes={() => undefined}
               estatico
             />
           ) : null}

@@ -6,7 +6,7 @@
  */
 
 import { describe, expect, it } from 'vitest';
-import { render, screen, waitFor, within } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { App } from '../src/App';
 import { Loja } from '../src/estado/Loja';
@@ -146,7 +146,7 @@ describe('vários planos', () => {
     await importar(usuario, FIM_DE_SEMANA, 'novo');
 
     // No plano do fim de semana, move a tapioca para o jantar.
-    await usuario.click(await screen.findByRole('button', { name: /^Tapioca/ }));
+    fireEvent.contextMenu(await screen.findByRole('button', { name: /^Tapioca/ }));
     await usuario.click(screen.getByRole('button', { name: /Mover para outra refeição/ }));
     await usuario.click(
       within(await screen.findByRole('dialog')).getByRole('button', { name: /^Café da manhã/ }),
@@ -232,7 +232,7 @@ describe('vários planos', () => {
 
     await importar(usuario, DIAS_UTEIS, 'novo');
 
-    await usuario.click(await screen.findByRole('button', { name: /^Pão francês/ }));
+    fireEvent.contextMenu(await screen.findByRole('button', { name: /^Pão francês/ }));
     await usuario.click(screen.getByRole('button', { name: /Mover para outra refeição/ }));
     await usuario.click(
       within(await screen.findByRole('dialog')).getByRole('button', { name: /^Almoço/ }),

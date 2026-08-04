@@ -15,7 +15,8 @@ import { descreverQuantidade } from './formatacao';
 export interface PropsDoCartao {
   bloco: BlocoCalorico;
   configuracoes: Configuracoes;
-  aoAbrir: (bloco: BlocoCalorico) => void;
+  aoAtivar: (bloco: BlocoCalorico) => void;
+  aoAbrirAcoes: (bloco: BlocoCalorico) => void;
   /** Desliga o arraste (usado no DragOverlay). */
   estatico?: boolean;
 }
@@ -54,7 +55,7 @@ function iconeDoAlimento(nome: string): string {
   return '🍴';
 }
 
-export function CartaoDeItem({ bloco, configuracoes, aoAbrir, estatico = false }: PropsDoCartao) {
+export function CartaoDeItem({ bloco, configuracoes, aoAtivar, aoAbrirAcoes, estatico = false }: PropsDoCartao) {
   const temporizador = useRef<number | null>(null);
   const { attributes, listeners, setNodeRef: setDraggableRef, isDragging } = useDraggable({
     id: bloco.id,
@@ -84,7 +85,7 @@ export function CartaoDeItem({ bloco, configuracoes, aoAbrir, estatico = false }
     cancelarToqueProlongado();
     temporizador.current = window.setTimeout(() => {
       temporizador.current = null;
-      aoAbrir(bloco);
+      aoAbrirAcoes(bloco);
     }, 500);
   };
 
@@ -106,19 +107,19 @@ export function CartaoDeItem({ bloco, configuracoes, aoAbrir, estatico = false }
         onContextMenu={(evento) => {
           evento.preventDefault();
           cancelarToqueProlongado();
-          aoAbrir(bloco);
+          aoAbrirAcoes(bloco);
         }}
         onClick={(evento) => {
           const tipoDePonteiro = (evento.nativeEvent as PointerEvent).pointerType;
           if (tipoDePonteiro === 'touch' || tipoDePonteiro === 'pen') return;
-          aoAbrir(bloco);
+          aoAtivar(bloco);
         }}
         onKeyDown={(evento) => {
           if (evento.key !== 'Enter' && evento.key !== ' ') return;
           evento.preventDefault();
-          aoAbrir(bloco);
+          aoAtivar(bloco);
         }}
-        aria-label={`${bloco.atual.alimentoNome}, ${quantidade}. Segure para abrir as opções do item.`}
+        aria-label={`${bloco.atual.alimentoNome}, ${quantidade}. Clique para substituir; segure ou clique com o botão direito para abrir as opções.`}
       >
         <span className="cartao__titulo">
           <span className="cartao__icone" aria-hidden="true">{iconeDoAlimento(bloco.atual.alimentoNome)}</span>

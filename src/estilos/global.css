@@ -1142,6 +1142,12 @@ textarea { -webkit-tap-highlight-color: rgb(98 189 232 / 16%); }
 .faixa--demonstracao { background: var(--cor-atencao-suave); }
 .faixa--atualizacao { background: var(--cor-azul-suave); color: #245e79; }
 .faixa--erro { background: var(--cor-perigo-suave); }
+.faixa--pendencias {
+  padding: var(--espaco-4);
+  margin-bottom: var(--espaco-3);
+  border: 0;
+  border-radius: var(--raio-md);
+}
 
 .refeicoes { gap: var(--espaco-6); }
 .refeicao {

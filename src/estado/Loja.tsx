@@ -39,6 +39,7 @@ export function Loja({ children, repositorioDeEstado, criarRepositorioDeAlimento
   const [carregando, setCarregando] = useState(true);
   const [aviso, setAviso] = useState<string | null>(null);
   const [alimentosProntos, setAlimentosProntos] = useState(false);
+  const [tentativaDeAlimentos, setTentativaDeAlimentos] = useState(0);
   const podeSalvar = useRef(false);
 
   const modoDemonstracao = estado.configuracoes.modoDemonstracao;
@@ -73,6 +74,13 @@ export function Loja({ children, repositorioDeEstado, criarRepositorioDeAlimento
     return () => clearTimeout(identificador);
   }, [estado, repositorio]);
 
+  // Uma falha transitória volta a ser tentada assim que o navegador recuperar a conexão.
+  useEffect(() => {
+    const tentarNovamente = () => setTentativaDeAlimentos((valor) => valor + 1);
+    window.addEventListener('online', tentarNovamente);
+    return () => window.removeEventListener('online', tentarNovamente);
+  }, []);
+
   // Base de alimentos: troca junto com o modo de demonstração.
   useEffect(() => {
     let ativo = true;
@@ -80,16 +88,20 @@ export function Loja({ children, repositorioDeEstado, criarRepositorioDeAlimento
     const novo = fabricaDeAlimentos(modoDemonstracao);
     void novo
       .carregar()
-      .catch(() => undefined)
-      .finally(() => {
+      .then(() => {
         if (!ativo) return;
         setAlimentos(novo);
         setAlimentosProntos(true);
+      })
+      .catch((erro: Error) => {
+        if (!ativo) return;
+        setAlimentosProntos(false);
+        setAviso(`${erro.message}. O Equivale tentará novamente quando a conexão voltar.`);
       });
     return () => {
       ativo = false;
     };
-  }, [modoDemonstracao, fabricaDeAlimentos]);
+  }, [modoDemonstracao, fabricaDeAlimentos, tentativaDeAlimentos]);
 
   const apagarTudo = useCallback(async () => {
     await repositorio.apagarTudo();

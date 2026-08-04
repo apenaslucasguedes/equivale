@@ -20,6 +20,7 @@ from openpyxl import load_workbook
 ROOT = Path(__file__).resolve().parents[1]
 TACO = ROOT / "data/fontes/taco/Taco-4a-Edicao.xlsx"
 CATALOGO = ROOT / "incoming/data/catalogo-equivalencias-equivale.md"
+BANCO_GERAL = ROOT / "incoming/data/equivale-food-database.md"
 MODELO = ROOT / "src/importacao/modelo.ts"
 SELECAO = ROOT / "data/alimentos-v1-selecao.json"
 SAIDA = ROOT / "public/data/alimentos.json"
@@ -48,6 +49,25 @@ CATEGORIAS = {
     "Alimentos preparados": "receitas",
     "Leguminosas e derivados": "leguminosas",
     "Nozes e sementes": "gorduras",
+}
+CATEGORIAS_BANCO_GERAL = {
+    "aves": "proteinas", "bebidas": "bebidas", "carnes bovinas": "proteinas",
+    "cereais": "cereais-paes-massas-tuberculos", "comida japonesa": "receitas",
+    "condimentos": "industrializados", "doces": "acucares-e-doces", "frutas": "frutas",
+    "hambúrgueres": "proteinas", "hortaliças": "hortalicas",
+    "industrializados": "industrializados", "ingredientes culinários": "industrializados",
+    "laticínios": "laticinios", "leguminosas": "leguminosas",
+    "massas": "cereais-paes-massas-tuberculos", "outras carnes": "proteinas",
+    "ovos": "proteinas", "peixes e frutos do mar": "proteinas", "pizzas": "receitas",
+    "pratos preparados": "receitas", "produtos de marca": "industrializados",
+    "pães": "cereais-paes-massas-tuberculos", "salgados": "receitas",
+    "sanduíches": "receitas", "sobremesas": "acucares-e-doces", "suínos": "proteinas",
+    "tubérculos": "cereais-paes-massas-tuberculos", "óleos": "gorduras",
+}
+ALIASES_CONTROLADOS = {
+    "taco-004-arroz-tipo-1-cru": ["Arroz branco cru"],
+    "taco-038-lasanha-massa-fresca-crua": ["Massa de lasanha crua", "Massa de lasanha fresca crua"],
+    "taco-040-macarrao-trigo-cru": ["Macarrão seco", "Massa seca de macarrão"],
 }
 PREPAROS = (
     ("cozida/10minutos", "cozido"), ("cozido/10minutos", "cozido"),
@@ -159,6 +179,84 @@ def porcoes_documentadas(registros: list[dict]) -> list[dict]:
     return porcoes
 
 
+def ler_banco_geral() -> list[dict]:
+    """Lê os registros operacionais JSON do Markdown recebido."""
+    registros = []
+    for linha in BANCO_GERAL.read_text(encoding="utf-8").splitlines():
+        achado = re.match(r"^\s*-\s*(\{.*\})\s*$", linha)
+        if not achado:
+            continue
+        try:
+            item = json.loads(achado.group(1))
+        except json.JSONDecodeError:
+            continue
+        if item.get("tipoRegistro") in {
+            "alimento-individual", "ingrediente", "preparacao-generica", "produto-de-marca"
+        }:
+            registros.append(item)
+    return registros
+
+
+def converter_banco_geral(enriquecimentos_taco: list[dict], taco: dict[str, dict]) -> list[dict]:
+    """Converte o banco geral para o contrato enxuto consumido pelo aplicativo."""
+    por_codigo_taco = {item["codigoDaFonte"]: item for item in enriquecimentos_taco}
+    alimentos = []
+    for item in ler_banco_geral():
+        kcal = item.get("kcalPor100g")
+        if item.get("utilizavelEmEquivalenciaCalorica") is not True and item.get("tipoRegistro") != "produto-de-marca":
+            continue
+        if not isinstance(kcal, (int, float)) or not math.isfinite(kcal) or kcal < 0:
+            continue
+
+        codigo_bruto = str(item.get("codigoFonte") or "")
+        codigo = codigo_bruto.removeprefix("TACO:")
+        if codigo.isdigit():
+            codigo = str(int(codigo))
+        anterior = por_codigo_taco.get(codigo)
+        origem_taco = taco.get(codigo)
+        aliases = [*(item.get("aliases") or []), *ALIASES_CONTROLADOS.get(item["id"], [])]
+        porcoes = []
+        for porcao in item.get("medidasCaseirasDocumentadas") or []:
+            if not isinstance(porcao, dict):
+                continue
+            quantidade, gramas = porcao.get("quantidade"), porcao.get("gramas")
+            medida = porcao.get("unidade") or porcao.get("descricao")
+            if not isinstance(medida, str) or not isinstance(quantidade, (int, float)) or not isinstance(gramas, (int, float)):
+                continue
+            if quantidade <= 0 or gramas <= 0:
+                continue
+            porcoes.append({
+                "medida": limpar_medida(medida), "quantidade": float(quantidade),
+                "gramas": float(gramas),
+                "fonte": porcao.get("referencia") or porcao.get("fonte") or item.get("fonte"),
+                "codigoDaFonte": porcao.get("codigoFonte"),
+            })
+        if anterior:
+            aliases.extend(anterior["aliases"])
+            porcoes.extend(anterior["porcoesCaseiras"])
+
+        peso_porcao = item.get("pesoPorcaoGramas")
+        if item.get("tipoRegistro") == "produto-de-marca" and isinstance(peso_porcao, (int, float)) and peso_porcao > 0:
+            porcoes.append({
+                "medida": "unidade", "quantidade": 1.0, "gramas": float(peso_porcao),
+                "fonte": item.get("fonte"), "codigoDaFonte": codigo_bruto,
+            })
+
+        preparos = item.get("preparo") or []
+        preparo = ", ".join(preparos) if isinstance(preparos, list) and preparos else None
+        porcoes_unicas = {(p["medida"], p["quantidade"], p["gramas"]): p for p in porcoes}
+        alimentos.append({
+            "id": item["id"], "nome": item.get("nomeCanonico") or item.get("nomeProduto"),
+            "aliases": sorted(set(aliases)),
+            "categoria": origem_taco["categoria"] if origem_taco else CATEGORIAS_BANCO_GERAL.get(item.get("categoria"), "industrializados"),
+            "preparo": preparo, "kcalPor100g": round(float(kcal), 6),
+            "porcoesCaseiras": list(porcoes_unicas.values()),
+            "fonte": item.get("fonte") or "não informada", "codigoDaFonte": codigo or item["id"],
+            "atualizadoEm": item.get("dataAtualizacao") or item.get("dataAcesso") or "",
+        })
+    return alimentos
+
+
 def gerar() -> tuple[dict, dict]:
     taco = ler_taco()
     catalogo = ler_catalogo()
@@ -205,7 +303,13 @@ def gerar() -> tuple[dict, dict]:
             "atualizadoEm": ACESSO_EM,
         })
 
-    base = {"versao": 1, "fonte": FONTE, "somenteParaTeste": False, "alimentos": alimentos}
+    alimentos = converter_banco_geral(alimentos, taco)
+    base = {
+        "versao": 2,
+        "fonte": "Banco geral do Equivale — TACO 4ª edição e fontes oficiais identificadas",
+        "somenteParaTeste": False,
+        "alimentos": alimentos,
+    }
     chaves = defaultdict(set)
     for alimento in alimentos:
         for texto in [alimento["nome"], *alimento["aliases"]]:

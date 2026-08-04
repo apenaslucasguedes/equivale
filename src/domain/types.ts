@@ -40,6 +40,12 @@ export const ROTULO_CATEGORIA: Record<Categoria, string> = {
   receitas: 'Receitas',
 };
 
+export const ICONE_CATEGORIA: Record<Categoria, string> = {
+  'cereais-paes-massas-tuberculos': '🍚', leguminosas: '🫘', proteinas: '🥩',
+  laticinios: '🥛', frutas: '🍎', hortalicas: '🥦', gorduras: '🥑',
+  'acucares-e-doces': '🍰', bebidas: '🥤', industrializados: '📦', receitas: '🍽️',
+};
+
 /** Medida caseira aproximada de um alimento (ex.: 1 fatia = 25 g). */
 export interface PorcaoCaseira {
   /** Nome da medida: unidade, fatia, colher de sopa, concha, copo, porção... */

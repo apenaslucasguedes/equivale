@@ -21,6 +21,7 @@ import { SeletorDeAlimento } from './SeletorDeAlimento';
 import { descreverEnergia, descreverQuantidade } from './formatacao';
 import { carregarCatalogo, criarIndiceCatalogo } from '../catalogo/catalogo';
 import type { GrupoCatalogo, OpcaoCatalogo } from '../catalogo/catalogo';
+import { encontrarCategoriaInicial } from './categoriaInicialSubstituicao';
 
 export interface PropsDaSubstituicao {
   aberta: boolean;
@@ -42,6 +43,7 @@ export function GavetaDeSubstituicao({
   const [escolhido, setEscolhido] = useState<Alimento | null>(null);
   const [medidaEscolhida, setMedidaEscolhida] = useState<string | null>(null);
   const [grupoPrescrito, setGrupoPrescrito] = useState<GrupoCatalogo | null>(null);
+  const categoriaInicial = encontrarCategoriaInicial(bloco, repositorio);
 
   useEffect(() => {
     if (!aberta) return;
@@ -153,6 +155,31 @@ export function GavetaDeSubstituicao({
 
       {!escolhido ? (
         <div>
+        <h3>Equivalência calórica livre</h3>
+        <p className="nota">Busca livre, inicialmente organizada pela categoria do alimento prescrito.</p>
+        <SeletorDeAlimento
+          key={`${bloco.id}:${categoriaInicial ?? 'todas'}`}
+          repositorio={repositorio}
+          categoriaInicial={categoriaInicial}
+          aoEscolher={(alimento) => {
+            setEscolhido(alimento);
+            setMedidaEscolhida(null);
+          }}
+          aoDescreverResultado={(alimento) => {
+            const resultado = calcularQuantidadeEquivalente(bloco.kcal, alimento.kcalPor100g);
+            const medida = resultado.ok
+              ? sugerirMedidasCaseiras(resultado.valor, alimento.porcoesCaseiras, { limite: 1 })[0]
+              : undefined;
+            return (
+              <span className="resultado__quantidade">
+                {resultado.ok
+                  ? `${formatarNumero(bloco.kcal, 0)} kcal · ${formatarQuantidade(resultado.valor, configuracoes.arredondamento)} g`
+                  : '—'}
+                <small>{resultado.ok ? (medida?.texto ?? 'sem medida caseira') : 'não calculável'}</small>
+              </span>
+            );
+          }}
+        />
         {grupoPrescrito ? (
           <section aria-labelledby="sugestoes-prescricao-titulo">
             <h3 id="sugestoes-prescricao-titulo">Sugestões da prescrição</h3>
@@ -174,26 +201,6 @@ export function GavetaDeSubstituicao({
             </ul>
           </section>
         ) : null}
-        <h3>Equivalência calórica livre</h3>
-        <p className="nota">Busca separada; requer uma base nutricional com kcal por 100 g.</p>
-        <SeletorDeAlimento
-          repositorio={repositorio}
-          aoEscolher={(alimento) => {
-            setEscolhido(alimento);
-            setMedidaEscolhida(null);
-          }}
-          aoDescreverResultado={(alimento) => {
-            const resultado = calcularQuantidadeEquivalente(bloco.kcal, alimento.kcalPor100g);
-            return (
-              <span className="resultado__quantidade">
-                {resultado.ok
-                  ? `${formatarQuantidade(resultado.valor, configuracoes.arredondamento)} g`
-                  : '—'}
-                <small>{resultado.ok ? 'equivalente' : 'não calculável'}</small>
-              </span>
-            );
-          }}
-        />
         </div>
       ) : (
         <div>
