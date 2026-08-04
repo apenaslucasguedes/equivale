@@ -11,6 +11,7 @@
  */
 
 import type {
+  Alimento,
   BlocoCalorico,
   Dieta,
   OrigemDasCalorias,
@@ -32,18 +33,37 @@ export interface ItemResolvido {
   origem: OrigemDasCalorias;
   /** Explicação curta de por que o item ficou pendente. */
   motivo: string | null;
+  opcoesCorrespondencia: Alimento[];
 }
 
-function indexarPorNome(repositorio: RepositorioDeAlimentos): Map<string, string> {
-  const mapa = new Map<string, string>();
+function indexarPorNome(repositorio: RepositorioDeAlimentos): Map<string, string[]> {
+  const mapa = new Map<string, string[]>();
   for (const alimento of repositorio.todos()) {
     const chaves = [alimento.nome, ...(alimento.aliases ?? [])];
     for (const chave of chaves) {
       const normalizado = normalizar(chave);
-      if (normalizado && !mapa.has(normalizado)) mapa.set(normalizado, alimento.id);
+      if (!normalizado) continue;
+      const ids = mapa.get(normalizado) ?? [];
+      if (!ids.includes(alimento.id)) ids.push(alimento.id);
+      mapa.set(normalizado, ids);
     }
   }
   return mapa;
+}
+
+const SINGULARES_DE_MEDIDA: Record<string, string> = {
+  colheres: 'colher', conchas: 'concha', copos: 'copo', escumadeiras: 'escumadeira',
+  fatias: 'fatia', unidades: 'unidade', porcoes: 'porcao', pedacos: 'pedaco', bifes: 'bife',
+  files: 'file', potes: 'pote', saches: 'sache', pacotes: 'pacote', xicaras: 'xicara',
+  pequenas: 'pequena', pequenos: 'pequeno', cheias: 'cheia', cheios: 'cheio',
+};
+
+export function normalizarMedida(medida: string): string {
+  const partes = normalizar(medida).split(' ').filter(Boolean);
+  partes.forEach((parte, indice) => {
+    if (SINGULARES_DE_MEDIDA[parte]) partes[indice] = SINGULARES_DE_MEDIDA[parte];
+  });
+  return partes.join(' ');
 }
 
 /** Gramas do item, a partir do peso explícito, da unidade ou da medida caseira. */
@@ -59,10 +79,12 @@ export function determinarGramas(
   const alimento = repositorio.porId(alimentoId);
   if (!alimento) return null;
 
-  const unidadeNormalizada = normalizar(item.unidade);
+  const unidadeNormalizada = normalizarMedida(item.descricaoMedidaOriginal ?? item.unidade);
   for (const porcao of alimento.porcoesCaseiras ?? []) {
-    const medida = normalizar(porcao.medida);
-    if (!medida.startsWith(unidadeNormalizada)) continue;
+    const medida = normalizarMedida(porcao.medida);
+    // A base pode qualificar a mesma medida ("colher de sopa cheia"); a
+    // prescrição nunca pode ser mais específica do que a porção cadastrada.
+    if (medida !== unidadeNormalizada && !medida.startsWith(`${unidadeNormalizada} `)) continue;
     if (!Number.isFinite(porcao.gramas) || !Number.isFinite(porcao.quantidade)) continue;
     if (porcao.quantidade <= 0) continue;
     return (item.quantidade * porcao.gramas) / porcao.quantidade;
@@ -81,8 +103,11 @@ export function resolverItens(
   return itens.map((item) => {
     const chave = normalizar(item.nomeAlimento);
     const idVinculado = porVinculo.get(chave) ?? null;
-    const idPorNome = porNome.get(chave) ?? null;
-    const alimentoId = idVinculado ?? idPorNome;
+    const idsCorrespondentes = idVinculado ? [idVinculado] : (porNome.get(chave) ?? []);
+    const opcoesCorrespondencia = idsCorrespondentes
+      .map((id) => repositorio.porId(id))
+      .filter((alimento): alimento is Alimento => alimento !== undefined);
+    const alimentoId = idsCorrespondentes.length === 1 ? (idsCorrespondentes[0] ?? null) : null;
 
     if (item.kcalInformada !== null) {
       return {
@@ -92,6 +117,19 @@ export function resolverItens(
         kcal: item.kcalInformada,
         origem: 'informada' as OrigemDasCalorias,
         motivo: null,
+        opcoesCorrespondencia,
+      };
+    }
+
+    if (idsCorrespondentes.length > 1) {
+      return {
+        item,
+        alimentoId: null,
+        alimentoNome: item.nomeAlimento,
+        kcal: 0,
+        origem: 'pendente' as OrigemDasCalorias,
+        motivo: 'Mais de uma correspondência encontrada',
+        opcoesCorrespondencia,
       };
     }
 
@@ -102,10 +140,8 @@ export function resolverItens(
         alimentoNome: item.nomeAlimento,
         kcal: 0,
         origem: 'pendente' as OrigemDasCalorias,
-        motivo:
-          repositorio.total() === 0
-            ? 'Sem calorias no arquivo e não há base de alimentos carregada.'
-            : 'Sem calorias no arquivo e sem correspondência exata na base.',
+        motivo: repositorio.total() === 0 ? 'Base nutricional não carregada' : 'Alimento não encontrado na base',
+        opcoesCorrespondencia: [],
       };
     }
 
@@ -117,7 +153,8 @@ export function resolverItens(
         alimentoNome: item.nomeAlimento,
         kcal: 0,
         origem: 'pendente' as OrigemDasCalorias,
-        motivo: `Não dá para converter "${item.quantidade} ${item.unidade}" em gramas. Informe as calorias ou o peso.`,
+        motivo: 'Medida sem peso conhecido',
+        opcoesCorrespondencia,
       };
     }
 
@@ -131,6 +168,7 @@ export function resolverItens(
         kcal: 0,
         origem: 'pendente' as OrigemDasCalorias,
         motivo: calculo.erro,
+        opcoesCorrespondencia,
       };
     }
 
@@ -141,6 +179,7 @@ export function resolverItens(
       kcal: calculo.valor,
       origem: 'calculada' as OrigemDasCalorias,
       motivo: null,
+      opcoesCorrespondencia,
     };
   });
 }
@@ -164,6 +203,7 @@ export function montarDieta(analise: ResultadoDaAnalise, resolvidos: ItemResolvi
         alimentoId: resolvido.alimentoId,
         quantidade: item.quantidade,
         unidade: item.unidade,
+        descricaoMedidaOriginal: item.descricaoMedidaOriginal,
         refeicaoId: item.refeicaoId,
       },
       atual: {
@@ -171,11 +211,14 @@ export function montarDieta(analise: ResultadoDaAnalise, resolvidos: ItemResolvi
         alimentoId: resolvido.alimentoId,
         quantidade: item.quantidade,
         unidade: item.unidade,
+        descricaoMedidaOriginal: item.descricaoMedidaOriginal,
         refeicaoId: item.refeicaoId,
         medidaCaseira: null,
       },
       kcal: resolvido.kcal,
       origemDasCalorias: resolvido.origem,
+      motivoPendencia: resolvido.motivo,
+      opcoesCorrespondencia: resolvido.opcoesCorrespondencia.map(({ id, nome }) => ({ id, nome })),
       observacao: item.observacao,
       ordem,
     };

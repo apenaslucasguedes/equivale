@@ -72,8 +72,38 @@ describe('analisarMarkdown', () => {
 - Azeite | 1,5 colher de sopa | peso 20 g | 177 kcal
 - Aveia | 30
 `);
-    expect(resultado.itens[0]).toMatchObject({ quantidade: 1.5, unidade: 'colher', gramas: 20 });
+    expect(resultado.itens[0]).toMatchObject({
+      quantidade: 1.5,
+      unidade: 'colher',
+      descricaoMedidaOriginal: 'colher de sopa',
+      gramas: 20,
+    });
     expect(resultado.itens[1]).toMatchObject({ quantidade: 30, unidade: 'g', gramas: 30 });
+  });
+
+  it.each([
+    ['1 pedaço', 1, 'pedaço'],
+    ['1 bife', 1, 'bife'],
+    ['4 colheres de sopa', 4, 'colher'],
+  ])('importa e preserva a medida livre "%s"', (medida, quantidade, unidade) => {
+    const resultado = analisarMarkdown(`# D\n## Almoço\n- Alimento | ${medida}`);
+    expect(resultado.erros).toEqual([]);
+    expect(resultado.itens).toHaveLength(1);
+    expect(resultado.itens[0]).toMatchObject({
+      quantidade,
+      unidade,
+      descricaoMedidaOriginal: medida.replace(/^\d+\s*/, ''),
+      gramas: null,
+    });
+  });
+
+  it('importa unidade livre desconhecida como item em vez de descartar a linha', () => {
+    const resultado = analisarMarkdown('# D\n## Almoço\n- Sopa | 2 escumadeiras fundas');
+    expect(resultado.erros).toEqual([]);
+    expect(resultado.itens[0]).toMatchObject({
+      unidade: 'escumadeiras fundas',
+      descricaoMedidaOriginal: 'escumadeiras fundas',
+    });
   });
 
   it('aceita campos opcionais em qualquer ordem e formatos alternativos', () => {

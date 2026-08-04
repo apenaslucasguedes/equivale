@@ -44,8 +44,11 @@ suggestedDays: seg, ter, qua, qui, sex
      - Alimento | Quantidade e unidade | peso 00 g | 000 kcal | obs: texto
 
      • Alimento (obrigatório) — sempre o primeiro campo.
-     • Quantidade e unidade (obrigatório) — sempre o segundo campo.
-       Unidades aceitas: g, ml, unidade, fatia, colher, concha, copo, porção.
+     • Quantidade e medida (obrigatório) — sempre o segundo campo. Qualquer
+       descrição textual é aceita e preservada: g, ml, pedaço, bife, filé,
+       pote, sachê, pacote, xícara, escumadeira, colheres de sopa etc.
+       g e ml são diretamente conversíveis. Outra medida sem peso exige uma
+       porção caseira correspondente na base ou o campo "peso 00 g".
      • peso 00 g (opcional) — o peso em gramas, quando a unidade não é g/ml.
      • 000 kcal (opcional, mas RECOMENDADO) — as calorias prescritas do item.
        Sem esse campo, o Equivale tenta calcular pela base de alimentos; se não

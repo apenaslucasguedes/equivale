@@ -1,7 +1,2699 @@
 {
   "versao": 1,
-  "fonte": "nenhuma base carregada",
+  "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
   "somenteParaTeste": false,
-  "_leia_me": "Este arquivo está VAZIO de propósito. O Equivale não inclui uma base nutricional própria e não inventa números. Substitua 'alimentos' por uma base real e validada (ex.: TACO/IBGE), mantendo os campos id, nome, aliases, categoria, preparo, kcalPor100g, porcoesCaseiras, fonte, codigoDaFonte e atualizadoEm. Veja README.md, seção 'Como substituir as fixtures pela base validada'.",
-  "alimentos": []
+  "alimentos": [
+    {
+      "id": "taco-1",
+      "nome": "Arroz, integral, cozido",
+      "aliases": [],
+      "categoria": "cereais-paes-massas-tuberculos",
+      "preparo": "cozido",
+      "kcalPor100g": 123.534893,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa",
+          "quantidade": 1.0,
+          "gramas": 20.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
+          "codigoDaFonte": "g02-arroz-integral-cozido"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "1",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-3",
+      "nome": "Arroz, tipo 1, cozido",
+      "aliases": [
+        "Arroz branco cozido",
+        "Arroz branco, cozido"
+      ],
+      "categoria": "cereais-paes-massas-tuberculos",
+      "preparo": "cozido",
+      "kcalPor100g": 128.258486,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa rasa",
+          "quantidade": 1.0,
+          "gramas": 20.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
+          "codigoDaFonte": "g02-arroz-branco-cozido"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "3",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-7",
+      "nome": "Aveia, flocos, crua",
+      "aliases": [
+        "Aveia em flocos"
+      ],
+      "categoria": "cereais-paes-massas-tuberculos",
+      "preparo": "cru",
+      "kcalPor100g": 393.822689,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa cheias",
+          "quantidade": 1.5,
+          "gramas": 22.5,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 10",
+          "codigoDaFonte": "g11-aveia-flocos-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "7",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-37",
+      "nome": "Lasanha, massa fresca, cozida",
+      "aliases": [
+        "Lasanha, massa, cozida"
+      ],
+      "categoria": "cereais-paes-massas-tuberculos",
+      "preparo": "cozido",
+      "kcalPor100g": 163.763667,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa rasa",
+          "quantidade": 1.0,
+          "gramas": 18.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
+          "codigoDaFonte": "g02-lasanha-massa-cozida"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "37",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-45",
+      "nome": "Milho, verde, enlatado, drenado",
+      "aliases": [
+        "Milho em lata"
+      ],
+      "categoria": "cereais-paes-massas-tuberculos",
+      "preparo": "drenado",
+      "kcalPor100g": 97.564894,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa",
+          "quantidade": 3.0,
+          "gramas": 45.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 3",
+          "codigoDaFonte": "g02-milho-em-lata"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "45",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-53",
+      "nome": "Pão, trigo, francês",
+      "aliases": [
+        "Pão francês"
+      ],
+      "categoria": "cereais-paes-massas-tuberculos",
+      "preparo": null,
+      "kcalPor100g": 299.81015,
+      "porcoesCaseiras": [
+        {
+          "medida": "unidade",
+          "quantidade": 0.5,
+          "gramas": 25.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 11",
+          "codigoDaFonte": "g11-pao-frances"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "53",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-63",
+      "nome": "Torrada, pão francês",
+      "aliases": [],
+      "categoria": "cereais-paes-massas-tuberculos",
+      "preparo": null,
+      "kcalPor100g": 377.422283,
+      "porcoesCaseiras": [
+        {
+          "medida": "fatia",
+          "quantidade": 4.0,
+          "gramas": 20.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 11",
+          "codigoDaFonte": "g11-torrada-pao-frances"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "63",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-64",
+      "nome": "Abóbora, cabotian, cozida",
+      "aliases": [
+        "Abóbora Cabotian/Japonesa cozida"
+      ],
+      "categoria": "hortalicas",
+      "preparo": "cozido",
+      "kcalPor100g": 48.043743,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa",
+          "quantidade": 1.5,
+          "gramas": 50.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 3",
+          "codigoDaFonte": "g02-abobora-cabotian-japonesa-cozida"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "64",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-71",
+      "nome": "Abobrinha, italiana, crua",
+      "aliases": [],
+      "categoria": "hortalicas",
+      "preparo": "cru",
+      "kcalPor100g": 19.279126,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa rasa",
+          "quantidade": 4.0,
+          "gramas": 80.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 9",
+          "codigoDaFonte": "g09-abobrinha-italiana-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "71",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-74",
+      "nome": "Acelga, crua",
+      "aliases": [],
+      "categoria": "hortalicas",
+      "preparo": "cru",
+      "kcalPor100g": 20.942342,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa",
+          "quantidade": 2.0,
+          "gramas": 60.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 8",
+          "codigoDaFonte": "g08-acelga-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "74",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-75",
+      "nome": "Agrião, cru",
+      "aliases": [],
+      "categoria": "hortalicas",
+      "preparo": "cru",
+      "kcalPor100g": 16.578801,
+      "porcoesCaseiras": [
+        {
+          "medida": "folha",
+          "quantidade": 10.0,
+          "gramas": 50.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 8",
+          "codigoDaFonte": "g08-agriao-cru"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "75",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-76",
+      "nome": "Aipo, cru",
+      "aliases": [],
+      "categoria": "hortalicas",
+      "preparo": "cru",
+      "kcalPor100g": 19.091457,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa",
+          "quantidade": 4.0,
+          "gramas": 60.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 8",
+          "codigoDaFonte": "g08-aipo-cru"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "76",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-83",
+      "nome": "Alho-poró, cru",
+      "aliases": [],
+      "categoria": "hortalicas",
+      "preparo": "cru",
+      "kcalPor100g": 31.507919,
+      "porcoesCaseiras": [
+        {
+          "medida": "porções",
+          "quantidade": 2.0,
+          "gramas": 30.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 8",
+          "codigoDaFonte": "g09-alho-poro-cru"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "83",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-86",
+      "nome": "Batata, baroa, cozida",
+      "aliases": [],
+      "categoria": "hortalicas",
+      "preparo": "cozido",
+      "kcalPor100g": 80.119763,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de arroz/servir",
+          "quantidade": 0.5,
+          "gramas": 30.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
+          "codigoDaFonte": "g02-batata-baroa-cozida"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "86",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-88",
+      "nome": "Batata, doce, cozida",
+      "aliases": [],
+      "categoria": "hortalicas",
+      "preparo": "cozido",
+      "kcalPor100g": 76.759611,
+      "porcoesCaseiras": [
+        {
+          "medida": "fatia média",
+          "quantidade": 0.5,
+          "gramas": 30.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
+          "codigoDaFonte": "g02-batata-doce-cozida"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "88",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-91",
+      "nome": "Batata, inglesa, cozida",
+      "aliases": [],
+      "categoria": "hortalicas",
+      "preparo": "cozido",
+      "kcalPor100g": 51.588477,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa",
+          "quantidade": 1.5,
+          "gramas": 45.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
+          "codigoDaFonte": "g02-batata-inglesa-cozida"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "91",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-95",
+      "nome": "Berinjela, cozida",
+      "aliases": [],
+      "categoria": "hortalicas",
+      "preparo": "cozido",
+      "kcalPor100g": 18.845286,
+      "porcoesCaseiras": [],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "95",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-97",
+      "nome": "Beterraba, cozida",
+      "aliases": [],
+      "categoria": "hortalicas",
+      "preparo": "cozido",
+      "kcalPor100g": 32.154324,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa",
+          "quantidade": 2.0,
+          "gramas": 70.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 3",
+          "codigoDaFonte": "g02-beterraba-cozida"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "97",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-100",
+      "nome": "Brócolis, cozido",
+      "aliases": [],
+      "categoria": "hortalicas",
+      "preparo": "cozido",
+      "kcalPor100g": 24.636163,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa",
+          "quantidade": 4.0,
+          "gramas": 50.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 9",
+          "codigoDaFonte": "g09-brocolis-cozido"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "100",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-108",
+      "nome": "Cebolinha, crua",
+      "aliases": [],
+      "categoria": "hortalicas",
+      "preparo": "cru",
+      "kcalPor100g": 19.515886,
+      "porcoesCaseiras": [
+        {
+          "medida": "ramo",
+          "quantidade": 10.0,
+          "gramas": 65.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 9",
+          "codigoDaFonte": "g09-cebolinha-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "108",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-109",
+      "nome": "Cenoura, cozida",
+      "aliases": [],
+      "categoria": "hortalicas",
+      "preparo": "cozido",
+      "kcalPor100g": 29.861778,
+      "porcoesCaseiras": [
+        {
+          "medida": "rodela",
+          "quantidade": 6.0,
+          "gramas": 60.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 8",
+          "codigoDaFonte": "g09-cenoura-cozida"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "109",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-110",
+      "nome": "Cenoura, crua",
+      "aliases": [],
+      "categoria": "hortalicas",
+      "preparo": "cru",
+      "kcalPor100g": 34.135388,
+      "porcoesCaseiras": [
+        {
+          "medida": "rodela",
+          "quantidade": 6.0,
+          "gramas": 30.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 8",
+          "codigoDaFonte": "g09-cenoura-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "110",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-112",
+      "nome": "Chuchu, cozido",
+      "aliases": [],
+      "categoria": "hortalicas",
+      "preparo": "cozido",
+      "kcalPor100g": 18.539791,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de servir",
+          "quantidade": 1.0,
+          "gramas": 50.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 9",
+          "codigoDaFonte": "g09-chuchu-cozido"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "112",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-118",
+      "nome": "Couve-flor, cozida",
+      "aliases": [],
+      "categoria": "hortalicas",
+      "preparo": "cozido",
+      "kcalPor100g": 19.114141,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa",
+          "quantidade": 3.0,
+          "gramas": 54.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 9",
+          "codigoDaFonte": "g09-couve-flor-cozida"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "118",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-129",
+      "nome": "Mandioca, cozida",
+      "aliases": [],
+      "categoria": "hortalicas",
+      "preparo": "cozido",
+      "kcalPor100g": 125.35825,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa rasa",
+          "quantidade": 1.0,
+          "gramas": 18.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
+          "codigoDaFonte": "g02-mandioca-cozida"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "129",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-136",
+      "nome": "Nhoque, batata, cozido",
+      "aliases": [
+        "Nhoque de batata, cozido"
+      ],
+      "categoria": "hortalicas",
+      "preparo": "cozido",
+      "kcalPor100g": 180.775274,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa cheia",
+          "quantidade": 0.5,
+          "gramas": 15.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
+          "codigoDaFonte": "g02-nhoque-de-batata-cozido"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "136",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-142",
+      "nome": "Pepino, cru",
+      "aliases": [],
+      "categoria": "hortalicas",
+      "preparo": "cru",
+      "kcalPor100g": 9.533691,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa",
+          "quantidade": 5.0,
+          "gramas": 100.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 9",
+          "codigoDaFonte": "g09-pepino-cru"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "142",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-143",
+      "nome": "Pimentão, amarelo, cru",
+      "aliases": [],
+      "categoria": "hortalicas",
+      "preparo": "cru",
+      "kcalPor100g": 27.927459,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa",
+          "quantidade": 2.0,
+          "gramas": 45.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 9",
+          "codigoDaFonte": "g09-pimentao-amarelo-cru"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "143",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-144",
+      "nome": "Pimentão, verde, cru",
+      "aliases": [],
+      "categoria": "hortalicas",
+      "preparo": "cru",
+      "kcalPor100g": 21.285881,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa",
+          "quantidade": 2.5,
+          "gramas": 60.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 9",
+          "codigoDaFonte": "g09-pimentao-verde-cru"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "144",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-145",
+      "nome": "Pimentão, vermelho, cru",
+      "aliases": [],
+      "categoria": "hortalicas",
+      "preparo": "cru",
+      "kcalPor100g": 23.281364,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa",
+          "quantidade": 2.0,
+          "gramas": 50.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 9",
+          "codigoDaFonte": "g09-pimentao-vermelho-cru"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "145",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-148",
+      "nome": "Rabanete, cru",
+      "aliases": [],
+      "categoria": "hortalicas",
+      "preparo": "cru",
+      "kcalPor100g": 13.738126,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa cheia",
+          "quantidade": 5.0,
+          "gramas": 90.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 9",
+          "codigoDaFonte": "g09-rabanete-cru"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "148",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-149",
+      "nome": "Repolho, branco, cru",
+      "aliases": [],
+      "categoria": "hortalicas",
+      "preparo": "cru",
+      "kcalPor100g": 17.118803,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa",
+          "quantidade": 6.0,
+          "gramas": 60.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 8",
+          "codigoDaFonte": "g08-repolho-branco-cru"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "149",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-150",
+      "nome": "Repolho, roxo, cru",
+      "aliases": [],
+      "categoria": "hortalicas",
+      "preparo": "cru",
+      "kcalPor100g": 30.907503,
+      "porcoesCaseiras": [
+        {
+          "medida": "concha",
+          "quantidade": 1.0,
+          "gramas": 50.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 8",
+          "codigoDaFonte": "g08-repolho-roxo-cru"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "150",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-152",
+      "nome": "Rúcula, crua",
+      "aliases": [],
+      "categoria": "hortalicas",
+      "preparo": "cru",
+      "kcalPor100g": 13.133257,
+      "porcoesCaseiras": [
+        {
+          "medida": "folha",
+          "quantidade": 20.0,
+          "gramas": 120.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 8",
+          "codigoDaFonte": "g08-rucula-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "152",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-153",
+      "nome": "Salsa, crua",
+      "aliases": [],
+      "categoria": "hortalicas",
+      "preparo": "cru",
+      "kcalPor100g": 33.424112,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de chá",
+          "quantidade": 6.0,
+          "gramas": 24.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 8",
+          "codigoDaFonte": "g08-salsa-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "153",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-163",
+      "nome": "Abacate, cru",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 96.154709,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa cheia",
+          "quantidade": 2.0,
+          "gramas": 99.9,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 7",
+          "codigoDaFonte": "g06-abacate-cru"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "163",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-164",
+      "nome": "Abacaxi, cru",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 48.322213,
+      "porcoesCaseiras": [
+        {
+          "medida": "fatia média",
+          "quantidade": 1.0,
+          "gramas": 80.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
+          "codigoDaFonte": "g05-abacaxi-cru"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "164",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-168",
+      "nome": "Açaí, polpa, congelada",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": null,
+      "kcalPor100g": 58.045369,
+      "porcoesCaseiras": [
+        {
+          "medida": "copo tulipa cheio",
+          "quantidade": 1.0,
+          "gramas": 99.9,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 7",
+          "codigoDaFonte": "g06-acai-polpa-congelada"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "168",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-169",
+      "nome": "Acerola, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 33.46227,
+      "porcoesCaseiras": [
+        {
+          "medida": "unidade",
+          "quantidade": 11.0,
+          "gramas": 130.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
+          "codigoDaFonte": "g05-acerola-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "169",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-172",
+      "nome": "Ameixa, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 52.542483,
+      "porcoesCaseiras": [
+        {
+          "medida": "unidade pequena",
+          "quantidade": 2.0,
+          "gramas": 75.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
+          "codigoDaFonte": "g05-ameixa-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "172",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-175",
+      "nome": "Banana, da terra, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 128.024452,
+      "porcoesCaseiras": [
+        {
+          "medida": "fatia",
+          "quantidade": 1.0,
+          "gramas": 30.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
+          "codigoDaFonte": "g05-banana-da-terra-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "175",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-178",
+      "nome": "Banana, maçã, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 86.80533,
+      "porcoesCaseiras": [
+        {
+          "medida": "pedaço",
+          "quantidade": 1.0,
+          "gramas": 45.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
+          "codigoDaFonte": "g05-banana-maca-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "178",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-179",
+      "nome": "Banana, nanica, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 91.528848,
+      "porcoesCaseiras": [
+        {
+          "medida": "unidade pequena",
+          "quantidade": 0.5,
+          "gramas": 39.6,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
+          "codigoDaFonte": "g05-banana-nanica-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "179",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-180",
+      "nome": "Banana, ouro, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 112.366048,
+      "porcoesCaseiras": [
+        {
+          "medida": "metade",
+          "quantidade": 1.0,
+          "gramas": 35.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
+          "codigoDaFonte": "g05-banana-ouro-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "180",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-182",
+      "nome": "Banana, prata, crua",
+      "aliases": [
+        "Banana prata"
+      ],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 98.249702,
+      "porcoesCaseiras": [
+        {
+          "medida": "pedaço",
+          "quantidade": 1.0,
+          "gramas": 40.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
+          "codigoDaFonte": "g05-banana-prata-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "182",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-186",
+      "nome": "Caju, cru",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 43.065069,
+      "porcoesCaseiras": [
+        {
+          "medida": "unidade média",
+          "quantidade": 1.0,
+          "gramas": 100.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
+          "codigoDaFonte": "g05-caju-cru"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "186",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-189",
+      "nome": "Caqui, chocolate, cru",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 71.350018,
+      "porcoesCaseiras": [
+        {
+          "medida": "unidade média",
+          "quantidade": 1.0,
+          "gramas": 55.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
+          "codigoDaFonte": "g05-caqui-chocolate-cru"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "189",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-190",
+      "nome": "Carambola, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 45.740889,
+      "porcoesCaseiras": [
+        {
+          "medida": "unidade média",
+          "quantidade": 1.0,
+          "gramas": 95.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
+          "codigoDaFonte": "g05-carambola-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "190",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-191",
+      "nome": "Ciriguela, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 75.59411,
+      "porcoesCaseiras": [
+        {
+          "medida": "unidade",
+          "quantidade": 10.0,
+          "gramas": 55.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
+          "codigoDaFonte": "g05-ciriguela-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "191",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-194",
+      "nome": "Figo, cru",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 41.447126,
+      "porcoesCaseiras": [
+        {
+          "medida": "unidade média",
+          "quantidade": 2.0,
+          "gramas": 100.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
+          "codigoDaFonte": "g05-figo-cru"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "194",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-197",
+      "nome": "Goiaba, branca, com casca, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 51.737748,
+      "porcoesCaseiras": [
+        {
+          "medida": "unidade média",
+          "quantidade": 0.5,
+          "gramas": 80.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
+          "codigoDaFonte": "g05-goiaba-branca-com-casca-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "197",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-200",
+      "nome": "Goiaba, vermelha, com casca, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 54.16993,
+      "porcoesCaseiras": [
+        {
+          "medida": "unidade média",
+          "quantidade": 0.5,
+          "gramas": 80.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
+          "codigoDaFonte": "g05-goiaba-vermelha-com-casca-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "200",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-201",
+      "nome": "Graviola, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 61.621898,
+      "porcoesCaseiras": [
+        {
+          "medida": "copo americano",
+          "quantidade": 1.0,
+          "gramas": 65.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
+          "codigoDaFonte": "g05-graviola-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "201",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-203",
+      "nome": "Jabuticaba, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 58.05315,
+      "porcoesCaseiras": [
+        {
+          "medida": "unidade",
+          "quantidade": 14.0,
+          "gramas": 70.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
+          "codigoDaFonte": "g05-jabuticaba-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "203",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-204",
+      "nome": "Jaca, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 87.92035,
+      "porcoesCaseiras": [
+        {
+          "medida": "bago",
+          "quantidade": 4.0,
+          "gramas": 45.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
+          "codigoDaFonte": "g05-jaca-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "204",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-207",
+      "nome": "Kiwi, cru",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 51.13633,
+      "porcoesCaseiras": [
+        {
+          "medida": "unidade média",
+          "quantidade": 1.0,
+          "gramas": 90.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
+          "codigoDaFonte": "g05-kiwi-cru"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "207",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-208",
+      "nome": "Laranja, baía, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 45.438117,
+      "porcoesCaseiras": [
+        {
+          "medida": "metade",
+          "quantidade": 1.0,
+          "gramas": 90.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
+          "codigoDaFonte": "g05-laranja-baia-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "208",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-210",
+      "nome": "Laranja, da terra, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 51.471129,
+      "porcoesCaseiras": [
+        {
+          "medida": "metade",
+          "quantidade": 1.0,
+          "gramas": 85.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
+          "codigoDaFonte": "g05-laranja-da-terra-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "210",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-212",
+      "nome": "Laranja, lima, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 45.701039,
+      "porcoesCaseiras": [
+        {
+          "medida": "metade",
+          "quantidade": 1.0,
+          "gramas": 90.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
+          "codigoDaFonte": "g05-laranja-lima-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "212",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-214",
+      "nome": "Laranja, pêra, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 36.773765,
+      "porcoesCaseiras": [
+        {
+          "medida": "metade",
+          "quantidade": 1.0,
+          "gramas": 115.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
+          "codigoDaFonte": "g05-laranja-pera-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "214",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-220",
+      "nome": "Limão, tahiti, cru",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 31.818153,
+      "porcoesCaseiras": [
+        {
+          "medida": "unidade grande",
+          "quantidade": 1.0,
+          "gramas": 90.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
+          "codigoDaFonte": "g05-limao-tahiti-cru"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "220",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-221",
+      "nome": "Maçã, Argentina, com casca, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 62.531818,
+      "porcoesCaseiras": [],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "221",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-222",
+      "nome": "Maçã, Fuji, com casca, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 55.5152,
+      "porcoesCaseiras": [],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "222",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-225",
+      "nome": "Mamão, Formosa, cru",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 45.340748,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa cheia",
+          "quantidade": 2.5,
+          "gramas": 100.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
+          "codigoDaFonte": "g05-mamao-formosa-cru"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "225",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-226",
+      "nome": "Mamão, Papaia, cru",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 40.156769,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa cheia",
+          "quantidade": 3.0,
+          "gramas": 100.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
+          "codigoDaFonte": "g05-mamao-papaia-cru"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "226",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-228",
+      "nome": "Manga, Haden, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 63.500318,
+      "porcoesCaseiras": [
+        {
+          "medida": "banda",
+          "quantidade": 1.0,
+          "gramas": 60.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
+          "codigoDaFonte": "g05-manga-haden-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "228",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-229",
+      "nome": "Manga, Palmer, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 72.486738,
+      "porcoesCaseiras": [
+        {
+          "medida": "banda",
+          "quantidade": 1.0,
+          "gramas": 55.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
+          "codigoDaFonte": "g05-manga-palmer-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "229",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-231",
+      "nome": "Manga, Tommy Atkins, crua",
+      "aliases": [
+        "Manga, Tommy, crua"
+      ],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 50.692183,
+      "porcoesCaseiras": [
+        {
+          "medida": "pedaço",
+          "quantidade": 1.0,
+          "gramas": 80.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
+          "codigoDaFonte": "g05-manga-tommy-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "231",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-235",
+      "nome": "Melancia, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 32.606626,
+      "porcoesCaseiras": [
+        {
+          "medida": "fatia grande",
+          "quantidade": 1.0,
+          "gramas": 125.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
+          "codigoDaFonte": "g05-melancia-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "235",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-236",
+      "nome": "Melão, cru",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 29.369391,
+      "porcoesCaseiras": [
+        {
+          "medida": "fatia",
+          "quantidade": 1.5,
+          "gramas": 135.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
+          "codigoDaFonte": "g05-melao-cru"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "236",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-237",
+      "nome": "Mexerica, Murcote, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 57.592778,
+      "porcoesCaseiras": [
+        {
+          "medida": "unidade média",
+          "quantidade": 0.5,
+          "gramas": 70.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
+          "codigoDaFonte": "g05-mexerica-murcote-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "237",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-238",
+      "nome": "Mexerica, Rio, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 36.87135,
+      "porcoesCaseiras": [
+        {
+          "medida": "unidade grande",
+          "quantidade": 1.0,
+          "gramas": 110.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
+          "codigoDaFonte": "g05-mexerica-rio-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "238",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-239",
+      "nome": "Morango, cru",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 30.147917,
+      "porcoesCaseiras": [
+        {
+          "medida": "unidade",
+          "quantidade": 12.5,
+          "gramas": 150.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
+          "codigoDaFonte": "g05-morango-cru"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "239",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-241",
+      "nome": "Pequi, cru",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 204.96677,
+      "porcoesCaseiras": [
+        {
+          "medida": "unidade da parte comestivel(is)",
+          "quantidade": 10.0,
+          "gramas": 45.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 7",
+          "codigoDaFonte": "g06-pequi-cru"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "241",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-242",
+      "nome": "Pêra, Park, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 60.58859,
+      "porcoesCaseiras": [
+        {
+          "medida": "metade",
+          "quantidade": 1.0,
+          "gramas": 65.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
+          "codigoDaFonte": "g05-pera-park-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "242",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-243",
+      "nome": "Pêra, Williams, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 53.309048,
+      "porcoesCaseiras": [
+        {
+          "medida": "metade",
+          "quantidade": 1.0,
+          "gramas": 75.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
+          "codigoDaFonte": "g05-pera-williams-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "243",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-244",
+      "nome": "Pêssego, Aurora, cru",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 36.327599,
+      "porcoesCaseiras": [
+        {
+          "medida": "unidade média",
+          "quantidade": 2.0,
+          "gramas": 110.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
+          "codigoDaFonte": "g05-pessego-aurora-cru"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "244",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-246",
+      "nome": "Pinha, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 88.473528,
+      "porcoesCaseiras": [
+        {
+          "medida": "unidade pequena",
+          "quantidade": 1.0,
+          "gramas": 45.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 6",
+          "codigoDaFonte": "g05-pinha-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "246",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-247",
+      "nome": "Pitanga, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 41.41553,
+      "porcoesCaseiras": [
+        {
+          "medida": "unidade",
+          "quantidade": 10.0,
+          "gramas": 100.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 6",
+          "codigoDaFonte": "g05-pitanga-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "247",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-249",
+      "nome": "Romã, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 55.739,
+      "porcoesCaseiras": [
+        {
+          "medida": "unidade pequena",
+          "quantidade": 1.0,
+          "gramas": 70.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 6",
+          "codigoDaFonte": "g05-roma-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "249",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-250",
+      "nome": "Tamarindo, cru",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 275.695643,
+      "porcoesCaseiras": [
+        {
+          "medida": "unidade",
+          "quantidade": 2.0,
+          "gramas": 15.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 6",
+          "codigoDaFonte": "g05-tamarindo-cru"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "250",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-251",
+      "nome": "Tangerina, Poncã, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 37.8306,
+      "porcoesCaseiras": [
+        {
+          "medida": "unidade grande",
+          "quantidade": 1.0,
+          "gramas": 110.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 6",
+          "codigoDaFonte": "g05-tangerina-ponca-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "251",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-256",
+      "nome": "Uva, Itália, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 52.8731,
+      "porcoesCaseiras": [
+        {
+          "medida": "bago",
+          "quantidade": 10.0,
+          "gramas": 80.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 6",
+          "codigoDaFonte": "g05-uva-italia-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "256",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-257",
+      "nome": "Uva, Rubi, crua",
+      "aliases": [],
+      "categoria": "frutas",
+      "preparo": "cru",
+      "kcalPor100g": 49.06129,
+      "porcoesCaseiras": [
+        {
+          "medida": "bago",
+          "quantidade": 10.0,
+          "gramas": 80.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 6",
+          "codigoDaFonte": "g05-uva-rubi-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "257",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-260",
+      "nome": "Azeite, de oliva, extra virgem",
+      "aliases": [],
+      "categoria": "gorduras",
+      "preparo": null,
+      "kcalPor100g": 884.0,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa",
+          "quantidade": 1.0,
+          "gramas": 8.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
+          "codigoDaFonte": "g04-azeite-de-oliva-extra-virgem"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "260",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-268",
+      "nome": "Óleo, de canola",
+      "aliases": [],
+      "categoria": "gorduras",
+      "preparo": null,
+      "kcalPor100g": 884.0,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa",
+          "quantidade": 1.0,
+          "gramas": 8.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
+          "codigoDaFonte": "g04-oleo-de-canola"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "268",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-269",
+      "nome": "Óleo, de girassol",
+      "aliases": [],
+      "categoria": "gorduras",
+      "preparo": null,
+      "kcalPor100g": 884.0,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa",
+          "quantidade": 1.0,
+          "gramas": 8.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
+          "codigoDaFonte": "g04-oleo-de-girassol"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "269",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-270",
+      "nome": "Óleo, de milho",
+      "aliases": [],
+      "categoria": "gorduras",
+      "preparo": null,
+      "kcalPor100g": 884.0,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa",
+          "quantidade": 1.0,
+          "gramas": 8.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
+          "codigoDaFonte": "g04-oleo-de-milho"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "270",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-272",
+      "nome": "Óleo, de soja",
+      "aliases": [],
+      "categoria": "gorduras",
+      "preparo": null,
+      "kcalPor100g": 884.0,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa",
+          "quantidade": 1.0,
+          "gramas": 8.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
+          "codigoDaFonte": "g04-oleo-de-soja"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "272",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-277",
+      "nome": "Atum, conserva em óleo",
+      "aliases": [
+        "Atum conservado em óleo"
+      ],
+      "categoria": "proteinas",
+      "preparo": null,
+      "kcalPor100g": 165.910561,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa",
+          "quantidade": 5.0,
+          "gramas": 80.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 1",
+          "codigoDaFonte": "g01-atum-conservado-em-oleo"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "277",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-301",
+      "nome": "Merluza, filé, assado",
+      "aliases": [
+        "Filé de merluza, assado"
+      ],
+      "categoria": "proteinas",
+      "preparo": "assado",
+      "kcalPor100g": 121.910218,
+      "porcoesCaseiras": [
+        {
+          "medida": "file pequeno",
+          "quantidade": 1.0,
+          "gramas": 80.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 1",
+          "codigoDaFonte": "g01-file-de-merluza-assado"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "301",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-317",
+      "nome": "Salmão, sem pele, fresco, grelhado",
+      "aliases": [],
+      "categoria": "proteinas",
+      "preparo": "grelhado",
+      "kcalPor100g": 242.706569,
+      "porcoesCaseiras": [
+        {
+          "medida": "file pequeno",
+          "quantidade": 1.0,
+          "gramas": 80.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
+          "codigoDaFonte": "g01-salmao-sem-pele-fresco-grelhado"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "317",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-318",
+      "nome": "Sardinha, assada",
+      "aliases": [],
+      "categoria": "proteinas",
+      "preparo": "assado",
+      "kcalPor100g": 164.350788,
+      "porcoesCaseiras": [],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "318",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-337",
+      "nome": "Carne, bovina, capa de contra-filé, sem gordura, grelhada",
+      "aliases": [
+        "Capa de contra-filé sem gordura, grelhado"
+      ],
+      "categoria": "proteinas",
+      "preparo": "grelhado",
+      "kcalPor100g": 239.443633,
+      "porcoesCaseiras": [
+        {
+          "medida": "bife pequeno",
+          "quantidade": 1.0,
+          "gramas": 60.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 1",
+          "codigoDaFonte": "g01-capa-de-contra-file-sem-gordura-grelhado"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "337",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-345",
+      "nome": "Carne, bovina, contra-filé, sem gordura, cru",
+      "aliases": [
+        "Contra-filé sem gordura, cru"
+      ],
+      "categoria": "proteinas",
+      "preparo": "cru",
+      "kcalPor100g": 156.615833,
+      "porcoesCaseiras": [
+        {
+          "medida": "bife pequeno",
+          "quantidade": 1.0,
+          "gramas": 85.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 1",
+          "codigoDaFonte": "g01-contra-file-sem-gordura-cru"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "345",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-346",
+      "nome": "Carne, bovina, contra-filé, sem gordura, grelhado",
+      "aliases": [
+        "Contra-filé sem gordura, grelhado"
+      ],
+      "categoria": "proteinas",
+      "preparo": "grelhado",
+      "kcalPor100g": 193.691567,
+      "porcoesCaseiras": [
+        {
+          "medida": "bife pequeno",
+          "quantidade": 1.0,
+          "gramas": 60.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 1",
+          "codigoDaFonte": "g01-contra-file-sem-gordura-grelhado"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "346",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-349",
+      "nome": "Carne, bovina, coxão duro, sem gordura, cozido",
+      "aliases": [
+        "Coxão duro, sem gordura, cozido"
+      ],
+      "categoria": "proteinas",
+      "preparo": "cozido",
+      "kcalPor100g": 216.616067,
+      "porcoesCaseiras": [
+        {
+          "medida": "bife pequeno",
+          "quantidade": 1.0,
+          "gramas": 65.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 1",
+          "codigoDaFonte": "g01-coxao-duro-sem-gordura-cozido"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "349",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-351",
+      "nome": "Carne, bovina, coxão mole, sem gordura, cozido",
+      "aliases": [
+        "Coxão mole, sem gordura, cozido"
+      ],
+      "categoria": "proteinas",
+      "preparo": "cozido",
+      "kcalPor100g": 218.6751,
+      "porcoesCaseiras": [
+        {
+          "medida": "bife pequeno",
+          "quantidade": 1.0,
+          "gramas": 65.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 1",
+          "codigoDaFonte": "g01-coxao-mole-sem-gordura-cozido"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "351",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-363",
+      "nome": "Carne, bovina, lagarto, cozido",
+      "aliases": [
+        "Lagarto bovino, cozido"
+      ],
+      "categoria": "proteinas",
+      "preparo": "cozido",
+      "kcalPor100g": 222.468567,
+      "porcoesCaseiras": [
+        {
+          "medida": "bife pequeno",
+          "quantidade": 1.0,
+          "gramas": 65.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 1",
+          "codigoDaFonte": "g01-lagarto-bovino-cozido"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "363",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-368",
+      "nome": "Carne, bovina, maminha, grelhada",
+      "aliases": [
+        "Maminha, grelhada"
+      ],
+      "categoria": "proteinas",
+      "preparo": "grelhado",
+      "kcalPor100g": 153.089676,
+      "porcoesCaseiras": [
+        {
+          "medida": "bife pequeno",
+          "quantidade": 1.0,
+          "gramas": 70.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 1",
+          "codigoDaFonte": "g01-maminha-grelhada"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "368",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-371",
+      "nome": "Carne, bovina, músculo, sem gordura, cozido",
+      "aliases": [
+        "Músculo, sem gordura, cozido"
+      ],
+      "categoria": "proteinas",
+      "preparo": "cozido",
+      "kcalPor100g": 193.800333,
+      "porcoesCaseiras": [
+        {
+          "medida": "bife pequeno",
+          "quantidade": 1.0,
+          "gramas": 70.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
+          "codigoDaFonte": "g01-musculo-sem-gordura-cozido"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "371",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-377",
+      "nome": "Carne, bovina, patinho, sem gordura, grelhado",
+      "aliases": [
+        "Patinho, sem gordura, grelhado"
+      ],
+      "categoria": "proteinas",
+      "preparo": "grelhado",
+      "kcalPor100g": 219.259267,
+      "porcoesCaseiras": [
+        {
+          "medida": "bife pequeno",
+          "quantidade": 1.0,
+          "gramas": 60.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
+          "codigoDaFonte": "g01-patinho-sem-gordura-grelhado"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "377",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-381",
+      "nome": "Carne, bovina, picanha, com gordura, grelhada",
+      "aliases": [
+        "Picanha, com gordura, grelhada"
+      ],
+      "categoria": "proteinas",
+      "preparo": "grelhado",
+      "kcalPor100g": 288.767092,
+      "porcoesCaseiras": [
+        {
+          "medida": "fatia",
+          "quantidade": 1.0,
+          "gramas": 90.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
+          "codigoDaFonte": "g01-picanha-com-gordura-grelhada"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "381",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-383",
+      "nome": "Carne, bovina, picanha, sem gordura, grelhada",
+      "aliases": [
+        "Picanha, sem gordura, grelhada"
+      ],
+      "categoria": "proteinas",
+      "preparo": "grelhado",
+      "kcalPor100g": 238.468133,
+      "porcoesCaseiras": [
+        {
+          "medida": "fatia pequena",
+          "quantidade": 1.0,
+          "gramas": 60.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
+          "codigoDaFonte": "g01-picanha-sem-gordura-grelhada"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "383",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-398",
+      "nome": "Frango, coxa, sem pele, cozida",
+      "aliases": [
+        "Coxa de frango sem pele, cozida"
+      ],
+      "categoria": "proteinas",
+      "preparo": "cozido",
+      "kcalPor100g": 167.428032,
+      "porcoesCaseiras": [
+        {
+          "medida": "unidade",
+          "quantidade": 1.5,
+          "gramas": 80.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 1",
+          "codigoDaFonte": "g01-coxa-de-frango-sem-pele-cozida"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "398",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-408",
+      "nome": "Frango, peito, sem pele, cozido",
+      "aliases": [
+        "Peito de frango sem pele, cozido"
+      ],
+      "categoria": "proteinas",
+      "preparo": "cozido",
+      "kcalPor100g": 162.874763,
+      "porcoesCaseiras": [
+        {
+          "medida": "file pequeno",
+          "quantidade": 1.0,
+          "gramas": 65.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 1",
+          "codigoDaFonte": "g01-peito-de-frango-sem-pele-cozido"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "408",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-410",
+      "nome": "Frango, peito, sem pele, grelhado",
+      "aliases": [
+        "Peito de frango grelhado",
+        "Peito de frango sem pele, grelhado"
+      ],
+      "categoria": "proteinas",
+      "preparo": "grelhado",
+      "kcalPor100g": 159.185007,
+      "porcoesCaseiras": [
+        {
+          "medida": "file pequeno",
+          "quantidade": 1.0,
+          "gramas": 65.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 1",
+          "codigoDaFonte": "g01-peito-de-frango-sem-pele-grelhado"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "410",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-413",
+      "nome": "Frango, sobrecoxa, sem pele, assada",
+      "aliases": [
+        "Sobrecoxa de frango sem pele, assada"
+      ],
+      "categoria": "proteinas",
+      "preparo": "assado",
+      "kcalPor100g": 232.883397,
+      "porcoesCaseiras": [],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "413",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-424",
+      "nome": "Mortadela",
+      "aliases": [],
+      "categoria": "proteinas",
+      "preparo": null,
+      "kcalPor100g": 268.819989,
+      "porcoesCaseiras": [
+        {
+          "medida": "fatia",
+          "quantidade": 3.0,
+          "gramas": 45.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
+          "codigoDaFonte": "g01-mortadela"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "424",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-432",
+      "nome": "Porco, lombo, assado",
+      "aliases": [
+        "Lombo suíno, assado"
+      ],
+      "categoria": "proteinas",
+      "preparo": "assado",
+      "kcalPor100g": 210.234666,
+      "porcoesCaseiras": [
+        {
+          "medida": "fatia pequena",
+          "quantidade": 1.0,
+          "gramas": 60.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 1",
+          "codigoDaFonte": "g01-lombo-suino-assado"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "432",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-435",
+      "nome": "Porco, pernil, assado",
+      "aliases": [
+        "Pernil suíno, assado"
+      ],
+      "categoria": "proteinas",
+      "preparo": "assado",
+      "kcalPor100g": 262.259607,
+      "porcoesCaseiras": [
+        {
+          "medida": "pedaço",
+          "quantidade": 1.5,
+          "gramas": 63.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
+          "codigoDaFonte": "g01-pernil-suino-assado"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "435",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-439",
+      "nome": "Presunto, sem capa de gordura",
+      "aliases": [],
+      "categoria": "proteinas",
+      "preparo": null,
+      "kcalPor100g": 93.743281,
+      "porcoesCaseiras": [
+        {
+          "medida": "fatia",
+          "quantidade": 9.5,
+          "gramas": 142.5,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
+          "codigoDaFonte": "g01-presunto-sem-capa-de-gordura"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "439",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-440",
+      "nome": "Quibe, assado",
+      "aliases": [],
+      "categoria": "proteinas",
+      "preparo": "assado",
+      "kcalPor100g": 136.228876,
+      "porcoesCaseiras": [
+        {
+          "medida": "unidade",
+          "quantidade": 3.0,
+          "gramas": 150.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
+          "codigoDaFonte": "g01-quibe-assado"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "440",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-448",
+      "nome": "Iogurte, natural",
+      "aliases": [],
+      "categoria": "laticinios",
+      "preparo": null,
+      "kcalPor100g": 51.489533,
+      "porcoesCaseiras": [],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "448",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-453",
+      "nome": "Leite, condensado",
+      "aliases": [],
+      "categoria": "laticinios",
+      "preparo": null,
+      "kcalPor100g": 312.5726,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa",
+          "quantidade": 1.0,
+          "gramas": 20.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 12",
+          "codigoDaFonte": "g12-leite-condensado"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "453",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-471",
+      "nome": "Café, infusão 10%",
+      "aliases": [],
+      "categoria": "bebidas",
+      "preparo": null,
+      "kcalPor100g": 9.070869,
+      "porcoesCaseiras": [
+        {
+          "medida": "xícara de chá",
+          "quantidade": 0.5,
+          "gramas": 100.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 15",
+          "codigoDaFonte": "g14-cafe-infusao-10"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "471",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-475",
+      "nome": "Chá, erva-doce, infusão 5%",
+      "aliases": [],
+      "categoria": "bebidas",
+      "preparo": null,
+      "kcalPor100g": 1.39706,
+      "porcoesCaseiras": [
+        {
+          "medida": "xícara de chá",
+          "quantidade": 0.5,
+          "gramas": 100.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 15",
+          "codigoDaFonte": "g14-cha-erva-doce-infusao-5"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "475",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-476",
+      "nome": "Chá, mate, infusão 5%",
+      "aliases": [],
+      "categoria": "bebidas",
+      "preparo": null,
+      "kcalPor100g": 2.73075,
+      "porcoesCaseiras": [
+        {
+          "medida": "xícara de chá",
+          "quantidade": 0.5,
+          "gramas": 100.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 15",
+          "codigoDaFonte": "g14-cha-mate-infusao-5"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "476",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-477",
+      "nome": "Chá, preto, infusão 5%",
+      "aliases": [],
+      "categoria": "bebidas",
+      "preparo": null,
+      "kcalPor100g": 2.24791,
+      "porcoesCaseiras": [
+        {
+          "medida": "xícara de chá",
+          "quantidade": 0.5,
+          "gramas": 100.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 15",
+          "codigoDaFonte": "g14-cha-preto-infusao-5"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "477",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-491",
+      "nome": "Achocolatado, pó",
+      "aliases": [],
+      "categoria": "acucares-e-doces",
+      "preparo": null,
+      "kcalPor100g": 401.02,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa",
+          "quantidade": 1.0,
+          "gramas": 22.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 12",
+          "codigoDaFonte": "g12-achocolatado-po"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "491",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-494",
+      "nome": "Açúcar, refinado",
+      "aliases": [],
+      "categoria": "acucares-e-doces",
+      "preparo": null,
+      "kcalPor100g": 386.574824,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa",
+          "quantidade": 2.0,
+          "gramas": 20.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 12",
+          "codigoDaFonte": "g12-acucar-refinado"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "494",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-504",
+      "nome": "Maria mole",
+      "aliases": [],
+      "categoria": "acucares-e-doces",
+      "preparo": null,
+      "kcalPor100g": 301.235888,
+      "porcoesCaseiras": [
+        {
+          "medida": "pedaço pequeno",
+          "quantidade": 1.0,
+          "gramas": 28.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 12",
+          "codigoDaFonte": "g12-maria-mole"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "504",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-507",
+      "nome": "Mel, de abelha",
+      "aliases": [],
+      "categoria": "acucares-e-doces",
+      "preparo": null,
+      "kcalPor100g": 309.242667,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de sopa",
+          "quantidade": 1.0,
+          "gramas": 23.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 12",
+          "codigoDaFonte": "g12-mel-de-abelha"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "507",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-523",
+      "nome": "Leite, de coco",
+      "aliases": [],
+      "categoria": "industrializados",
+      "preparo": null,
+      "kcalPor100g": 166.160302,
+      "porcoesCaseiras": [
+        {
+          "medida": "copo",
+          "quantidade": 1.0,
+          "gramas": 200.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 7",
+          "codigoDaFonte": "g07-leite-de-coco"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "523",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-533",
+      "nome": "Cuscuz, de milho, cozido com sal",
+      "aliases": [
+        "Cuscuz de milho, cozido"
+      ],
+      "categoria": "receitas",
+      "preparo": null,
+      "kcalPor100g": 113.459482,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de arroz/servir",
+          "quantidade": 1.0,
+          "gramas": 20.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
+          "codigoDaFonte": "g02-cuscuz-de-milho-cozido"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "533",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-560",
+      "nome": "Ervilha, enlatada, drenada",
+      "aliases": [],
+      "categoria": "leguminosas",
+      "preparo": "drenado",
+      "kcalPor100g": 73.844704,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de servir/arroz",
+          "quantidade": 2.0,
+          "gramas": 76.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 3",
+          "codigoDaFonte": "g03-ervilha-enlatada-drenada"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "560",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-561",
+      "nome": "Feijão, carioca, cozido",
+      "aliases": [],
+      "categoria": "leguminosas",
+      "preparo": "cozido",
+      "kcalPor100g": 76.424086,
+      "porcoesCaseiras": [
+        {
+          "medida": "concha rasa",
+          "quantidade": 1.0,
+          "gramas": 80.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 3",
+          "codigoDaFonte": "g03-feijao-carioca-cozido"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "561",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-563",
+      "nome": "Feijão, fradinho, cozido",
+      "aliases": [],
+      "categoria": "leguminosas",
+      "preparo": "cozido",
+      "kcalPor100g": 78.008897,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de arroz/servir",
+          "quantidade": 2.0,
+          "gramas": 80.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 3",
+          "codigoDaFonte": "g03-feijao-fradinho-cozido"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "563",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-567",
+      "nome": "Feijão, preto, cozido",
+      "aliases": [],
+      "categoria": "leguminosas",
+      "preparo": "cozido",
+      "kcalPor100g": 77.027267,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de arroz/servir",
+          "quantidade": 2.0,
+          "gramas": 70.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 3",
+          "codigoDaFonte": "g03-feijao-preto-cozido"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "567",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-573",
+      "nome": "Feijão, roxo, cozido",
+      "aliases": [],
+      "categoria": "leguminosas",
+      "preparo": "cozido",
+      "kcalPor100g": 76.893382,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de arroz/servir",
+          "quantidade": 2.5,
+          "gramas": 87.5,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 3",
+          "codigoDaFonte": "g03-feijao-roxo-cozido"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "573",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-577",
+      "nome": "Lentilha, cozida",
+      "aliases": [],
+      "categoria": "leguminosas",
+      "preparo": "cozido",
+      "kcalPor100g": 92.638766,
+      "porcoesCaseiras": [
+        {
+          "medida": "colher de arroz/servir",
+          "quantidade": 2.0,
+          "gramas": 60.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 3",
+          "codigoDaFonte": "g03-lentilha-cozida"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "577",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-588",
+      "nome": "Castanha-de-caju, torrada, salgada",
+      "aliases": [],
+      "categoria": "gorduras",
+      "preparo": null,
+      "kcalPor100g": 570.167627,
+      "porcoesCaseiras": [
+        {
+          "medida": "unidade",
+          "quantidade": 8.0,
+          "gramas": 20.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 10",
+          "codigoDaFonte": "g10-castanha-de-caju-torrada-salgada"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "588",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-596",
+      "nome": "Pupunha, cozida",
+      "aliases": [],
+      "categoria": "gorduras",
+      "preparo": "cozido",
+      "kcalPor100g": 218.533881,
+      "porcoesCaseiras": [
+        {
+          "medida": "unidade pequena",
+          "quantidade": 4.0,
+          "gramas": 75.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 10",
+          "codigoDaFonte": "g10-pupunha-cozida"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "596",
+      "atualizadoEm": "2026-08-03"
+    },
+    {
+      "id": "taco-597",
+      "nome": "Noz, crua",
+      "aliases": [],
+      "categoria": "gorduras",
+      "preparo": "cru",
+      "kcalPor100g": 620.06002,
+      "porcoesCaseiras": [
+        {
+          "medida": "unidade",
+          "quantidade": 3.0,
+          "gramas": 16.0,
+          "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 10",
+          "codigoDaFonte": "g10-noz-crua"
+        }
+      ],
+      "fonte": "TACO — Tabela Brasileira de Composição de Alimentos, 4ª edição ampliada e revisada (NEPA/Unicamp)",
+      "codigoDaFonte": "597",
+      "atualizadoEm": "2026-08-03"
+    }
+  ]
 }

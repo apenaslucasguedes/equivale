@@ -1,0 +1,298 @@
+# Relatório da base nutricional v1
+
+## Resultado
+
+- Alimentos adicionados: **134**
+- Registros disponíveis na TACO: **597**
+- Nomes inventariados: **416**
+- Itens com peso documentado que podem ser resolvidos: **133**
+- Medidas caseiras documentadas incluídas: **128**
+- Nomes ainda sem correspondência confiável: **279**
+
+## Fontes
+
+A composição nutricional usa exclusivamente a TACO 4ª edição. A TBCA não foi usada nesta v1 devido às condições publicadas para reprodução; consulte `data/fontes/README.md`. As medidas caseiras vêm somente dos pesos explícitos preservados no catálogo da nutricionista.
+
+## Pendências sem correspondência confiável
+
+- Abóbora cabotiá, assada
+- Abóbora moranga cozida
+- Acompanhamentos, McDonald's, McFritas Cheddar e Bacon
+- Acompanhamentos, McDonald's, McFritas Grande
+- Acompanhamentos, McDonald's, McFritas Média
+- Acompanhamentos, McDonald's, McFritas Pequena
+- Acompanhamentos, McDonald's, McNuggets 6 unidades
+- Acém cozido, sem gordura
+- Albumina
+- Alcatra bovina grelhada
+- Alface americana
+- Alface lisa
+- Alface roxa
+- Alface, crespa
+- Ameixa seca
+- Amendoim cru
+- Amendoim torrado com sal
+- Amora, crua
+- Amêndoa torrada com sal
+- Amêndoa torrada sem sal
+- Aspargo, cozido
+- Atum sólido ao natural conservado
+- Aveia, farelo, crua
+- Aveia, farinha, crua
+- Aveia, flocos, finos
+- Avelã
+- Azeitona preta
+- Azeitona verde
+- Açaí, frooty, industrializado
+- Bacalhau refogado
+- Bala Fini, geral
+- Batata doce assada
+- Batata inglesa, assada
+- Batata palha
+- Beijinho
+- Biscoito de Arroz
+- Biscoito de arroz integral
+- Biscoito de maisena
+- Biscoito de polvilho
+- Biscoito, bono
+- Biscoito, cream cracker
+- Biscoito, cream cracker, integral
+- Biscoito, oreo
+- Biscoito, recheado, geral
+- Bisteca de porco, assada
+- Bolinho, Ana Maria
+- Bolo de aipim
+- Bolo de cenoura com cobertura de chocolate
+- Bolo de chocolate
+- Bolo de coco
+- Bolo de milho
+- Bolos recheados, geral
+- Bombom, ouro branco
+- Bombom, sonho de valsa
+- Brigadeiro
+- Brownie, geral
+- Cacau em pó
+- Café com leite
+- Califórnia Roll
+- Camarão cozido
+- Caseina
+- Casquinha de sorvete, McDonald's
+- Castanha-de-caju crua sem sal
+- Castanha-do-Brasil
+- Cebola, branca, crua
+- Cenoura, baby, cozida
+- Cereal, geral
+- Cereja, crua
+- Cerveja, todas
+- Chocolate, todos
+- Clara de ovo de galinha
+- Coentro, cru
+- Cookies, geral
+- Couve, crua
+- Creme de avelã, geral
+- Creme, de ricota, sem lactose
+- Cuscuz Marroquino Cozido
+- Cuscuz de milho, cru
+- Damasco, cru
+- Doce de leite
+- Doce, de abóbora, cremos
+- Doritos
+- Erva-doce
+- Ervilha em grão, cozida
+- Escarola
+- Esfirra, todas
+- Espinafre, cru
+- Fandangos de presunto
+- Farinha de amêndoa
+- Farinha de arroz
+- Farinha de linhaça
+- Farofa
+- Filé mignon, sem gordura, grelhado
+- Framboesa, crua
+- Fígado bovino, grelhado
+- Gelatto, todos os sabores de frutas
+- Geleia, tradicional, geral
+- Gin puro ou com tônica/energético ZERO
+- Goiabada
+- Granola
+- Grão-de-bico, cozido
+- Guacamole
+- Guioza
+- Hambúrger de falafel
+- Hambúrguer, McDonald's, Big Mac
+- Hambúrguer, McDonald's, Big Tasty
+- Hambúrguer, McDonald's, Cheddar McMelt
+- Hambúrguer, McDonald's, Cheeseburger
+- Hambúrguer, McDonald's, Duplo Burger Bacon
+- Hambúrguer, McDonald's, Duplo Quarteirão
+- Hambúrguer, McDonald's, Hamburger
+- Hambúrguer, McDonald's, McChicken
+- Hambúrguer, McDonald's, McCrispy Chicken Deluxe
+- Hambúrguer, McDonald's, McFiesta
+- Hambúrguer, McDonald's, Quarteirão com queijo
+- Homus
+- Hortelã, cru
+- Hossomaki de salmão
+- Hot Roll, geral
+- Inhame cozido
+- Iogurte Grego - Pense Zero
+- Iogurte Vegano (vida veg)
+- Iogurte grego, sem lactose
+- Iogurte natural, sem lactose
+- Jiló, cozido
+- Kombucha
+- Leite de amêndoas/castanhas, geral
+- Leite de soja ades
+- Leite de soja ades zero açúcar
+- Leite desnatado
+- Leite zero lactose
+- Lichia, crua
+- M&M, confetti, chocolate
+- Macadâmia crua
+- Macadâmia, torrada, com sal
+- Macadâmia, torrada, sem sal
+- Macarrão cozido
+- Mamão papaia
+- Mandioca assada
+- Mandioquinha cozida
+- Maracujá, polpa
+- Margarina
+- Maçã sem casca, crua
+- Milho para pipoca, sem óleo
+- Milho, espiga, cozida
+- Mirtilo, cru
+- Mostarda, crua
+- Nabo, cozido
+- Nectarina, crua
+- Niguiri de salmão
+- Orégano
+- Ovo, de codorna, unidade
+- Ovo, de galinha, unidade
+- Palmito em conserva
+- Palmito, cozido
+- Pamonha, cozida
+- Pasta de amendoim saborizada, geral
+- Pasta de amendoim tradicional
+- Pasta de amendoim, BetterPB
+- Pasta de castanha de caju
+- Pasta de mix de nuts
+- Pastel de queijo
+- Paçoca
+- Pea Protein (proteína de ervilha)
+- Picolé de frutas
+- Pimentão, cru
+- Pistache, torrada, com sal
+- Pistache, torrada, sem sal
+- Pitaya
+- Pizza vegana
+- Pizza, frango com catupiry/requeijão
+- Pizza, marguerita
+- Pizza, pepperoni
+- Pizza, portuguesa
+- Pizza, quatro queijos
+- Polenta, cozida
+- Polpa do coco, crua
+- Polpa do coco, crua, ralado
+- Polvilho
+- Prato executivo, bife ou frango a parmegiana, gera
+- Proteína isolada de soja
+- Proteína texturizada de soja cozida
+- Pré-treino, DUX
+- Pudim, todos
+- Pão australiano
+- Pão baguete
+- Pão bisnaguinha
+- Pão cará
+- Pão de batata
+- Pão de centeio
+- Pão de forma integral
+- Pão de forma tradicional
+- Pão de forma, do forno, integral
+- Pão de hambúrger, tradicional
+- Pão de milho, forma
+- Pão de ovo
+- Pão sovado
+- Pão sírio
+- Pêra sem casca, crua
+- Queijo ricota, sem lactose
+- Queijo, cottage, sem lactose
+- Queijo, minas frescal, sem lactose
+- Queijo, muçarela, sem lactose
+- Queijo, parmesão, sem lactose
+- Queijo, prato, sem lactose
+- Queijo, requeijão cremoso, sem lactose
+- Queijo, tofu, soja
+- Quiabo, cozido
+- Quinoa, cozida
+- Refrigerante zero calorias, qualquer um
+- Repolho, branco, cozido
+- Repolho, roxo, cozido
+- Requeijão vegano (vida veg)
+- Rice Protein (proteína do arroz)
+- Salada de folhas
+- Salgadinhos de festa, geral
+- Salgados de padaria, geral
+- Salsão, refogado
+- Sashimi de salmão
+- Semente de abóbora
+- Semente de chia
+- Semente de girassol
+- Semente de mostarda, amarela
+- Sementes de gergelim
+- Shimeji
+- Skol Beats
+- Sobremesas, McDonald's, Tortas
+- Soja seca, cozida
+- Sonho de doce de leite
+- Sorvete Ben & Jerry, todos
+- Sorvete vegano
+- Sorvete, geral
+- Sorvetes, McDonald's, McColosso
+- Sorvetes, McDonald's, McFlurry
+- Sorvetes, McDonald's, McShake
+- Sorvetes, McDonald's, Sundae
+- Suco de abacaxi
+- Suco de acerola
+- Suco de beterraba
+- Suco de cupuaçu
+- Suco de goiaba
+- Suco de laranja, lima
+- Suco de laranja, pêra
+- Suco de laranja, terra
+- Suco de laranja-baía
+- Suco de limão, cravo
+- Suco de limão-galego
+- Suco de mamão
+- Suco de manga
+- Suco de maracuja
+- Suco de melão
+- Suco de morango
+- Suco de poncã
+- Suco de pêssego
+- Suco de uva integral
+- Sushi Joe
+- Tapioca de goma
+- Temaki de salmão
+- Tilápia assada
+- Tilápia, cozida
+- Tomate, cereja, cru
+- Tomate, cru
+- Tomate-caqui
+- Top Sundae, todos os sabores
+- Toranja, crua
+- Tulipa de frango, assada
+- Urumaki
+- Uvas-passas
+- Vagem cozida
+- Vinho, todos
+- Vodka
+- Whey Protein Hidrolisado
+- Whey Protein Isolado
+- Whey protein Concentrado
+- Wrap integral (wickbold)
+- Xilitol
+- Água de coco
+- Óleo, de gergelim
+- Óleo, de macadâmia
+
+O relatório estruturado completo está em `docs/alimentos-v1-relatorio.json`.

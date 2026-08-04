@@ -76,6 +76,7 @@ export function substituirAlimentoDoBloco(
       alimentoNome: dados.alimento.nome,
       quantidade: dados.quantidade,
       unidade: dados.unidade,
+      descricaoMedidaOriginal: null,
       medidaCaseira: dados.medidaCaseira ?? null,
     },
   };
@@ -99,6 +100,7 @@ export function restaurarBloco(bloco: BlocoCalorico): BlocoCalorico {
       alimentoNome: bloco.original.alimentoNome,
       quantidade: bloco.original.quantidade,
       unidade: bloco.original.unidade,
+      descricaoMedidaOriginal: bloco.original.descricaoMedidaOriginal ?? null,
       refeicaoId: bloco.original.refeicaoId,
       medidaCaseira: null,
     },

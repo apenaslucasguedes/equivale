@@ -7,16 +7,17 @@ import { formatarNumero } from '../domain/texto';
 /** "120 g", "1 unidade", "85 g · ≈ 1,5 fatia". */
 export function descreverQuantidade(bloco: BlocoCalorico, configuracoes: Configuracoes): string {
   const { quantidade, unidade, medidaCaseira } = bloco.atual;
+  const unidadeExibida = bloco.atual.descricaoMedidaOriginal ?? unidade;
   const base =
     unidade === 'g' || unidade === 'ml'
       ? `${formatarQuantidade(quantidade, configuracoes.arredondamento)} ${unidade}`
-      : `${formatarNumero(quantidade, 2)} ${unidade}`;
+      : `${formatarNumero(quantidade, 2)} ${unidadeExibida}`;
   return medidaCaseira ? `${base} · ${medidaCaseira}` : base;
 }
 
 export function descreverQuantidadeOriginal(bloco: BlocoCalorico): string {
   const { quantidade, unidade } = bloco.original;
-  return `${formatarNumero(quantidade, 2)} ${unidade}`;
+  return `${formatarNumero(quantidade, 2)} ${bloco.original.descricaoMedidaOriginal ?? unidade}`;
 }
 
 /** Energia do bloco. Informação de referência — nunca uma meta. */

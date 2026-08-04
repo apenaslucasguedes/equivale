@@ -221,7 +221,25 @@ export function validarBase(dados: unknown): BaseDeAlimentos {
     if (!item || typeof item !== 'object') continue;
     const a = item as Partial<Alimento>;
     if (typeof a.id !== 'string' || typeof a.nome !== 'string') continue;
-    if (typeof a.kcalPor100g !== 'number' || !Number.isFinite(a.kcalPor100g)) continue;
+    if (
+      typeof a.kcalPor100g !== 'number' ||
+      !Number.isFinite(a.kcalPor100g) ||
+      a.kcalPor100g < 0
+    ) {
+      continue;
+    }
+    const porcoesCaseiras = Array.isArray(a.porcoesCaseiras) ? a.porcoesCaseiras : [];
+    const porcoesValidas = porcoesCaseiras.filter(
+      (p) =>
+          !p ||
+          (typeof p.medida === 'string' &&
+            typeof p.gramas === 'number' &&
+            Number.isFinite(p.gramas) &&
+            p.gramas > 0 &&
+            typeof p.quantidade === 'number' &&
+            Number.isFinite(p.quantidade) &&
+            p.quantidade > 0),
+    ).filter((p): p is NonNullable<typeof p> => Boolean(p));
     alimentos.push({
       id: a.id,
       nome: a.nome,
@@ -229,15 +247,7 @@ export function validarBase(dados: unknown): BaseDeAlimentos {
       categoria: (a.categoria ?? 'industrializados') as Categoria,
       preparo: typeof a.preparo === 'string' ? a.preparo : null,
       kcalPor100g: a.kcalPor100g,
-      porcoesCaseiras: Array.isArray(a.porcoesCaseiras)
-        ? a.porcoesCaseiras.filter(
-            (p) =>
-              p &&
-              typeof p.medida === 'string' &&
-              typeof p.gramas === 'number' &&
-              typeof p.quantidade === 'number',
-          )
-        : [],
+      porcoesCaseiras: porcoesValidas,
       fonte: typeof a.fonte === 'string' ? a.fonte : 'não informada',
       codigoDaFonte: typeof a.codigoDaFonte === 'string' ? a.codigoDaFonte : null,
       atualizadoEm: typeof a.atualizadoEm === 'string' ? a.atualizadoEm : '',

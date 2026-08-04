@@ -10,6 +10,18 @@ export interface PropsDoEstadoVazio {
 export function EstadoVazio({ aoImportar }: PropsDoEstadoVazio) {
   return (
     <div className="vazio">
+      <div className="vazio__ilustracao" aria-hidden="true">
+        <div className="vazio__trilho vazio__trilho--superior">
+          <span className="vazio__peca vazio__peca--azul"><i /><i /></span>
+          <span className="vazio__movimento vazio__movimento--direita" />
+          <span className="vazio__peca vazio__peca--neutra"><i /><i /><i /></span>
+        </div>
+        <div className="vazio__trilho vazio__trilho--inferior">
+          <span className="vazio__peca vazio__peca--verde"><i /><i /></span>
+          <span className="vazio__movimento vazio__movimento--esquerda" />
+          <span className="vazio__peca vazio__peca--pequena"><i /></span>
+        </div>
+      </div>
       <p className="vazio__titulo">Nenhum plano por aqui ainda</p>
       <p className="vazio__texto">
         O Equivale organiza uma dieta que <strong>você já recebeu</strong>. Importe o arquivo em
@@ -29,10 +41,13 @@ export function EstadoVazio({ aoImportar }: PropsDoEstadoVazio) {
           Baixar modelo
         </button>
       </div>
-      <p className="nota" style={{ marginTop: 20 }}>
-        O Equivale não cria dietas, não sugere restrição alimentar, não define metas corporais e não
-        julga escolhas. Tudo fica no seu aparelho.
-      </p>
+      <div className="vazio__transparencia">
+        <span className="vazio__transparencia-icone" aria-hidden="true" />
+        <p className="nota">
+          O Equivale não cria dietas, não sugere restrição alimentar, não define metas corporais e não
+          julga escolhas. Tudo fica no seu aparelho.
+        </p>
+      </div>
     </div>
   );
 }

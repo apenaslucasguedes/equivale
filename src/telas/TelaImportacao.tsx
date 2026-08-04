@@ -373,11 +373,16 @@ export function TelaImportacao({ aoConcluir, aoCancelar }: PropsDaImportacao) {
                 <div className="linha-conferencia" key={`${resolvido.item.linha}-${indice}`}>
                   <div className="linha-conferencia__titulo">
                     {resolvido.item.nomeAlimento} · {formatarNumero(resolvido.item.quantidade, 2)}{' '}
-                    {resolvido.item.unidade}
+                    {resolvido.item.descricaoMedidaOriginal ?? resolvido.item.unidade}
                   </div>
                   <p className="linha-conferencia__motivo">
                     Linha {resolvido.item.linha}: {resolvido.motivo}
                   </p>
+                  {resolvido.opcoesCorrespondencia.length > 1 ? (
+                    <p className="nota">
+                      Opções: {resolvido.opcoesCorrespondencia.map((alimento) => alimento.nome).join(' · ')}
+                    </p>
+                  ) : null}
                   <button
                     type="button"
                     className="botao botao--pequeno"
@@ -419,7 +424,8 @@ export function TelaImportacao({ aoConcluir, aoCancelar }: PropsDaImportacao) {
           itemEmConferencia ? (
             <>
               <strong>{itemEmConferencia.item.nomeAlimento}</strong> ·{' '}
-              {formatarNumero(itemEmConferencia.item.quantidade, 2)} {itemEmConferencia.item.unidade}
+              {formatarNumero(itemEmConferencia.item.quantidade, 2)}{' '}
+              {itemEmConferencia.item.descricaoMedidaOriginal ?? itemEmConferencia.item.unidade}
             </>
           ) : undefined
         }

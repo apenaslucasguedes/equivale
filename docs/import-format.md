@@ -162,19 +162,22 @@ barra vertical `|`.
 | Posição | Campo                  | Obrigatório | Exemplos                       |
 | ------- | ---------------------- | ----------- | ------------------------------ |
 | 1º      | Nome do alimento       | **Sim**     | `Arroz branco cozido`          |
-| 2º      | Quantidade + unidade   | **Sim**     | `100 g`, `1 unidade`, `200 ml` |
+| 2º      | Quantidade + medida    | **Sim**     | `100 g`, `1 pedaço`, `1 bife`, `200 ml` |
 
 A quantidade aceita vírgula ou ponto como separador decimal (`1,5` = `1.5`).
 Se a unidade for omitida (`- Aveia | 30`), assume-se **g**.
 
-Unidades aceitas (singular ou plural):
+Qualquer descrição textual depois da quantidade é aceita e preservada, por
+exemplo `1 pedaço`, `1 bife`, `1 filé`, `1 pote`, `1 sachê`, `1 pacote`,
+`1 xícara`, `1 escumadeira` ou `4 colheres de sopa`. As unidades históricas
+(`g`, `ml`, `unidade`, `fatia`, `colher`, `concha`, `copo` e `porção`, com suas
+abreviações e plurais) continuam reconhecidas.
 
-`g` · `gr` · `grama(s)` · `ml` · `mililitro(s)` · `un` · `und` · `uni` ·
-`unidade(s)` · `fatia(s)` · `colher(es)` · `concha(s)` · `copo(s)` ·
-`porção/porções`
-
-Complementos após a unidade são aceitos e usados só como texto:
-`1 colher de sopa` é lido como quantidade `1`, unidade `colher`.
+`g` e `ml` são diretamente conversíveis. Para qualquer outra medida, o cálculo
+automático exige uma porção caseira correspondente no registro do alimento ou
+o campo explícito `peso 00 g`. Uma medida desconhecida **não gera erro e não
+descarta a linha**: o item é importado e fica pendente se peso e kcal não puderem
+ser determinados. O Equivale nunca inventa o peso.
 
 ### 4.2 Campos nomeados (opcionais, em qualquer ordem)
 
@@ -206,6 +209,25 @@ segue esta ordem:
    um alimento da base ou informa as calorias.
 
 O Equivale nunca adivinha por semelhança aproximada de nome.
+Nomes e múltiplos aliases são comparados após normalização de caixa, acentos e
+espaços. Variações controladas de nomenclatura e preparo (por exemplo `arroz
+branco cozido`, `banana-maçã crua` e `patinho sem gordura grelhado`) devem ser
+cadastradas explicitamente como nome ou alias. Se a mesma chave exata apontar
+para mais de um alimento, o item permanece pendente e as opções são exibidas.
+
+As pendências usam motivos específicos: **Base nutricional não carregada**,
+**Alimento não encontrado na base**, **Medida sem peso conhecido** ou **Mais de
+uma correspondência encontrada**.
+
+## 5.1 Processo auditável da base nutricional
+
+Antes de substituir `public/data/alimentos.json`, execute
+`npm run alimentos:auditar -- public/data/alimentos.json caminho/da/dieta.md` e
+guarde a saída JSON no processo de revisão. O relatório informa fonte, contagem,
+itens ausentes e aliases ambíguos. A inclusão só pode usar uma fonte nutricional
+validada e rastreável; fixtures `TEST_ONLY` não são dados reais. Cada registro
+deve trazer nome, aliases controlados, preparo, `kcalPor100g`, porções caseiras
+documentadas, fonte, código da fonte e data de atualização.
 
 ---
 

@@ -63,6 +63,12 @@ export function GavetaDeDetalhes({
           <dd>{descreverEnergia(bloco.kcal)}</dd>
           <dt>Origem</dt>
           <dd>{ROTULO_ORIGEM[bloco.origemDasCalorias]}</dd>
+          {bloco.origemDasCalorias === 'pendente' ? (
+            <>
+              <dt>Pendência</dt>
+              <dd>{bloco.motivoPendencia ?? 'Calorias pendentes'}</dd>
+            </>
+          ) : null}
           <dt>Alterações</dt>
           <dd>
             {substituido || movido

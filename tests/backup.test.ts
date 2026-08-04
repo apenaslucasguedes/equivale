@@ -111,6 +111,19 @@ describe('exportação', () => {
 });
 
 describe('restauração', () => {
+  it('preserva a descrição original de medidas livres na volta completa', () => {
+    const estado = estadoComAlteracoes();
+    const bloco = estado.planos[0]!.dietaAtual.blocos[0]!;
+    bloco.original.descricaoMedidaOriginal = 'pedaço grande';
+    bloco.atual.descricaoMedidaOriginal = 'pedaço grande';
+    const resultado = interpretarBackup(serializarBackup(estado));
+    expect(resultado.ok).toBe(true);
+    if (!resultado.ok) return;
+    const restaurado = resultado.valor.estado.planos[0]!.dietaAtual.blocos[0]!;
+    expect(restaurado.original.descricaoMedidaOriginal).toBe('pedaço grande');
+    expect(restaurado.atual.descricaoMedidaOriginal).toBe('pedaço grande');
+  });
+
   it('faz a volta completa preservando o estado atual', () => {
     const resultado = interpretarBackup(serializarBackup(estadoComAlteracoes()));
 
