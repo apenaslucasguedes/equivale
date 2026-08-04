@@ -56,6 +56,7 @@ describe('arrastar e soltar cartões', () => {
     await montar();
     const cartao = screen.getByRole('button', { name: /^Arroz, 50 g/ });
 
+    expect(within(cartao).getByText('🍚')).toBeInTheDocument();
     expect(screen.queryByText('obs.')).not.toBeInTheDocument();
     await usuario.pointer([{ keys: '[TouchA>]', target: cartao }]);
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument();

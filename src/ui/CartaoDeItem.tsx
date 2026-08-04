@@ -22,6 +22,38 @@ export interface PropsDoCartao {
 
 export const PREFIXO_ITEM_DESTINO = 'item:';
 
+function iconeDoAlimento(nome: string): string {
+  const alimento = nome.toLocaleLowerCase('pt-BR');
+  if (alimento.includes('café')) return '☕';
+  if (alimento.includes('queijo') || alimento.includes('muçarela') || alimento.includes('mussarela')) return '🧀';
+  if (alimento.includes('banana')) return '🍌';
+  if (alimento.includes('maçã')) return '🍎';
+  if (alimento.includes('mamão')) return '🍈';
+  if (alimento.includes('morango')) return '🍓';
+  if (alimento.includes('uva')) return '🍇';
+  if (alimento.includes('laranja') || alimento.includes('tangerina')) return '🍊';
+  if (alimento.includes('abacaxi')) return '🍍';
+  if (alimento.includes('melancia')) return '🍉';
+  if (alimento.includes('abacate')) return '🥑';
+  if (alimento.includes('ovo')) return '🥚';
+  if (alimento.includes('pão') || alimento.includes('torrada')) return '🥖';
+  if (alimento.includes('leite')) return '🥛';
+  if (alimento.includes('iogurte')) return '🥣';
+  if (alimento.includes('arroz')) return '🍚';
+  if (alimento.includes('feijão')) return '🫘';
+  if (alimento.includes('frango')) return '🍗';
+  if (alimento.includes('carne')) return '🥩';
+  if (alimento.includes('peixe') || alimento.includes('atum') || alimento.includes('sardinha')) return '🐟';
+  if (alimento.includes('salada') || alimento.includes('alface')) return '🥗';
+  if (alimento.includes('brócolis') || alimento.includes('couve')) return '🥦';
+  if (alimento.includes('batata')) return '🥔';
+  if (alimento.includes('milho') || alimento.includes('cuscuz')) return '🌽';
+  if (alimento.includes('suco')) return '🧃';
+  if (alimento.includes('água')) return '💧';
+  if (alimento.includes('castanha') || alimento.includes('amendoim')) return '🥜';
+  return '🍴';
+}
+
 export function CartaoDeItem({ bloco, configuracoes, aoAbrir, estatico = false }: PropsDoCartao) {
   const temporizador = useRef<number | null>(null);
   const { attributes, listeners, setNodeRef: setDraggableRef, isDragging } = useDraggable({
@@ -88,7 +120,10 @@ export function CartaoDeItem({ bloco, configuracoes, aoAbrir, estatico = false }
         }}
         aria-label={`${bloco.atual.alimentoNome}, ${quantidade}. Segure para abrir as opções do item.`}
       >
-        <span className="cartao__nome">{bloco.atual.alimentoNome}</span>
+        <span className="cartao__titulo">
+          <span className="cartao__icone" aria-hidden="true">{iconeDoAlimento(bloco.atual.alimentoNome)}</span>
+          <span className="cartao__nome">{bloco.atual.alimentoNome}</span>
+        </span>
         <span className="cartao__quantidade">{quantidade}</span>
         {substituido || movido || pendente ? (
           <span className="cartao__etiquetas">

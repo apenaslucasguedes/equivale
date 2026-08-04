@@ -1185,6 +1185,8 @@ textarea { -webkit-tap-highlight-color: rgb(98 189 232 / 16%); }
 .cartao--destino { outline-color: var(--cor-azul-acao); background: var(--cor-azul-suave); }
 .cartao--sobreposto { border-color: var(--cor-azul-acao); box-shadow: var(--sombra-interativa); transform: rotate(-0.6deg) scale(1.015); }
 .cartao__corpo { gap: 2px; min-height: 52px; padding: var(--espaco-2) var(--espaco-2) var(--espaco-2) var(--espaco-3); }
+.cartao__titulo { display: inline-flex; align-items: center; gap: var(--espaco-2); min-width: 0; }
+.cartao__icone { flex: 0 0 auto; font-size: 1.3rem; line-height: 1; }
 .cartao__nome { color: var(--cor-texto); font-size: var(--texto-md); font-weight: 700; letter-spacing: -0.018em; }
 .cartao__quantidade { color: var(--cor-texto-secundario); font-size: var(--texto-sm); font-weight: 550; font-variant-numeric: tabular-nums; }
 .cartao__etiquetas { gap: var(--espaco-1); margin-top: var(--espaco-1); }
