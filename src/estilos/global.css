@@ -155,15 +155,6 @@ textarea {
   margin-top: 1px;
 }
 
-.seletor-de-plano--unico {
-  font-size: 11px;
-  color: var(--texto-3);
-  line-height: 1.2;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 .seletor-de-plano__guias {
   display: flex;
   max-width: 100%;
@@ -1054,8 +1045,7 @@ textarea { -webkit-tap-highlight-color: rgb(98 189 232 / 16%); }
 
 .cabecalho__marca { gap: 1px; }
 .cabecalho__nome img { height: 32px; max-width: min(174px, 46vw); }
-.cabecalho__assinatura,
-.seletor-de-plano--unico { color: var(--cor-texto-secundario); font-size: 11px; font-weight: 500; }
+.cabecalho__assinatura { color: var(--cor-texto-secundario); font-size: 11px; font-weight: 500; }
 .cabecalho__acoes { gap: var(--espaco-1); }
 
 .seletor-de-plano__guias { gap: var(--espaco-1); margin-top: var(--espaco-1); }

@@ -119,6 +119,7 @@ describe('vários planos', () => {
     await importar(usuario, DIAS_UTEIS, 'novo');
     expect(await screen.findByRole('region', { name: 'Almoço' })).toBeInTheDocument();
     expect(screen.getByText('Pão francês')).toBeInTheDocument();
+    expect(guiaDoPlano('Dias úteis')).toHaveAttribute('aria-selected', 'true');
 
     await importar(usuario, FIM_DE_SEMANA, 'novo');
 

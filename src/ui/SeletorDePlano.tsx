@@ -28,16 +28,6 @@ function legendaDoPlano(plano: PlanoAlimentar | undefined): string | null {
 export function SeletorDePlano({ planos, planoAtivoId, aoTrocar }: PropsDoSeletorDePlano) {
   if (planos.length === 0) return null;
 
-  // Um plano só: mostrar um seletor seria ruído. Basta o nome.
-  if (planos.length === 1) {
-    const unico = planos[0] as PlanoAlimentar;
-    return (
-      <span className="seletor-de-plano seletor-de-plano--unico" title={rotuloDoPlano(unico)}>
-        {unico.nome}
-      </span>
-    );
-  }
-
   const ativo = planos.find((plano) => plano.id === planoAtivoId) ?? planos[0];
   const legenda = legendaDoPlano(ativo);
 
