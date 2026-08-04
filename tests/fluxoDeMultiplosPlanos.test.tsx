@@ -110,6 +110,7 @@ describe('vários planos', () => {
       screen.getByRole('tablist', { name: 'Planos alimentares' }),
     ).getAllByRole('tab');
     expect(guias.map((guia) => guia.textContent)).toEqual(['Dias úteis', 'Fim de semana']);
+    expect(screen.getByRole('navigation', { name: 'Escolher plano' }).closest('header')).toBeNull();
     expect(screen.queryByText(/Dias sugeridos:/)).not.toBeInTheDocument();
   });
   it('mantém dois planos independentes e alterna entre eles pelo cabeçalho', async () => {

@@ -53,15 +53,6 @@ export function App() {
             </button>
           ) : null}
         </div>
-        {estado.planos.length > 0 ? (
-          <div className="cabecalho__planos">
-            <SeletorDePlano
-              planos={estado.planos}
-              planoAtivoId={estado.planoAtivoId}
-              aoTrocar={(planoId) => despachar({ tipo: 'planoAtivado', planoId })}
-            />
-          </div>
-        ) : null}
       </header>
 
       {emDemonstracao ? (
@@ -104,6 +95,16 @@ export function App() {
             ✕
           </button>
         </div>
+      ) : null}
+
+      {estado.planos.length > 0 ? (
+        <nav className="navegacao-de-planos" aria-label="Escolher plano">
+          <SeletorDePlano
+            planos={estado.planos}
+            planoAtivoId={estado.planoAtivoId}
+            aoTrocar={(planoId) => despachar({ tipo: 'planoAtivado', planoId })}
+          />
+        </nav>
       ) : null}
 
       <main className="conteudo">

@@ -1,11 +1,12 @@
 /**
  * Cartão compacto de um bloco calórico.
  *
- * Toque ou clique no corpo → abre a gaveta de ações.
+ * Toque prolongado ou menu de contexto no corpo → abre a gaveta de ações.
  * Somente o pegador inicia o arraste.
  * O pegador também funciona com teclado (dnd-kit KeyboardSensor).
  */
 
+import { useEffect, useRef } from 'react';
 import { useDraggable, useDroppable } from '@dnd-kit/core';
 import type { BlocoCalorico, Configuracoes } from '../domain/types';
 import { foiMovido, foiSubstituido } from '../domain/blocos';
@@ -22,6 +23,7 @@ export interface PropsDoCartao {
 export const PREFIXO_ITEM_DESTINO = 'item:';
 
 export function CartaoDeItem({ bloco, configuracoes, aoAbrir, estatico = false }: PropsDoCartao) {
+  const temporizador = useRef<number | null>(null);
   const { attributes, listeners, setNodeRef: setDraggableRef, isDragging } = useDraggable({
     id: bloco.id,
     disabled: estatico,
@@ -41,6 +43,20 @@ export function CartaoDeItem({ bloco, configuracoes, aoAbrir, estatico = false }
   const movido = foiMovido(bloco);
   const pendente = bloco.origemDasCalorias === 'pendente';
   const quantidade = descreverQuantidade(bloco, configuracoes);
+  const cancelarToqueProlongado = () => {
+    if (temporizador.current !== null) window.clearTimeout(temporizador.current);
+    temporizador.current = null;
+  };
+  const iniciarToqueProlongado = (evento: React.PointerEvent<HTMLButtonElement>) => {
+    if (evento.pointerType !== 'touch' && evento.pointerType !== 'pen') return;
+    cancelarToqueProlongado();
+    temporizador.current = window.setTimeout(() => {
+      temporizador.current = null;
+      aoAbrir(bloco);
+    }, 500);
+  };
+
+  useEffect(() => cancelarToqueProlongado, []);
 
   return (
     <article
@@ -50,12 +66,31 @@ export function CartaoDeItem({ bloco, configuracoes, aoAbrir, estatico = false }
       <button
         type="button"
         className="cartao__corpo"
-        onClick={() => aoAbrir(bloco)}
-        aria-label={`${bloco.atual.alimentoNome}, ${quantidade}. Abrir opções do item.`}
+        onPointerDown={iniciarToqueProlongado}
+        onPointerUp={cancelarToqueProlongado}
+        onPointerCancel={cancelarToqueProlongado}
+        onPointerLeave={cancelarToqueProlongado}
+        onPointerMove={cancelarToqueProlongado}
+        onContextMenu={(evento) => {
+          evento.preventDefault();
+          cancelarToqueProlongado();
+          aoAbrir(bloco);
+        }}
+        onClick={(evento) => {
+          const tipoDePonteiro = (evento.nativeEvent as PointerEvent).pointerType;
+          if (tipoDePonteiro === 'touch' || tipoDePonteiro === 'pen') return;
+          aoAbrir(bloco);
+        }}
+        onKeyDown={(evento) => {
+          if (evento.key !== 'Enter' && evento.key !== ' ') return;
+          evento.preventDefault();
+          aoAbrir(bloco);
+        }}
+        aria-label={`${bloco.atual.alimentoNome}, ${quantidade}. Segure para abrir as opções do item.`}
       >
         <span className="cartao__nome">{bloco.atual.alimentoNome}</span>
         <span className="cartao__quantidade">{quantidade}</span>
-        {substituido || movido || pendente || bloco.observacao ? (
+        {substituido || movido || pendente ? (
           <span className="cartao__etiquetas">
             {substituido ? <span className="etiqueta etiqueta--alterado">substituído</span> : null}
             {movido ? <span className="etiqueta etiqueta--alterado">movido</span> : null}
@@ -64,7 +99,7 @@ export function CartaoDeItem({ bloco, configuracoes, aoAbrir, estatico = false }
                 {bloco.motivoPendencia ?? 'Calorias pendentes'}
               </span>
             ) : null}
-            {bloco.observacao ? <span className="etiqueta">obs.</span> : null}
+
           </span>
         ) : null}
       </button>

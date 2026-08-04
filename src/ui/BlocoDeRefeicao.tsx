@@ -6,6 +6,16 @@ import { CartaoDeItem } from './CartaoDeItem';
 
 export const PREFIXO_DESTINO = 'refeicao:';
 
+function iconeDaRefeicao(nome: string): string {
+  const nomeNormalizado = nome.toLocaleLowerCase('pt-BR');
+  if (nomeNormalizado.includes('café')) return '☕';
+  if (nomeNormalizado.includes('lanche')) return '🍎';
+  if (nomeNormalizado.includes('almoço')) return '🍽️';
+  if (nomeNormalizado.includes('jantar')) return '🥗';
+  if (nomeNormalizado.includes('ceia')) return '🌙';
+  return '🍴';
+}
+
 export interface PropsDaRefeicao {
   refeicao: Refeicao;
   blocos: BlocoCalorico[];
@@ -32,6 +42,7 @@ export function BlocoDeRefeicao({
     <section className="refeicao" aria-labelledby={`refeicao-${refeicao.id}`}>
       <header className="refeicao__cabecalho">
         <h2 className="refeicao__nome" id={`refeicao-${refeicao.id}`}>
+          <span className="refeicao__icone" aria-hidden="true">{iconeDaRefeicao(refeicao.nome)}</span>
           {refeicao.nome}
         </h2>
         <span className="refeicao__contagem">

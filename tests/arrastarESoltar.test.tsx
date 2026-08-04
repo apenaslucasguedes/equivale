@@ -9,7 +9,7 @@ import { criarBloco, criarDieta, criarEstadoComPlanos, criarPlanoDeTeste, criarR
 
 function estadoParaArraste() {
   const dieta = criarDieta([
-    criarBloco({ id: 'a', nome: 'Arroz', refeicaoId: 'almoco', ordem: 0, kcal: 128 }),
+    { ...criarBloco({ id: 'a', nome: 'Arroz', refeicaoId: 'almoco', ordem: 0, kcal: 128 }), observacao: 'sem sal' },
     criarBloco({ id: 'b', nome: 'Feijão', refeicaoId: 'almoco', ordem: 1, kcal: 76 }),
     criarBloco({ id: 'c', nome: 'Salada', refeicaoId: 'almoco', ordem: 2, kcal: 35 }),
     criarBloco({ id: 'd', nome: 'Sopa', refeicaoId: 'jantar', ordem: 0, kcal: 90 }),
@@ -49,6 +49,18 @@ describe('arrastar e soltar cartões', () => {
     expect(pegador).toHaveAttribute('type', 'button');
     await usuario.click(pegador);
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+  });
+
+  it('abre as opções por toque prolongado e não exibe a observação no cartão', async () => {
+    const usuario = userEvent.setup();
+    await montar();
+    const cartao = screen.getByRole('button', { name: /^Arroz, 50 g/ });
+
+    expect(screen.queryByText('obs.')).not.toBeInTheDocument();
+    await usuario.pointer([{ keys: '[TouchA>]', target: cartao }]);
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+    expect(await screen.findByRole('dialog', {}, { timeout: 800 })).toBeInTheDocument();
+    await usuario.pointer([{ keys: '[/TouchA]', target: cartao }]);
   });
 
   it('reordena para baixo na mesma refeição por mouse usando apenas o pegador', async () => {

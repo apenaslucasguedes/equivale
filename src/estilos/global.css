@@ -1036,26 +1036,26 @@ textarea { -webkit-tap-highlight-color: rgb(98 189 232 / 16%); }
 
 .cabecalho {
   min-height: var(--cabecalho);
+  position: static;
   gap: var(--espaco-2);
   padding: 7px max(var(--espaco-4), calc((100vw - var(--largura-conteudo)) / 2));
   background: rgb(255 255 255 / 96%);
   border-bottom-color: rgb(61 80 98 / 11%);
   box-shadow: 0 1px 0 rgb(255 255 255 / 70%);
-  flex-wrap: wrap;
 }
 
 .cabecalho__marca { gap: 1px; }
 .cabecalho__nome img { height: 28px; max-width: min(154px, 42vw); }
 .cabecalho__assinatura { color: var(--cor-texto-secundario); font-size: 11px; font-weight: 500; }
 .cabecalho__acoes { gap: var(--espaco-1); }
-.cabecalho__planos {
-  flex: 0 0 100%;
-  min-width: 0;
-  padding-top: var(--espaco-2);
-  border-top: 1px solid rgb(61 80 98 / 9%);
+.navegacao-de-planos {
+  width: 100%;
+  max-width: var(--largura-conteudo);
+  margin: var(--espaco-4) auto 0;
+  padding-inline: var(--espaco-4);
 }
 
-.seletor-de-plano__guias { gap: var(--espaco-2); }
+.seletor-de-plano__guias { justify-content: center; gap: var(--espaco-2); }
 .seletor-de-plano__guia {
   min-height: 36px;
   padding: var(--espaco-2) var(--espaco-4);
@@ -1157,6 +1157,7 @@ textarea { -webkit-tap-highlight-color: rgb(98 189 232 / 16%); }
   font-weight: var(--peso-titulo);
   letter-spacing: -0.025em;
 }
+.refeicao__icone { margin-right: var(--espaco-2); font-size: 1.25em; }
 .refeicao__contagem {
   padding: 3px var(--espaco-2);
   border-radius: 999px;
@@ -1183,7 +1184,7 @@ textarea { -webkit-tap-highlight-color: rgb(98 189 232 / 16%); }
 .cartao--arrastando { opacity: 0.25; transform: scale(0.985); }
 .cartao--destino { outline-color: var(--cor-azul-acao); background: var(--cor-azul-suave); }
 .cartao--sobreposto { border-color: var(--cor-azul-acao); box-shadow: var(--sombra-interativa); transform: rotate(-0.6deg) scale(1.015); }
-.cartao__corpo { gap: 3px; min-height: 64px; padding: var(--espaco-3) var(--espaco-3) var(--espaco-3) var(--espaco-4); }
+.cartao__corpo { gap: 2px; min-height: 52px; padding: var(--espaco-2) var(--espaco-2) var(--espaco-2) var(--espaco-3); }
 .cartao__nome { color: var(--cor-texto); font-size: var(--texto-md); font-weight: 700; letter-spacing: -0.018em; }
 .cartao__quantidade { color: var(--cor-texto-secundario); font-size: var(--texto-sm); font-weight: 550; font-variant-numeric: tabular-nums; }
 .cartao__etiquetas { gap: var(--espaco-1); margin-top: var(--espaco-1); }
@@ -1192,8 +1193,8 @@ textarea { -webkit-tap-highlight-color: rgb(98 189 232 / 16%); }
 .cartao__etiquetas .etiqueta--alterado + .etiqueta--alterado { background: var(--cor-azul-suave); color: #246f93; }
 .etiqueta--pendente { background: var(--cor-atencao-suave); color: var(--cor-atencao); }
 .cartao__pegador {
-  width: 52px;
-  min-height: 64px;
+  width: 48px;
+  min-height: 52px;
   border-left-color: #e7ebed;
   background: var(--cor-superficie-sutil);
   color: #84929d;
