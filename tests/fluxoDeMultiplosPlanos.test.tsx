@@ -98,7 +98,7 @@ function guiaDoPlano(nome: string) {
 }
 
 describe('vários planos', () => {
-  it('mostra os planos como guias e os dias sugeridos fora delas', async () => {
+  it('mostra os planos como guias sem repetir os dias sugeridos', async () => {
     const usuario = userEvent.setup();
     const repositorio = new RepositorioDeEstado(new ArmazenamentoEmMemoria());
     montar(repositorio);
@@ -110,7 +110,7 @@ describe('vários planos', () => {
       screen.getByRole('tablist', { name: 'Planos alimentares' }),
     ).getAllByRole('tab');
     expect(guias.map((guia) => guia.textContent)).toEqual(['Dias úteis', 'Fim de semana']);
-    expect(screen.getByText(/Dias sugeridos:/)).toBeInTheDocument();
+    expect(screen.queryByText(/Dias sugeridos:/)).not.toBeInTheDocument();
   });
   it('mantém dois planos independentes e alterna entre eles pelo cabeçalho', async () => {
     const usuario = userEvent.setup();

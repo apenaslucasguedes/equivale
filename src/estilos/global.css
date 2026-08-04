@@ -1041,21 +1041,29 @@ textarea { -webkit-tap-highlight-color: rgb(98 189 232 / 16%); }
   background: rgb(255 255 255 / 96%);
   border-bottom-color: rgb(61 80 98 / 11%);
   box-shadow: 0 1px 0 rgb(255 255 255 / 70%);
+  flex-wrap: wrap;
 }
 
 .cabecalho__marca { gap: 1px; }
-.cabecalho__nome img { height: 32px; max-width: min(174px, 46vw); }
+.cabecalho__nome img { height: 28px; max-width: min(154px, 42vw); }
 .cabecalho__assinatura { color: var(--cor-texto-secundario); font-size: 11px; font-weight: 500; }
 .cabecalho__acoes { gap: var(--espaco-1); }
+.cabecalho__planos {
+  flex: 0 0 100%;
+  min-width: 0;
+  padding-top: var(--espaco-2);
+  border-top: 1px solid rgb(61 80 98 / 9%);
+}
 
-.seletor-de-plano__guias { gap: var(--espaco-1); margin-top: var(--espaco-1); }
+.seletor-de-plano__guias { gap: var(--espaco-2); }
 .seletor-de-plano__guia {
-  min-height: 28px;
-  padding: var(--espaco-1) var(--espaco-3);
-  border: 1px solid transparent;
+  min-height: 36px;
+  padding: var(--espaco-2) var(--espaco-4);
+  border: 1px solid var(--cor-borda-forte);
   border-radius: 999px;
+  background: var(--cor-superficie);
   color: var(--cor-texto-secundario);
-  font-size: var(--texto-xs);
+  font-size: var(--texto-sm);
   font-weight: 650;
   transition: background-color var(--duracao-rapida) var(--curva), color var(--duracao-rapida) var(--curva);
 }
@@ -1065,7 +1073,6 @@ textarea { -webkit-tap-highlight-color: rgb(98 189 232 / 16%); }
   color: #356f20;
 }
 
-.seletor-de-plano__legenda { font-size: 10px; color: var(--cor-texto-suave); }
 
 .botao {
   min-height: var(--altura-controle);
