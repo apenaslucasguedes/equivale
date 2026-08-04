@@ -93,12 +93,12 @@ async function importar(
   );
 }
 
-function seletorDePlano() {
-  return screen.getByLabelText('Plano atual') as HTMLSelectElement;
+function guiaDoPlano(nome: string) {
+  return screen.getByRole('tab', { name: nome });
 }
 
 describe('vários planos', () => {
-  it('mostra somente o nome dentro do select e os dias sugeridos fora dele', async () => {
+  it('mostra os planos como guias e os dias sugeridos fora delas', async () => {
     const usuario = userEvent.setup();
     const repositorio = new RepositorioDeEstado(new ArmazenamentoEmMemoria());
     montar(repositorio);
@@ -106,8 +106,10 @@ describe('vários planos', () => {
     await importar(usuario, DIAS_UTEIS, 'novo');
     await importar(usuario, FIM_DE_SEMANA, 'novo');
 
-    const opcoes = within(seletorDePlano()).getAllByRole('option');
-    expect(opcoes.map((opcao) => opcao.textContent)).toEqual(['Dias úteis', 'Fim de semana']);
+    const guias = within(
+      screen.getByRole('tablist', { name: 'Planos alimentares' }),
+    ).getAllByRole('tab');
+    expect(guias.map((guia) => guia.textContent)).toEqual(['Dias úteis', 'Fim de semana']);
     expect(screen.getByText(/Dias sugeridos:/)).toBeInTheDocument();
   });
   it('mantém dois planos independentes e alterna entre eles pelo cabeçalho', async () => {
@@ -124,17 +126,12 @@ describe('vários planos', () => {
     expect(await screen.findByText('Tapioca')).toBeInTheDocument();
     expect(screen.queryByText('Pão francês')).not.toBeInTheDocument();
 
-    // Os dois planos aparecem no seletor, com os dias sugeridos como legenda.
-    // O select contém somente nomes; os dias ficam na legenda secundária.
-    const seletor = seletorDePlano();
-    expect([...seletor.options].map((o) => o.textContent)).toEqual([
-      'Dias úteis',
-      'Fim de semana',
-    ]);
-    expect(seletor.value).toBe('fim-de-semana');
+    // Os dois planos aparecem como guias, com os dias sugeridos como legenda.
+    expect(guiaDoPlano('Dias úteis')).toHaveAttribute('aria-selected', 'false');
+    expect(guiaDoPlano('Fim de semana')).toHaveAttribute('aria-selected', 'true');
 
     // Voltar manualmente para o outro plano traz os itens dele de volta.
-    await usuario.selectOptions(seletor, 'dias-uteis');
+    await usuario.click(guiaDoPlano('Dias úteis'));
     expect(await screen.findByText('Pão francês')).toBeInTheDocument();
     expect(screen.queryByText('Tapioca')).not.toBeInTheDocument();
   }, 40000);
@@ -153,7 +150,7 @@ describe('vários planos', () => {
       within(await screen.findByRole('dialog')).getByRole('button', { name: /^Café da manhã/ }),
     );
 
-    await usuario.selectOptions(seletorDePlano(), 'dias-uteis');
+    await usuario.click(guiaDoPlano('Dias úteis'));
 
     // O plano dos dias úteis continua exatamente como foi importado.
     expect(await screen.findByText('Pão francês')).toBeInTheDocument();
@@ -170,12 +167,13 @@ describe('vários planos', () => {
 
     expect(await screen.findByText('Cuscuz')).toBeInTheDocument();
 
-    const seletor = seletorDePlano();
-    expect(seletor.options).toHaveLength(2);
-    expect([...seletor.options].map((o) => o.value)).toEqual(['dias-uteis', 'fim-de-semana']);
+    expect(screen.getAllByRole('tab').map((guia) => guia.textContent)).toEqual([
+      'Dias úteis (revisado)',
+      'Fim de semana',
+    ]);
 
     // O outro plano ficou intacto.
-    await usuario.selectOptions(seletor, 'fim-de-semana');
+    await usuario.click(guiaDoPlano('Fim de semana'));
     expect(await screen.findByText('Tapioca')).toBeInTheDocument();
   }, 40000);
 
@@ -187,7 +185,7 @@ describe('vários planos', () => {
     await importar(usuario, DIAS_UTEIS_REVISADO, 'novo');
 
     // Nada foi substituído: agora são dois planos.
-    expect(seletorDePlano().options).toHaveLength(2);
+    expect(screen.getAllByRole('tab')).toHaveLength(2);
     expect(await screen.findByText('Cuscuz')).toBeInTheDocument();
   }, 40000);
 
@@ -244,7 +242,7 @@ describe('vários planos', () => {
     });
 
     await importar(usuario, FIM_DE_SEMANA, 'novo');
-    await usuario.selectOptions(seletorDePlano(), 'dias-uteis');
+    await usuario.click(guiaDoPlano('Dias úteis'));
 
     await usuario.click(screen.getByRole('button', { name: 'Abrir ajustes' }));
     await usuario.click(await screen.findByRole('button', { name: /Restaurar dieta original/ }));

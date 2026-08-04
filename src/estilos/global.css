@@ -147,7 +147,7 @@ textarea {
   gap: 4px;
 }
 
-/* Seletor compacto do plano atual. A troca é sempre manual. */
+/* Guias compactas dos planos. A troca é sempre manual. */
 
 .seletor-de-plano {
   display: block;
@@ -164,25 +164,33 @@ textarea {
   white-space: nowrap;
 }
 
-.seletor-de-plano__campo {
+.seletor-de-plano__guias {
+  display: flex;
   max-width: 100%;
-  padding: 1px 18px 1px 6px;
-  margin-left: -6px;
-  border: 1px solid transparent;
+  gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.seletor-de-plano__guias::-webkit-scrollbar { display: none; }
+
+.seletor-de-plano__guia {
+  flex: 0 0 auto;
+  padding: 4px 8px;
+  border: 0;
   border-radius: var(--raio-p);
   background: transparent;
-  color: var(--texto-2);
+  color: var(--texto-3);
   font: inherit;
   font-size: 12px;
   font-weight: 600;
   line-height: 1.3;
   cursor: pointer;
-  appearance: auto;
 }
 
-.seletor-de-plano__campo:focus-visible {
-  outline: 2px solid var(--primaria);
-  outline-offset: 1px;
+.seletor-de-plano__guia--ativa {
+  background: var(--primaria-clara);
+  color: var(--primaria-escura);
 }
 
 .seletor-de-plano__legenda {
@@ -1032,7 +1040,7 @@ textarea { -webkit-tap-highlight-color: rgb(98 189 232 / 16%); }
 
 .conteudo {
   max-width: var(--largura-conteudo);
-  padding: var(--espaco-5) var(--espaco-4) calc(var(--espaco-10) + var(--seguro-baixo));
+  padding: var(--espaco-8) var(--espaco-4) calc(var(--espaco-10) + var(--seguro-baixo));
 }
 
 .cabecalho {
@@ -1050,15 +1058,21 @@ textarea { -webkit-tap-highlight-color: rgb(98 189 232 / 16%); }
 .seletor-de-plano--unico { color: var(--cor-texto-secundario); font-size: 11px; font-weight: 500; }
 .cabecalho__acoes { gap: var(--espaco-1); }
 
-.seletor-de-plano__campo {
-  min-height: 22px;
-  padding: 0 var(--espaco-1);
-  margin-left: calc(var(--espaco-1) * -1);
-  background-image: none;
-  appearance: auto;
+.seletor-de-plano__guias { gap: var(--espaco-1); margin-top: var(--espaco-1); }
+.seletor-de-plano__guia {
+  min-height: 28px;
+  padding: var(--espaco-1) var(--espaco-3);
+  border: 1px solid transparent;
+  border-radius: 999px;
   color: var(--cor-texto-secundario);
   font-size: var(--texto-xs);
   font-weight: 650;
+  transition: background-color var(--duracao-rapida) var(--curva), color var(--duracao-rapida) var(--curva);
+}
+.seletor-de-plano__guia--ativa {
+  border-color: #b8dfaa;
+  background: var(--cor-verde-suave);
+  color: #356f20;
 }
 
 .seletor-de-plano__legenda { font-size: 10px; color: var(--cor-texto-suave); }

@@ -1,5 +1,5 @@
 /**
- * Seletor compacto do plano atual, no cabeçalho.
+ * Guias compactas dos planos, no cabeçalho.
  *
  * A troca é sempre MANUAL. Os dias sugeridos aparecem só como legenda: nesta
  * versão o Equivale não troca de plano sozinho conforme o dia da semana.
@@ -43,20 +43,24 @@ export function SeletorDePlano({ planos, planoAtivoId, aoTrocar }: PropsDoSeleto
 
   return (
     <div className="seletor-de-plano">
-      <label>
-        <span className="visualmente-oculto">Plano atual</span>
-        <select
-          className="seletor-de-plano__campo"
-          value={planoAtivoId ?? ''}
-          onChange={(evento) => aoTrocar(evento.target.value)}
-        >
-          {planos.map((plano) => (
-            <option key={plano.id} value={plano.id}>
+      <div className="seletor-de-plano__guias" role="tablist" aria-label="Planos alimentares">
+        {planos.map((plano) => {
+          const selecionado = plano.id === ativo?.id;
+          return (
+            <button
+              key={plano.id}
+              type="button"
+              className={`seletor-de-plano__guia${selecionado ? ' seletor-de-plano__guia--ativa' : ''}`}
+              role="tab"
+              aria-selected={selecionado}
+              title={rotuloDoPlano(plano)}
+              onClick={() => aoTrocar(plano.id)}
+            >
               {plano.nome}
-            </option>
-          ))}
-        </select>
-      </label>
+            </button>
+          );
+        })}
+      </div>
       {legenda ? <span className="seletor-de-plano__legenda">{legenda}</span> : null}
     </div>
   );
