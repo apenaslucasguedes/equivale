@@ -26,7 +26,6 @@ import {
   CONFIGURACOES_PADRAO,
   DIAS_DA_SEMANA,
   NOME_DO_PLANO_MIGRADO,
-  UNIDADES,
   VERSAO_DO_ESQUEMA,
   estadoInicial,
   falha,
@@ -51,9 +50,15 @@ function numero(valor: unknown, padrao = 0): number {
 }
 
 function unidade(valor: unknown): Unidade {
-  return typeof valor === 'string' && (UNIDADES as string[]).includes(valor)
-    ? (valor as Unidade)
-    : 'g';
+  return typeof valor === 'string' && valor.trim() ? valor.trim() : 'g';
+}
+
+function descricaoMedida(valor: Record<string, unknown>): { descricaoMedidaOriginal?: string | null } {
+  if (!('descricaoMedidaOriginal' in valor)) return {};
+  const descricao = valor.descricaoMedidaOriginal;
+  return typeof descricao === 'string' || descricao === null
+    ? { descricaoMedidaOriginal: descricao as string | null }
+    : {};
 }
 
 function sanearRefeicao(valor: unknown, indice: number): Refeicao | null {
@@ -83,6 +88,7 @@ function sanearBloco(valor: unknown, indice: number): BlocoCalorico | null {
       alimentoId: typeof original.alimentoId === 'string' ? original.alimentoId : null,
       quantidade: numero(original.quantidade, 0),
       unidade: unidade(original.unidade),
+      ...descricaoMedida(original),
       refeicaoId: refeicaoOriginal,
     },
     atual: {
@@ -90,6 +96,11 @@ function sanearBloco(valor: unknown, indice: number): BlocoCalorico | null {
       alimentoId: typeof atual.alimentoId === 'string' ? atual.alimentoId : null,
       quantidade: numero(atual.quantidade, numero(original.quantidade, 0)),
       unidade: unidade(atual.unidade ?? original.unidade),
+      ...(Object.prototype.hasOwnProperty.call(atual, 'descricaoMedidaOriginal')
+        ? descricaoMedida(atual)
+        : typeof original.descricaoMedidaOriginal === 'string'
+          ? { descricaoMedidaOriginal: original.descricaoMedidaOriginal }
+          : {}),
       refeicaoId: texto(atual.refeicaoId, refeicaoOriginal),
       medidaCaseira: typeof atual.medidaCaseira === 'string' ? atual.medidaCaseira : null,
     },
@@ -98,6 +109,15 @@ function sanearBloco(valor: unknown, indice: number): BlocoCalorico | null {
       origem === 'calculada' || origem === 'pendente' || origem === 'informada'
         ? origem
         : 'informada',
+    ...(typeof valor.motivoPendencia === 'string' ? { motivoPendencia: valor.motivoPendencia } : {}),
+    ...(Array.isArray(valor.opcoesCorrespondencia)
+      ? {
+          opcoesCorrespondencia: valor.opcoesCorrespondencia
+            .filter(ehObjeto)
+            .map((opcao) => ({ id: texto(opcao.id), nome: texto(opcao.nome) }))
+            .filter((opcao) => opcao.id && opcao.nome),
+        }
+      : {}),
     observacao: typeof valor.observacao === 'string' ? valor.observacao : null,
     ordem: numero(valor.ordem, indice),
   };

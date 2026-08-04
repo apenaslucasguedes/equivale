@@ -45,6 +45,7 @@ export interface ItemImportado {
   nomeAlimento: string;
   quantidade: number;
   unidade: Unidade;
+  descricaoMedidaOriginal: string | null;
   /** Peso explícito em gramas, quando a unidade não é g/ml. */
   gramas: number | null;
   /** Calorias prescritas informadas no arquivo. */
@@ -101,6 +102,7 @@ function interpretarUnidade(bruto: string): Unidade | null {
 interface QuantidadeLida {
   quantidade: number;
   unidade: Unidade;
+  descricaoMedidaOriginal: string | null;
 }
 
 /** Lê "120 g", "1 unidade", "1,5 colher de sopa", "200ml". */
@@ -113,10 +115,9 @@ function lerQuantidade(bruto: string): QuantidadeLida | null {
   if (quantidade === null || quantidade < 0) return null;
 
   const restante = (casamento[2] ?? '').trim();
-  const unidade = restante ? interpretarUnidade(restante) : 'g';
-  if (!unidade) return null;
+  const unidade = restante ? (interpretarUnidade(restante) ?? restante) : 'g';
 
-  return { quantidade, unidade };
+  return { quantidade, unidade, descricaoMedidaOriginal: restante || null };
 }
 
 /** Lê "peso 50 g", "peso: 50g", "50 g". Devolve gramas. */
@@ -295,6 +296,7 @@ export function analisarMarkdown(conteudo: string): ResultadoDaAnalise {
         nomeAlimento,
         quantidade: quantidade.quantidade,
         unidade: quantidade.unidade,
+        descricaoMedidaOriginal: quantidade.descricaoMedidaOriginal,
         gramas,
         kcalInformada,
         observacao,

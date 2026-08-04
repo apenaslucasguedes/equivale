@@ -7,6 +7,7 @@ import {
   resolverItens,
 } from '../src/importacao/resolucao';
 import { RepositorioEmMemoria, BASE_VAZIA } from '../src/data/alimentos/repositorio';
+import type { BaseDeAlimentos } from '../src/domain/types';
 import { criarRepositorioDeTeste } from './apoio/fabricas';
 
 let repositorio: RepositorioEmMemoria;
@@ -50,13 +51,13 @@ describe('resolução das calorias do bloco', () => {
     const { resolvidos } = resolverTexto('# D\n## Almoço\n- Arroz sete grãos artesanal | 100 g');
     expect(resolvidos[0]?.origem).toBe('pendente');
     expect(resolvidos[0]?.kcal).toBe(0);
-    expect(resolvidos[0]?.motivo).toContain('sem correspondência exata');
+    expect(resolvidos[0]?.motivo).toBe('Alimento não encontrado na base');
   });
 
   it('deixa pendente quando a unidade não converte em gramas', () => {
     const { resolvidos } = resolverTexto('# D\n## Almoço\n- Arroz branco cozido | 1 porção');
     expect(resolvidos[0]?.origem).toBe('pendente');
-    expect(resolvidos[0]?.motivo).toContain('converter');
+    expect(resolvidos[0]?.motivo).toBe('Medida sem peso conhecido');
   });
 
   it('não usa semelhança aproximada de nome', () => {
@@ -83,8 +84,63 @@ describe('resolução das calorias do bloco', () => {
     vazio.definirBase(BASE_VAZIA);
     const analise = analisarMarkdown('# D\n## Almoço\n- Arroz | 100 g');
     const resolvidos = resolverItens(analise.itens, vazio);
-    expect(resolvidos[0]?.motivo).toContain('não há base de alimentos carregada');
+    expect(resolvidos[0]?.motivo).toBe('Base nutricional não carregada');
   });
+
+  it('resolve porção caseira usando toda a descrição original da medida', () => {
+    const { resolvidos } = resolverTexto('# D\n## Almoço\n- Arroz branco cozido | 4 colheres de sopa');
+    expect(resolvidos[0]?.origem).toBe('calculada');
+    expect(resolvidos[0]?.kcal).toBeCloseTo(128, 6);
+  });
+
+  it('mantém unidade livre sem peso como pendente, sem descartar o item', () => {
+    const { analise, resolvidos } = resolverTexto('# D\n## Almoço\n- Arroz branco cozido | 1 bife');
+    expect(analise.itens).toHaveLength(1);
+    expect(resolvidos[0]?.origem).toBe('pendente');
+    expect(resolvidos[0]?.motivo).toBe('Medida sem peso conhecido');
+  });
+
+  it('mantém correspondência ambígua pendente e apresenta as opções', () => {
+    const baseAmbigua: BaseDeAlimentos = {
+      versao: 1,
+      fonte: 'TEST_ONLY',
+      somenteParaTeste: true,
+      alimentos: [
+        { ...repositorio.todos()[0]!, id: 'a', nome: 'Arroz A', aliases: ['arroz da casa'] },
+        { ...repositorio.todos()[0]!, id: 'b', nome: 'Arroz B', aliases: ['arroz da casa'] },
+      ],
+    };
+    const ambiguo = new RepositorioEmMemoria(async () => baseAmbigua);
+    ambiguo.definirBase(baseAmbigua);
+    const analise = analisarMarkdown('# D\n## Almoço\n- Arroz da casa | 100 g');
+    const resolvido = resolverItens(analise.itens, ambiguo)[0];
+    expect(resolvido?.origem).toBe('pendente');
+    expect(resolvido?.motivo).toBe('Mais de uma correspondência encontrada');
+    expect(resolvido?.opcoesCorrespondencia.map((a) => a.id)).toEqual(['a', 'b']);
+  });
+
+  it.each(['banana-maçã crua', 'patinho sem gordura grelhado'])(
+    'resolve a variação controlada cadastrada como alias exato: %s',
+    (alias) => {
+      const base: BaseDeAlimentos = {
+        versao: 1,
+        fonte: 'TEST_ONLY',
+        somenteParaTeste: true,
+        alimentos: [
+          {
+            ...repositorio.todos()[0]!,
+            id: 'controlado',
+            nome: 'Alimento controlado',
+            aliases: ['banana-maçã crua', 'patinho sem gordura grelhado'],
+          },
+        ],
+      };
+      const controlado = new RepositorioEmMemoria(async () => base);
+      controlado.definirBase(base);
+      const analise = analisarMarkdown(`# D\n## Almoço\n- ${alias} | 100 g`);
+      expect(resolverItens(analise.itens, controlado)[0]?.alimentoId).toBe('controlado');
+    },
+  );
 
   it('conta os pendentes', () => {
     const { resolvidos } = resolverTexto(
@@ -153,5 +209,12 @@ describe('montarDieta', () => {
     expect(dieta.blocos).toHaveLength(1);
     expect(dieta.blocos[0]?.origemDasCalorias).toBe('pendente');
     expect(dieta.blocos[0]?.original.alimentoNome).toBe('Coisa desconhecida');
+  });
+
+  it('preserva a descrição original da medida no bloco', () => {
+    const { analise, resolvidos } = resolverTexto('# D\n## Almoço\n- Mandioca cozida | 1 pedaço');
+    const bloco = montarDieta(analise, resolvidos).blocos[0];
+    expect(bloco?.original.descricaoMedidaOriginal).toBe('pedaço');
+    expect(bloco?.atual.descricaoMedidaOriginal).toBe('pedaço');
   });
 });

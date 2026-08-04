@@ -1,0 +1,6469 @@
+{
+  "geradoAntesDaBaseV1": true,
+  "fontesDoInventario": [
+    "incoming\\data\\catalogo-equivalencias-equivale.md",
+    "src\\importacao\\modelo.ts"
+  ],
+  "ocorrenciasExtraidas": 425,
+  "nomesNormalizadosUnicos": 416,
+  "gruposComDuplicatasOuVariantes": 9,
+  "alimentos": [
+    {
+      "chaveNormalizada": "abacate cru",
+      "nomes": [
+        "Abacate, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "abacaxi cru",
+      "nomes": [
+        "Abacaxi, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "abobora cabotia assada",
+      "nomes": [
+        "Abóbora cabotiá, assada"
+      ],
+      "preparos": [
+        "assada"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "abobora cabotian japonesa cozida",
+      "nomes": [
+        "Abóbora Cabotian/Japonesa cozida"
+      ],
+      "preparos": [
+        "cozida"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "abobora moranga cozida",
+      "nomes": [
+        "Abóbora moranga cozida"
+      ],
+      "preparos": [
+        "cozida"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "abobrinha italiana crua",
+      "nomes": [
+        "Abobrinha, italiana, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "acai frooty industrializado",
+      "nomes": [
+        "Açaí, frooty, industrializado"
+      ],
+      "preparos": [
+        "industrializado"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "acai polpa congelada",
+      "nomes": [
+        "Açaí, polpa, congelada"
+      ],
+      "preparos": [
+        "congelada"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "acelga crua",
+      "nomes": [
+        "Acelga, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "acem cozido sem gordura",
+      "nomes": [
+        "Acém cozido, sem gordura"
+      ],
+      "preparos": [
+        "sem gordura; cozido"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "acerola crua",
+      "nomes": [
+        "Acerola, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "achocolatado po",
+      "nomes": [
+        "Achocolatado, pó"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "acompanhamentos mcdonald s mcfritas cheddar e bacon",
+      "nomes": [
+        "Acompanhamentos, McDonald's, McFritas Cheddar e Bacon"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "acompanhamentos mcdonald s mcfritas grande",
+      "nomes": [
+        "Acompanhamentos, McDonald's, McFritas Grande"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "acompanhamentos mcdonald s mcfritas media",
+      "nomes": [
+        "Acompanhamentos, McDonald's, McFritas Média"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "acompanhamentos mcdonald s mcfritas pequena",
+      "nomes": [
+        "Acompanhamentos, McDonald's, McFritas Pequena"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "acompanhamentos mcdonald s mcnuggets 6 unidades",
+      "nomes": [
+        "Acompanhamentos, McDonald's, McNuggets 6 unidades"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "acucar refinado",
+      "nomes": [
+        "Açúcar, refinado"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "agriao cru",
+      "nomes": [
+        "Agrião, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "agua de coco",
+      "nomes": [
+        "Água de coco"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "aipo cru",
+      "nomes": [
+        "Aipo, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 2
+    },
+    {
+      "chaveNormalizada": "albumina",
+      "nomes": [
+        "Albumina"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "alcatra bovina grelhada",
+      "nomes": [
+        "Alcatra bovina grelhada"
+      ],
+      "preparos": [
+        "grelhada"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "alface americana",
+      "nomes": [
+        "Alface americana"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "alface crespa",
+      "nomes": [
+        "Alface, crespa"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "alface lisa",
+      "nomes": [
+        "Alface lisa"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "alface roxa",
+      "nomes": [
+        "Alface roxa"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "alho poro cru",
+      "nomes": [
+        "Alho-poró, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "ameixa crua",
+      "nomes": [
+        "Ameixa, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "ameixa seca",
+      "nomes": [
+        "Ameixa seca"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "amendoa torrada com sal",
+      "nomes": [
+        "Amêndoa torrada com sal"
+      ],
+      "preparos": [
+        "torrada com sal; torrada"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "amendoa torrada sem sal",
+      "nomes": [
+        "Amêndoa torrada sem sal"
+      ],
+      "preparos": [
+        "torrada sem sal; torrada"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "amendoim cru",
+      "nomes": [
+        "Amendoim cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "amendoim torrado com sal",
+      "nomes": [
+        "Amendoim torrado com sal"
+      ],
+      "preparos": [
+        "torrado com sal; torrado"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "amora crua",
+      "nomes": [
+        "Amora, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "arroz branco cozido",
+      "nomes": [
+        "Arroz branco cozido",
+        "Arroz branco, cozido"
+      ],
+      "preparos": [
+        "cozido"
+      ],
+      "origens": [
+        "lista-substituicoes",
+        "modelo-markdown"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana",
+        "modelo"
+      ],
+      "ocorrencias": 2
+    },
+    {
+      "chaveNormalizada": "arroz integral cozido",
+      "nomes": [
+        "Arroz integral, cozido"
+      ],
+      "preparos": [
+        "integral; cozido"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "aspargo cozido",
+      "nomes": [
+        "Aspargo, cozido"
+      ],
+      "preparos": [
+        "cozido"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 2
+    },
+    {
+      "chaveNormalizada": "atum conservado em oleo",
+      "nomes": [
+        "Atum conservado em óleo"
+      ],
+      "preparos": [
+        "conservado em óleo"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "atum solido ao natural conservado",
+      "nomes": [
+        "Atum sólido ao natural conservado"
+      ],
+      "preparos": [
+        "ao natural conservado"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "aveia em flocos",
+      "nomes": [
+        "Aveia em flocos"
+      ],
+      "preparos": [],
+      "origens": [
+        "modelo-markdown"
+      ],
+      "planos": [
+        "modelo"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "aveia farelo crua",
+      "nomes": [
+        "Aveia, farelo, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "aveia farinha crua",
+      "nomes": [
+        "Aveia, farinha, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "aveia flocos crua",
+      "nomes": [
+        "Aveia, flocos, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "aveia flocos finos",
+      "nomes": [
+        "Aveia, flocos, finos"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "avela",
+      "nomes": [
+        "Avelã"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "azeite de oliva extra virgem",
+      "nomes": [
+        "Azeite, de oliva, extra virgem"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "azeitona preta",
+      "nomes": [
+        "Azeitona preta"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "azeitona verde",
+      "nomes": [
+        "Azeitona verde"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "bacalhau refogado",
+      "nomes": [
+        "Bacalhau refogado"
+      ],
+      "preparos": [
+        "refogado"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "bala fini geral",
+      "nomes": [
+        "Bala Fini, geral"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "banana da terra crua",
+      "nomes": [
+        "Banana, da terra, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "banana maca crua",
+      "nomes": [
+        "Banana, maçã, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "banana nanica crua",
+      "nomes": [
+        "Banana, nanica, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "banana ouro crua",
+      "nomes": [
+        "Banana, ouro, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "banana prata",
+      "nomes": [
+        "Banana prata"
+      ],
+      "preparos": [],
+      "origens": [
+        "modelo-markdown"
+      ],
+      "planos": [
+        "modelo"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "banana prata crua",
+      "nomes": [
+        "Banana, prata, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "batata baroa cozida",
+      "nomes": [
+        "Batata baroa, cozida"
+      ],
+      "preparos": [
+        "cozida"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "batata doce assada",
+      "nomes": [
+        "Batata doce assada"
+      ],
+      "preparos": [
+        "assada"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "batata doce cozida",
+      "nomes": [
+        "Batata doce, cozida",
+        "Batata-doce cozida"
+      ],
+      "preparos": [
+        "cozida"
+      ],
+      "origens": [
+        "lista-substituicoes",
+        "modelo-markdown"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana",
+        "modelo"
+      ],
+      "ocorrencias": 2
+    },
+    {
+      "chaveNormalizada": "batata inglesa assada",
+      "nomes": [
+        "Batata inglesa, assada"
+      ],
+      "preparos": [
+        "assada"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "batata inglesa cozida",
+      "nomes": [
+        "Batata inglesa, cozida"
+      ],
+      "preparos": [
+        "cozida"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "batata palha",
+      "nomes": [
+        "Batata palha"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "beijinho",
+      "nomes": [
+        "Beijinho"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "berinjela cozida",
+      "nomes": [
+        "Berinjela, cozida"
+      ],
+      "preparos": [
+        "cozida"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 2
+    },
+    {
+      "chaveNormalizada": "beterraba cozida",
+      "nomes": [
+        "Beterraba cozida"
+      ],
+      "preparos": [
+        "cozida"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "biscoito bono",
+      "nomes": [
+        "Biscoito, bono"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "biscoito cream cracker",
+      "nomes": [
+        "Biscoito, cream cracker"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "biscoito cream cracker integral",
+      "nomes": [
+        "Biscoito, cream cracker, integral"
+      ],
+      "preparos": [
+        "integral"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "biscoito de arroz",
+      "nomes": [
+        "Biscoito de Arroz"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "biscoito de arroz integral",
+      "nomes": [
+        "Biscoito de arroz integral"
+      ],
+      "preparos": [
+        "integral"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "biscoito de maisena",
+      "nomes": [
+        "Biscoito de maisena"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "biscoito de polvilho",
+      "nomes": [
+        "Biscoito de polvilho"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "biscoito oreo",
+      "nomes": [
+        "Biscoito, oreo"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "biscoito recheado geral",
+      "nomes": [
+        "Biscoito, recheado, geral"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "bisteca de porco assada",
+      "nomes": [
+        "Bisteca de porco, assada"
+      ],
+      "preparos": [
+        "assada"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "bolinho ana maria",
+      "nomes": [
+        "Bolinho, Ana Maria"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "bolo de aipim",
+      "nomes": [
+        "Bolo de aipim"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "bolo de cenoura com cobertura de chocolate",
+      "nomes": [
+        "Bolo de cenoura com cobertura de chocolate"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "bolo de chocolate",
+      "nomes": [
+        "Bolo de chocolate"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "bolo de coco",
+      "nomes": [
+        "Bolo de coco"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "bolo de milho",
+      "nomes": [
+        "Bolo de milho"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "bolos recheados geral",
+      "nomes": [
+        "Bolos recheados, geral"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "bombom ouro branco",
+      "nomes": [
+        "Bombom, ouro branco"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "bombom sonho de valsa",
+      "nomes": [
+        "Bombom, sonho de valsa"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "brigadeiro",
+      "nomes": [
+        "Brigadeiro"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "brocolis cozido",
+      "nomes": [
+        "Brócolis, cozido"
+      ],
+      "preparos": [
+        "cozido"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "brownie geral",
+      "nomes": [
+        "Brownie, geral"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "cacau em po",
+      "nomes": [
+        "Cacau em pó"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "cafe com leite",
+      "nomes": [
+        "Café com leite"
+      ],
+      "preparos": [],
+      "origens": [
+        "modelo-markdown"
+      ],
+      "planos": [
+        "modelo"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "cafe infusao 10",
+      "nomes": [
+        "Café, infusão 10%"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "caju cru",
+      "nomes": [
+        "Caju, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "california roll",
+      "nomes": [
+        "Califórnia Roll"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "camarao cozido",
+      "nomes": [
+        "Camarão cozido"
+      ],
+      "preparos": [
+        "cozido"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "capa de contra file sem gordura grelhado",
+      "nomes": [
+        "Capa de contra-filé sem gordura, grelhado"
+      ],
+      "preparos": [
+        "sem gordura; grelhado"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "caqui chocolate cru",
+      "nomes": [
+        "Caqui, chocolate, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "carambola crua",
+      "nomes": [
+        "Carambola, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "caseina",
+      "nomes": [
+        "Caseina"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "casquinha de sorvete mcdonald s",
+      "nomes": [
+        "Casquinha de sorvete, McDonald's"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "castanha de caju crua sem sal",
+      "nomes": [
+        "Castanha-de-caju crua sem sal"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "castanha de caju torrada salgada",
+      "nomes": [
+        "Castanha-de-caju torrada salgada"
+      ],
+      "preparos": [
+        "torrada salgada; torrada"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "castanha do brasil",
+      "nomes": [
+        "Castanha-do-Brasil"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "cebola branca crua",
+      "nomes": [
+        "Cebola, branca, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "cebolinha crua",
+      "nomes": [
+        "Cebolinha, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "cenoura baby cozida",
+      "nomes": [
+        "Cenoura, baby, cozida"
+      ],
+      "preparos": [
+        "cozida"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "cenoura cozida",
+      "nomes": [
+        "Cenoura, cozida"
+      ],
+      "preparos": [
+        "cozida"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "cenoura crua",
+      "nomes": [
+        "Cenoura, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "cereal geral",
+      "nomes": [
+        "Cereal, geral"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "cereja crua",
+      "nomes": [
+        "Cereja, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "cerveja todas",
+      "nomes": [
+        "Cerveja, todas"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "cha erva doce infusao 5",
+      "nomes": [
+        "Chá, erva-doce, infusão 5%"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "cha mate infusao 5",
+      "nomes": [
+        "Chá, mate, infusão 5%"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "cha preto infusao 5",
+      "nomes": [
+        "Chá, preto, infusão 5%"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "chocolate todos",
+      "nomes": [
+        "Chocolate, todos"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "chuchu cozido",
+      "nomes": [
+        "Chuchu, cozido"
+      ],
+      "preparos": [
+        "cozido"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "ciriguela crua",
+      "nomes": [
+        "Ciriguela, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "clara de ovo de galinha",
+      "nomes": [
+        "Clara de ovo de galinha"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "coentro cru",
+      "nomes": [
+        "Coentro, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "contra file sem gordura cru",
+      "nomes": [
+        "Contra-filé sem gordura, cru"
+      ],
+      "preparos": [
+        "sem gordura; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "contra file sem gordura grelhado",
+      "nomes": [
+        "Contra-filé sem gordura, grelhado"
+      ],
+      "preparos": [
+        "sem gordura; grelhado"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "cookies geral",
+      "nomes": [
+        "Cookies, geral"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "couve crua",
+      "nomes": [
+        "Couve, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "couve flor cozida",
+      "nomes": [
+        "Couve-flor, cozida"
+      ],
+      "preparos": [
+        "cozida"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "coxa de frango sem pele cozida",
+      "nomes": [
+        "Coxa de frango sem pele, cozida"
+      ],
+      "preparos": [
+        "sem pele; cozida"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "coxao duro sem gordura cozido",
+      "nomes": [
+        "Coxão duro, sem gordura, cozido"
+      ],
+      "preparos": [
+        "sem gordura; cozido"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "coxao mole sem gordura cozido",
+      "nomes": [
+        "Coxão mole, sem gordura, cozido"
+      ],
+      "preparos": [
+        "sem gordura; cozido"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "creme de avela geral",
+      "nomes": [
+        "Creme de avelã, geral"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "creme de ricota sem lactose",
+      "nomes": [
+        "Creme, de ricota, sem lactose"
+      ],
+      "preparos": [
+        "sem lactose"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "cuscuz de milho cozido",
+      "nomes": [
+        "Cuscuz de milho, cozido"
+      ],
+      "preparos": [
+        "cozido"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "cuscuz de milho cru",
+      "nomes": [
+        "Cuscuz de milho, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "cuscuz marroquino cozido",
+      "nomes": [
+        "Cuscuz Marroquino Cozido"
+      ],
+      "preparos": [
+        "cozido"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "damasco cru",
+      "nomes": [
+        "Damasco, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "doce de abobora cremos",
+      "nomes": [
+        "Doce, de abóbora, cremos"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "doce de leite",
+      "nomes": [
+        "Doce de leite"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "doritos",
+      "nomes": [
+        "Doritos"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "erva doce",
+      "nomes": [
+        "Erva-doce"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "ervilha em grao cozida",
+      "nomes": [
+        "Ervilha em grão, cozida"
+      ],
+      "preparos": [
+        "cozida"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "ervilha enlatada drenada",
+      "nomes": [
+        "Ervilha, enlatada, drenada"
+      ],
+      "preparos": [
+        "drenada; enlatada"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "escarola",
+      "nomes": [
+        "Escarola"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "esfirra todas",
+      "nomes": [
+        "Esfirra, todas"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "espinafre cru",
+      "nomes": [
+        "Espinafre, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "fandangos de presunto",
+      "nomes": [
+        "Fandangos de presunto"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "farinha de amendoa",
+      "nomes": [
+        "Farinha de amêndoa"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "farinha de arroz",
+      "nomes": [
+        "Farinha de arroz"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "farinha de linhaca",
+      "nomes": [
+        "Farinha de linhaça"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "farofa",
+      "nomes": [
+        "Farofa"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "feijao carioca cozido",
+      "nomes": [
+        "Feijão carioca cozido",
+        "Feijão carioca, cozido"
+      ],
+      "preparos": [
+        "cozido"
+      ],
+      "origens": [
+        "lista-substituicoes",
+        "modelo-markdown"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana",
+        "modelo"
+      ],
+      "ocorrencias": 2
+    },
+    {
+      "chaveNormalizada": "feijao fradinho cozido",
+      "nomes": [
+        "Feijão fradinho, cozido"
+      ],
+      "preparos": [
+        "cozido"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "feijao preto cozido",
+      "nomes": [
+        "Feijão preto, cozido"
+      ],
+      "preparos": [
+        "cozido"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "feijao roxo cozido",
+      "nomes": [
+        "Feijão roxo, cozido"
+      ],
+      "preparos": [
+        "cozido"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "figado bovino grelhado",
+      "nomes": [
+        "Fígado bovino, grelhado"
+      ],
+      "preparos": [
+        "grelhado"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "figo cru",
+      "nomes": [
+        "Figo, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "file de merluza assado",
+      "nomes": [
+        "Filé de merluza, assado"
+      ],
+      "preparos": [
+        "assado"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "file mignon sem gordura grelhado",
+      "nomes": [
+        "Filé mignon, sem gordura, grelhado"
+      ],
+      "preparos": [
+        "sem gordura; grelhado"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "framboesa crua",
+      "nomes": [
+        "Framboesa, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "gelatto todos os sabores de frutas",
+      "nomes": [
+        "Gelatto, todos os sabores de frutas"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "geleia tradicional geral",
+      "nomes": [
+        "Geleia, tradicional, geral"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "gin puro ou com tonica energetico zero",
+      "nomes": [
+        "Gin puro ou com tônica/energético ZERO"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "goiaba branca com casca crua",
+      "nomes": [
+        "Goiaba, branca, com casca, crua"
+      ],
+      "preparos": [
+        "com casca; crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "goiaba vermelha com casca crua",
+      "nomes": [
+        "Goiaba, vermelha, com casca, crua"
+      ],
+      "preparos": [
+        "com casca; crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "goiabada",
+      "nomes": [
+        "Goiabada"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "granola",
+      "nomes": [
+        "Granola"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "grao de bico cozido",
+      "nomes": [
+        "Grão-de-bico, cozido"
+      ],
+      "preparos": [
+        "cozido"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "graviola crua",
+      "nomes": [
+        "Graviola, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "guacamole",
+      "nomes": [
+        "Guacamole"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "guioza",
+      "nomes": [
+        "Guioza"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "hamburger de falafel",
+      "nomes": [
+        "Hambúrger de falafel"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "hamburguer mcdonald s big mac",
+      "nomes": [
+        "Hambúrguer, McDonald's, Big Mac"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "hamburguer mcdonald s big tasty",
+      "nomes": [
+        "Hambúrguer, McDonald's, Big Tasty"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "hamburguer mcdonald s cheddar mcmelt",
+      "nomes": [
+        "Hambúrguer, McDonald's, Cheddar McMelt"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "hamburguer mcdonald s cheeseburger",
+      "nomes": [
+        "Hambúrguer, McDonald's, Cheeseburger"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "hamburguer mcdonald s duplo burger bacon",
+      "nomes": [
+        "Hambúrguer, McDonald's, Duplo Burger Bacon"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "hamburguer mcdonald s duplo quarteirao",
+      "nomes": [
+        "Hambúrguer, McDonald's, Duplo Quarteirão"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "hamburguer mcdonald s hamburger",
+      "nomes": [
+        "Hambúrguer, McDonald's, Hamburger"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "hamburguer mcdonald s mcchicken",
+      "nomes": [
+        "Hambúrguer, McDonald's, McChicken"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "hamburguer mcdonald s mccrispy chicken deluxe",
+      "nomes": [
+        "Hambúrguer, McDonald's, McCrispy Chicken Deluxe"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "hamburguer mcdonald s mcfiesta",
+      "nomes": [
+        "Hambúrguer, McDonald's, McFiesta"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "hamburguer mcdonald s quarteirao com queijo",
+      "nomes": [
+        "Hambúrguer, McDonald's, Quarteirão com queijo"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "homus",
+      "nomes": [
+        "Homus"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "hortela cru",
+      "nomes": [
+        "Hortelã, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "hossomaki de salmao",
+      "nomes": [
+        "Hossomaki de salmão"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "hot roll geral",
+      "nomes": [
+        "Hot Roll, geral"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "inhame cozido",
+      "nomes": [
+        "Inhame cozido"
+      ],
+      "preparos": [
+        "cozido"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "iogurte grego pense zero",
+      "nomes": [
+        "Iogurte Grego - Pense Zero"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "iogurte grego sem lactose",
+      "nomes": [
+        "Iogurte grego, sem lactose"
+      ],
+      "preparos": [
+        "sem lactose"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "iogurte natural",
+      "nomes": [
+        "Iogurte natural"
+      ],
+      "preparos": [],
+      "origens": [
+        "modelo-markdown"
+      ],
+      "planos": [
+        "modelo"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "iogurte natural sem lactose",
+      "nomes": [
+        "Iogurte natural, sem lactose"
+      ],
+      "preparos": [
+        "sem lactose"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "iogurte vegano vida veg",
+      "nomes": [
+        "Iogurte Vegano (vida veg)"
+      ],
+      "preparos": [
+        "vegano"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "jabuticaba crua",
+      "nomes": [
+        "Jabuticaba, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "jaca crua",
+      "nomes": [
+        "Jaca, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "jilo cozido",
+      "nomes": [
+        "Jiló, cozido"
+      ],
+      "preparos": [
+        "cozido"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "kiwi cru",
+      "nomes": [
+        "Kiwi, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "kombucha",
+      "nomes": [
+        "Kombucha"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "lagarto bovino cozido",
+      "nomes": [
+        "Lagarto bovino, cozido"
+      ],
+      "preparos": [
+        "cozido"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "laranja baia crua",
+      "nomes": [
+        "Laranja, baía, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "laranja da terra crua",
+      "nomes": [
+        "Laranja, da terra, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "laranja lima crua",
+      "nomes": [
+        "Laranja, lima, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "laranja pera crua",
+      "nomes": [
+        "Laranja, pêra, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "lasanha massa cozida",
+      "nomes": [
+        "Lasanha, massa, cozida"
+      ],
+      "preparos": [
+        "cozida"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "leite condensado",
+      "nomes": [
+        "Leite condensado"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "leite de amendoas castanhas geral",
+      "nomes": [
+        "Leite de amêndoas/castanhas, geral"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "leite de coco",
+      "nomes": [
+        "Leite de coco"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "leite de soja ades",
+      "nomes": [
+        "Leite de soja ades"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "leite de soja ades zero acucar",
+      "nomes": [
+        "Leite de soja ades zero açúcar"
+      ],
+      "preparos": [
+        "zero açúcar"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "leite desnatado",
+      "nomes": [
+        "Leite desnatado"
+      ],
+      "preparos": [],
+      "origens": [
+        "modelo-markdown"
+      ],
+      "planos": [
+        "modelo"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "leite zero lactose",
+      "nomes": [
+        "Leite zero lactose"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "lentilha cozida",
+      "nomes": [
+        "Lentilha cozida"
+      ],
+      "preparos": [
+        "cozida"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "lichia crua",
+      "nomes": [
+        "Lichia, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "limao tahiti cru",
+      "nomes": [
+        "Limão, tahiti, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "lombo suino assado",
+      "nomes": [
+        "Lombo suíno, assado"
+      ],
+      "preparos": [
+        "assado"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "m m confetti chocolate",
+      "nomes": [
+        "M&M, confetti, chocolate"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "maca argentina com casca crua",
+      "nomes": [
+        "Maçã, Argentina, com casca, crua"
+      ],
+      "preparos": [
+        "com casca; crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "maca fuji com casca crua",
+      "nomes": [
+        "Maçã, Fuji, com casca, crua"
+      ],
+      "preparos": [
+        "com casca; crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "maca sem casca crua",
+      "nomes": [
+        "Maçã sem casca, crua"
+      ],
+      "preparos": [
+        "sem casca; crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "macadamia crua",
+      "nomes": [
+        "Macadâmia crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "macadamia torrada com sal",
+      "nomes": [
+        "Macadâmia, torrada, com sal"
+      ],
+      "preparos": [
+        "torrada"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "macadamia torrada sem sal",
+      "nomes": [
+        "Macadâmia, torrada, sem sal"
+      ],
+      "preparos": [
+        "torrada"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "macarrao cozido",
+      "nomes": [
+        "Macarrão cozido"
+      ],
+      "preparos": [
+        "cozido"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "mamao formosa cru",
+      "nomes": [
+        "Mamão, Formosa, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "mamao papaia",
+      "nomes": [
+        "Mamão papaia"
+      ],
+      "preparos": [],
+      "origens": [
+        "modelo-markdown"
+      ],
+      "planos": [
+        "modelo"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "mamao papaia cru",
+      "nomes": [
+        "Mamão, Papaia, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "maminha grelhada",
+      "nomes": [
+        "Maminha, grelhada"
+      ],
+      "preparos": [
+        "grelhada"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "mandioca assada",
+      "nomes": [
+        "Mandioca assada"
+      ],
+      "preparos": [
+        "assada"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "mandioca cozida",
+      "nomes": [
+        "Mandioca cozida"
+      ],
+      "preparos": [
+        "cozida"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "mandioquinha cozida",
+      "nomes": [
+        "Mandioquinha cozida"
+      ],
+      "preparos": [
+        "cozida"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "manga haden crua",
+      "nomes": [
+        "Manga, Haden, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "manga palmer crua",
+      "nomes": [
+        "Manga, Palmer, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "manga tommy crua",
+      "nomes": [
+        "Manga, Tommy, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "maracuja polpa",
+      "nomes": [
+        "Maracujá, polpa"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "margarina",
+      "nomes": [
+        "Margarina"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "maria mole",
+      "nomes": [
+        "Maria mole"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "mel de abelha",
+      "nomes": [
+        "Mel, de abelha"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "melancia crua",
+      "nomes": [
+        "Melancia, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "melao cru",
+      "nomes": [
+        "Melão, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "mexerica murcote crua",
+      "nomes": [
+        "Mexerica, Murcote, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "mexerica rio crua",
+      "nomes": [
+        "Mexerica, Rio, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "milho em lata",
+      "nomes": [
+        "Milho em lata"
+      ],
+      "preparos": [
+        "em lata"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "milho espiga cozida",
+      "nomes": [
+        "Milho, espiga, cozida"
+      ],
+      "preparos": [
+        "cozida"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "milho para pipoca sem oleo",
+      "nomes": [
+        "Milho para pipoca, sem óleo"
+      ],
+      "preparos": [
+        "sem óleo"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "mirtilo cru",
+      "nomes": [
+        "Mirtilo, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "morango cru",
+      "nomes": [
+        "Morango, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "mortadela",
+      "nomes": [
+        "Mortadela"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "mostarda crua",
+      "nomes": [
+        "Mostarda, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "musculo sem gordura cozido",
+      "nomes": [
+        "Músculo, sem gordura, cozido"
+      ],
+      "preparos": [
+        "sem gordura; cozido"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "nabo cozido",
+      "nomes": [
+        "Nabo, cozido"
+      ],
+      "preparos": [
+        "cozido"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 2
+    },
+    {
+      "chaveNormalizada": "nectarina crua",
+      "nomes": [
+        "Nectarina, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "nhoque de batata cozido",
+      "nomes": [
+        "Nhoque de batata, cozido"
+      ],
+      "preparos": [
+        "cozido"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "niguiri de salmao",
+      "nomes": [
+        "Niguiri de salmão"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "noz crua",
+      "nomes": [
+        "Noz crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "oleo de canola",
+      "nomes": [
+        "Óleo, de canola"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "oleo de gergelim",
+      "nomes": [
+        "Óleo, de gergelim"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "oleo de girassol",
+      "nomes": [
+        "Óleo, de girassol"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "oleo de macadamia",
+      "nomes": [
+        "Óleo, de macadâmia"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "oleo de milho",
+      "nomes": [
+        "Óleo, de milho"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "oleo de soja",
+      "nomes": [
+        "Óleo, de soja"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "oregano",
+      "nomes": [
+        "Orégano"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "ovo de codorna unidade",
+      "nomes": [
+        "Ovo, de codorna, unidade"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "ovo de galinha unidade",
+      "nomes": [
+        "Ovo, de galinha, unidade"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pacoca",
+      "nomes": [
+        "Paçoca"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "palmito cozido",
+      "nomes": [
+        "Palmito, cozido"
+      ],
+      "preparos": [
+        "cozido"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "palmito em conserva",
+      "nomes": [
+        "Palmito em conserva"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pamonha cozida",
+      "nomes": [
+        "Pamonha, cozida"
+      ],
+      "preparos": [
+        "cozida"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pao australiano",
+      "nomes": [
+        "Pão australiano"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pao baguete",
+      "nomes": [
+        "Pão baguete"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pao bisnaguinha",
+      "nomes": [
+        "Pão bisnaguinha"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pao cara",
+      "nomes": [
+        "Pão cará"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pao de batata",
+      "nomes": [
+        "Pão de batata"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pao de centeio",
+      "nomes": [
+        "Pão de centeio"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pao de forma do forno integral",
+      "nomes": [
+        "Pão de forma, do forno, integral"
+      ],
+      "preparos": [
+        "integral"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pao de forma integral",
+      "nomes": [
+        "Pão de forma integral"
+      ],
+      "preparos": [
+        "integral"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pao de forma tradicional",
+      "nomes": [
+        "Pão de forma tradicional"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pao de hamburger tradicional",
+      "nomes": [
+        "Pão de hambúrger, tradicional"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pao de milho forma",
+      "nomes": [
+        "Pão de milho, forma"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pao de ovo",
+      "nomes": [
+        "Pão de ovo"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pao frances",
+      "nomes": [
+        "Pão francês"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes",
+        "modelo-markdown"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana",
+        "modelo"
+      ],
+      "ocorrencias": 2
+    },
+    {
+      "chaveNormalizada": "pao sirio",
+      "nomes": [
+        "Pão sírio"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pao sovado",
+      "nomes": [
+        "Pão sovado"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pasta de amendoim betterpb",
+      "nomes": [
+        "Pasta de amendoim, BetterPB"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pasta de amendoim saborizada geral",
+      "nomes": [
+        "Pasta de amendoim saborizada, geral"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pasta de amendoim tradicional",
+      "nomes": [
+        "Pasta de amendoim tradicional"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pasta de castanha de caju",
+      "nomes": [
+        "Pasta de castanha de caju"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pasta de mix de nuts",
+      "nomes": [
+        "Pasta de mix de nuts"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pastel de queijo",
+      "nomes": [
+        "Pastel de queijo"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "patinho sem gordura grelhado",
+      "nomes": [
+        "Patinho, sem gordura, grelhado"
+      ],
+      "preparos": [
+        "sem gordura; grelhado"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pea protein proteina de ervilha",
+      "nomes": [
+        "Pea Protein (proteína de ervilha)"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "peito de frango grelhado",
+      "nomes": [
+        "Peito de frango grelhado"
+      ],
+      "preparos": [],
+      "origens": [
+        "modelo-markdown"
+      ],
+      "planos": [
+        "modelo"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "peito de frango sem pele cozido",
+      "nomes": [
+        "Peito de frango sem pele, cozido"
+      ],
+      "preparos": [
+        "sem pele; cozido"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "peito de frango sem pele grelhado",
+      "nomes": [
+        "Peito de frango sem pele, grelhado"
+      ],
+      "preparos": [
+        "sem pele; grelhado"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pepino cru",
+      "nomes": [
+        "Pepino, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pequi cru",
+      "nomes": [
+        "Pequi, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pera park crua",
+      "nomes": [
+        "Pêra, Park, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pera sem casca crua",
+      "nomes": [
+        "Pêra sem casca, crua"
+      ],
+      "preparos": [
+        "sem casca; crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pera williams crua",
+      "nomes": [
+        "Pêra, Williams, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pernil suino assado",
+      "nomes": [
+        "Pernil suíno, assado"
+      ],
+      "preparos": [
+        "assado"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pessego aurora cru",
+      "nomes": [
+        "Pêssego, Aurora, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "picanha com gordura grelhada",
+      "nomes": [
+        "Picanha, com gordura, grelhada"
+      ],
+      "preparos": [
+        "com gordura; grelhada"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "picanha sem gordura grelhada",
+      "nomes": [
+        "Picanha, sem gordura, grelhada"
+      ],
+      "preparos": [
+        "sem gordura; grelhada"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "picole de frutas",
+      "nomes": [
+        "Picolé de frutas"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pimentao amarelo cru",
+      "nomes": [
+        "Pimentão, amarelo, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pimentao cru",
+      "nomes": [
+        "Pimentão, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pimentao verde cru",
+      "nomes": [
+        "Pimentão, verde, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pimentao vermelho cru",
+      "nomes": [
+        "Pimentão, vermelho, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pinha crua",
+      "nomes": [
+        "Pinha, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pistache torrada com sal",
+      "nomes": [
+        "Pistache, torrada, com sal"
+      ],
+      "preparos": [
+        "torrada"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pistache torrada sem sal",
+      "nomes": [
+        "Pistache, torrada, sem sal"
+      ],
+      "preparos": [
+        "torrada"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pitanga crua",
+      "nomes": [
+        "Pitanga, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pitaya",
+      "nomes": [
+        "Pitaya"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pizza frango com catupiry requeijao",
+      "nomes": [
+        "Pizza, frango com catupiry/requeijão"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pizza marguerita",
+      "nomes": [
+        "Pizza, marguerita"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pizza pepperoni",
+      "nomes": [
+        "Pizza, pepperoni"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pizza portuguesa",
+      "nomes": [
+        "Pizza, portuguesa"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pizza quatro queijos",
+      "nomes": [
+        "Pizza, quatro queijos"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pizza vegana",
+      "nomes": [
+        "Pizza vegana"
+      ],
+      "preparos": [
+        "vegana"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "polenta cozida",
+      "nomes": [
+        "Polenta, cozida"
+      ],
+      "preparos": [
+        "cozida"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "polpa do coco crua",
+      "nomes": [
+        "Polpa do coco, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "polpa do coco crua ralado",
+      "nomes": [
+        "Polpa do coco, crua, ralado"
+      ],
+      "preparos": [
+        "crua; cru; ralado"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "polvilho",
+      "nomes": [
+        "Polvilho"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "prato executivo bife ou frango a parmegiana gera",
+      "nomes": [
+        "Prato executivo, bife ou frango a parmegiana, gera"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pre treino dux",
+      "nomes": [
+        "Pré-treino, DUX"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "presunto sem capa de gordura",
+      "nomes": [
+        "Presunto, sem capa de gordura"
+      ],
+      "preparos": [
+        "sem capa de gordura"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "proteina isolada de soja",
+      "nomes": [
+        "Proteína isolada de soja"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "proteina texturizada de soja cozida",
+      "nomes": [
+        "Proteína texturizada de soja cozida"
+      ],
+      "preparos": [
+        "cozida"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pudim todos",
+      "nomes": [
+        "Pudim, todos"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "pupunha cozida",
+      "nomes": [
+        "Pupunha cozida"
+      ],
+      "preparos": [
+        "cozida"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "queijo cottage sem lactose",
+      "nomes": [
+        "Queijo, cottage, sem lactose"
+      ],
+      "preparos": [
+        "sem lactose"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "queijo minas frescal sem lactose",
+      "nomes": [
+        "Queijo, minas frescal, sem lactose"
+      ],
+      "preparos": [
+        "sem lactose; fresca"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "queijo mucarela sem lactose",
+      "nomes": [
+        "Queijo, muçarela, sem lactose"
+      ],
+      "preparos": [
+        "sem lactose"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "queijo parmesao sem lactose",
+      "nomes": [
+        "Queijo, parmesão, sem lactose"
+      ],
+      "preparos": [
+        "sem lactose"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "queijo prato sem lactose",
+      "nomes": [
+        "Queijo, prato, sem lactose"
+      ],
+      "preparos": [
+        "sem lactose"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "queijo requeijao cremoso sem lactose",
+      "nomes": [
+        "Queijo, requeijão cremoso, sem lactose"
+      ],
+      "preparos": [
+        "sem lactose; cremoso"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "queijo ricota sem lactose",
+      "nomes": [
+        "Queijo ricota, sem lactose"
+      ],
+      "preparos": [
+        "sem lactose"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "queijo tofu soja",
+      "nomes": [
+        "Queijo, tofu, soja"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "quiabo cozido",
+      "nomes": [
+        "Quiabo, cozido"
+      ],
+      "preparos": [
+        "cozido"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "quibe assado",
+      "nomes": [
+        "Quibe, assado"
+      ],
+      "preparos": [
+        "assado"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "quinoa cozida",
+      "nomes": [
+        "Quinoa, cozida"
+      ],
+      "preparos": [
+        "cozida"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "rabanete cru",
+      "nomes": [
+        "Rabanete, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "refrigerante zero calorias qualquer um",
+      "nomes": [
+        "Refrigerante zero calorias, qualquer um"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "repolho branco cozido",
+      "nomes": [
+        "Repolho, branco, cozido"
+      ],
+      "preparos": [
+        "cozido"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "repolho branco cru",
+      "nomes": [
+        "Repolho, branco, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "repolho roxo cozido",
+      "nomes": [
+        "Repolho, roxo, cozido"
+      ],
+      "preparos": [
+        "cozido"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "repolho roxo cru",
+      "nomes": [
+        "Repolho, roxo, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "requeijao vegano vida veg",
+      "nomes": [
+        "Requeijão vegano (vida veg)"
+      ],
+      "preparos": [
+        "vegano"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "rice protein proteina do arroz",
+      "nomes": [
+        "Rice Protein (proteína do arroz)"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "roma crua",
+      "nomes": [
+        "Romã, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "rucula crua",
+      "nomes": [
+        "Rúcula, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "salada de folhas",
+      "nomes": [
+        "Salada de folhas"
+      ],
+      "preparos": [],
+      "origens": [
+        "modelo-markdown"
+      ],
+      "planos": [
+        "modelo"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "salgadinhos de festa geral",
+      "nomes": [
+        "Salgadinhos de festa, geral"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "salgados de padaria geral",
+      "nomes": [
+        "Salgados de padaria, geral"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "salmao sem pele fresco grelhado",
+      "nomes": [
+        "Salmão, sem pele, fresco, grelhado"
+      ],
+      "preparos": [
+        "sem pele; grelhado; fresco"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "salsa crua",
+      "nomes": [
+        "Salsa, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "salsao refogado",
+      "nomes": [
+        "Salsão, refogado"
+      ],
+      "preparos": [
+        "refogado"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "sardinha assada",
+      "nomes": [
+        "Sardinha, assada"
+      ],
+      "preparos": [
+        "assada"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "sashimi de salmao",
+      "nomes": [
+        "Sashimi de salmão"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "semente de abobora",
+      "nomes": [
+        "Semente de abóbora"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "semente de chia",
+      "nomes": [
+        "Semente de chia"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "semente de girassol",
+      "nomes": [
+        "Semente de girassol"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "semente de mostarda amarela",
+      "nomes": [
+        "Semente de mostarda, amarela"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "sementes de gergelim",
+      "nomes": [
+        "Sementes de gergelim"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "shimeji",
+      "nomes": [
+        "Shimeji"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "skol beats",
+      "nomes": [
+        "Skol Beats"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "sobrecoxa de frango sem pele assada",
+      "nomes": [
+        "Sobrecoxa de frango sem pele, assada"
+      ],
+      "preparos": [
+        "sem pele; assada"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "sobremesas mcdonald s tortas",
+      "nomes": [
+        "Sobremesas, McDonald's, Tortas"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "soja seca cozida",
+      "nomes": [
+        "Soja seca, cozida"
+      ],
+      "preparos": [
+        "cozida"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "sonho de doce de leite",
+      "nomes": [
+        "Sonho de doce de leite"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "sorvete ben jerry todos",
+      "nomes": [
+        "Sorvete Ben & Jerry, todos"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "sorvete geral",
+      "nomes": [
+        "Sorvete, geral"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "sorvete vegano",
+      "nomes": [
+        "Sorvete vegano"
+      ],
+      "preparos": [
+        "vegano"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "sorvetes mcdonald s mccolosso",
+      "nomes": [
+        "Sorvetes, McDonald's, McColosso"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "sorvetes mcdonald s mcflurry",
+      "nomes": [
+        "Sorvetes, McDonald's, McFlurry"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "sorvetes mcdonald s mcshake",
+      "nomes": [
+        "Sorvetes, McDonald's, McShake"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "sorvetes mcdonald s sundae",
+      "nomes": [
+        "Sorvetes, McDonald's, Sundae"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "suco de abacaxi",
+      "nomes": [
+        "Suco de abacaxi"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "suco de acerola",
+      "nomes": [
+        "Suco de acerola"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "suco de beterraba",
+      "nomes": [
+        "Suco de beterraba"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "suco de cupuacu",
+      "nomes": [
+        "Suco de cupuaçu"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "suco de goiaba",
+      "nomes": [
+        "Suco de goiaba"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "suco de laranja baia",
+      "nomes": [
+        "Suco de laranja-baía"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "suco de laranja lima",
+      "nomes": [
+        "Suco de laranja, lima"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "suco de laranja pera",
+      "nomes": [
+        "Suco de laranja, pêra"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "suco de laranja terra",
+      "nomes": [
+        "Suco de laranja, terra"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "suco de limao cravo",
+      "nomes": [
+        "Suco de limão, cravo"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "suco de limao galego",
+      "nomes": [
+        "Suco de limão-galego"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "suco de mamao",
+      "nomes": [
+        "Suco de mamão"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "suco de manga",
+      "nomes": [
+        "Suco de manga"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "suco de maracuja",
+      "nomes": [
+        "Suco de maracuja"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "suco de melao",
+      "nomes": [
+        "Suco de melão"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "suco de morango",
+      "nomes": [
+        "Suco de morango"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "suco de pessego",
+      "nomes": [
+        "Suco de pêssego"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "suco de ponca",
+      "nomes": [
+        "Suco de poncã"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "suco de uva integral",
+      "nomes": [
+        "Suco de uva integral"
+      ],
+      "preparos": [
+        "integral"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "sushi joe",
+      "nomes": [
+        "Sushi Joe"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "tamarindo cru",
+      "nomes": [
+        "Tamarindo, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "tangerina ponca crua",
+      "nomes": [
+        "Tangerina, Poncã, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "tapioca de goma",
+      "nomes": [
+        "Tapioca de goma"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "temaki de salmao",
+      "nomes": [
+        "Temaki de salmão"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "tilapia assada",
+      "nomes": [
+        "Tilápia assada"
+      ],
+      "preparos": [],
+      "origens": [
+        "modelo-markdown"
+      ],
+      "planos": [
+        "modelo"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "tilapia cozida",
+      "nomes": [
+        "Tilápia, cozida"
+      ],
+      "preparos": [
+        "cozida"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "tomate caqui",
+      "nomes": [
+        "Tomate-caqui"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "tomate cereja cru",
+      "nomes": [
+        "Tomate, cereja, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "tomate cru",
+      "nomes": [
+        "Tomate, cru"
+      ],
+      "preparos": [
+        "cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "top sundae todos os sabores",
+      "nomes": [
+        "Top Sundae, todos os sabores"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "toranja crua",
+      "nomes": [
+        "Toranja, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "torrada pao frances",
+      "nomes": [
+        "Torrada, pão francês"
+      ],
+      "preparos": [
+        "torrada"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "tulipa de frango assada",
+      "nomes": [
+        "Tulipa de frango, assada"
+      ],
+      "preparos": [
+        "assada"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "urumaki",
+      "nomes": [
+        "Urumaki"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "uva italia crua",
+      "nomes": [
+        "Uva, Itália, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "uva rubi crua",
+      "nomes": [
+        "Uva, Rubi, crua"
+      ],
+      "preparos": [
+        "crua; cru"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "uvas passas",
+      "nomes": [
+        "Uvas-passas"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "vagem cozida",
+      "nomes": [
+        "Vagem cozida",
+        "Vagem, cozida"
+      ],
+      "preparos": [
+        "cozida"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 2
+    },
+    {
+      "chaveNormalizada": "vinho todos",
+      "nomes": [
+        "Vinho, todos"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "vodka",
+      "nomes": [
+        "Vodka"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "whey protein concentrado",
+      "nomes": [
+        "Whey protein Concentrado"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "whey protein hidrolisado",
+      "nomes": [
+        "Whey Protein Hidrolisado"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "whey protein isolado",
+      "nomes": [
+        "Whey Protein Isolado"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "wrap integral wickbold",
+      "nomes": [
+        "Wrap integral (wickbold)"
+      ],
+      "preparos": [
+        "integral"
+      ],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    },
+    {
+      "chaveNormalizada": "xilitol",
+      "nomes": [
+        "Xilitol"
+      ],
+      "preparos": [],
+      "origens": [
+        "lista-substituicoes"
+      ],
+      "planos": [
+        "dias-uteis",
+        "finais-de-semana"
+      ],
+      "ocorrencias": 1
+    }
+  ]
+}

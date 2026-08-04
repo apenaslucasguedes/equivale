@@ -48,6 +48,10 @@ export interface PorcaoCaseira {
   quantidade: number;
   /** Peso em gramas correspondente a `quantidade` medidas. */
   gramas: number;
+  /** Referência documental específica do peso da medida, quando disponível. */
+  fonte?: string;
+  /** Identificador da opção/documento que declarou o peso. */
+  codigoDaFonte?: string | null;
 }
 
 /**
@@ -100,7 +104,17 @@ export interface Refeicao {
 
 // ------------------------------------------------------------------ blocos
 
-export type Unidade = 'g' | 'ml' | 'unidade' | 'fatia' | 'colher' | 'concha' | 'copo' | 'porção';
+/** Unidades históricas e descrições textuais livres vindas da prescrição. */
+export type Unidade =
+  | 'g'
+  | 'ml'
+  | 'unidade'
+  | 'fatia'
+  | 'colher'
+  | 'concha'
+  | 'copo'
+  | 'porção'
+  | (string & {});
 
 export const UNIDADES: Unidade[] = [
   'g',
@@ -129,6 +143,7 @@ export interface BlocoCalorico {
     alimentoId: string | null;
     quantidade: number;
     unidade: Unidade;
+    descricaoMedidaOriginal?: string | null;
     refeicaoId: string;
   };
 
@@ -138,6 +153,7 @@ export interface BlocoCalorico {
     alimentoId: string | null;
     quantidade: number;
     unidade: Unidade;
+    descricaoMedidaOriginal?: string | null;
     refeicaoId: string;
     /** Medida caseira aproximada exibida junto à quantidade, quando houver. */
     medidaCaseira: string | null;
@@ -146,6 +162,8 @@ export interface BlocoCalorico {
   /** Energia fixa do bloco, em kcal. */
   kcal: number;
   origemDasCalorias: OrigemDasCalorias;
+  motivoPendencia?: string | null;
+  opcoesCorrespondencia?: Array<{ id: string; nome: string }>;
   observacao: string | null;
   /** Ordem dentro da refeição (apenas apresentação). */
   ordem: number;

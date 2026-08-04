@@ -59,7 +59,11 @@ export function CartaoDeItem({ bloco, configuracoes, aoAbrir, estatico = false }
           <span className="cartao__etiquetas">
             {substituido ? <span className="etiqueta etiqueta--alterado">substituído</span> : null}
             {movido ? <span className="etiqueta etiqueta--alterado">movido</span> : null}
-            {pendente ? <span className="etiqueta etiqueta--pendente">a conferir</span> : null}
+            {pendente ? (
+              <span className="etiqueta etiqueta--pendente">
+                {bloco.motivoPendencia ?? 'Calorias pendentes'}
+              </span>
+            ) : null}
             {bloco.observacao ? <span className="etiqueta">obs.</span> : null}
           </span>
         ) : null}

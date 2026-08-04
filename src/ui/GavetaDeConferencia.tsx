@@ -9,6 +9,7 @@ import { useState } from 'react';
 import type { Alimento, BlocoCalorico } from '../domain/types';
 import type { RepositorioDeAlimentos } from '../data/alimentos/repositorio';
 import { calcularCaloriasDaQuantidade } from '../domain/equivalencia';
+import { normalizarMedida } from '../importacao/resolucao';
 import { formatarNumero, lerNumero } from '../domain/texto';
 import { Gaveta } from './Gaveta';
 import { SeletorDeAlimento } from './SeletorDeAlimento';
@@ -24,13 +25,13 @@ export interface PropsDaConferencia {
 
 /** Gramas do item a partir da quantidade prescrita e das medidas do alimento. */
 function gramasDoBloco(bloco: BlocoCalorico, alimento: Alimento | null): number | null {
-  const { quantidade, unidade } = bloco.original;
+  const { quantidade, unidade, descricaoMedidaOriginal } = bloco.original;
   if (unidade === 'g' || unidade === 'ml') return quantidade;
   if (!alimento) return null;
 
   for (const porcao of alimento.porcoesCaseiras ?? []) {
-    const medida = porcao.medida.toLowerCase();
-    if (!medida.startsWith(unidade.toLowerCase())) continue;
+    const medida = normalizarMedida(porcao.medida);
+    if (medida !== normalizarMedida(descricaoMedidaOriginal ?? unidade)) continue;
     if (!Number.isFinite(porcao.gramas) || porcao.quantidade <= 0) continue;
     return (quantidade * porcao.gramas) / porcao.quantidade;
   }
@@ -63,14 +64,14 @@ export function GavetaDeConferencia({
       subtitulo={
         <>
           <strong>{bloco.original.alimentoNome}</strong> · {formatarNumero(bloco.original.quantidade, 2)}{' '}
-          {bloco.original.unidade}
+          {bloco.original.descricaoMedidaOriginal ?? bloco.original.unidade}
         </>
       }
       aoFechar={aoFechar}
     >
       <p className="nota nota--destaque" style={{ marginBottom: 12 }}>
-        Este item veio da dieta sem calorias e sem correspondência exata na base. Vincule a um
-        alimento ou informe as calorias prescritas. Nada foi descartado.
+        {bloco.motivoPendencia ?? 'Calorias pendentes'}. Vincule a um alimento ou informe as
+        calorias prescritas. Nada foi descartado.
       </p>
 
       <h3 className="cartao-info__titulo">Informar as calorias do item</h3>
