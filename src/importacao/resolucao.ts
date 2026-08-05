@@ -103,7 +103,12 @@ export function resolverItens(
   return itens.map((item) => {
     const chave = normalizar(item.nomeAlimento);
     const idVinculado = porVinculo.get(chave) ?? null;
-    const idsCorrespondentes = idVinculado ? [idVinculado] : (porNome.get(chave) ?? []);
+    const alimentoPorId = item.alimentoIdInformado
+      ? repositorio.porId(item.alimentoIdInformado)
+      : undefined;
+    const idsCorrespondentes = alimentoPorId
+      ? [alimentoPorId.id]
+      : idVinculado ? [idVinculado] : (porNome.get(chave) ?? []);
     const opcoesCorrespondencia = idsCorrespondentes
       .map((id) => repositorio.porId(id))
       .filter((alimento): alimento is Alimento => alimento !== undefined);
@@ -203,6 +208,7 @@ export function montarDieta(analise: ResultadoDaAnalise, resolvidos: ItemResolvi
         alimentoId: resolvido.alimentoId,
         quantidade: item.quantidade,
         unidade: item.unidade,
+        pesoGramas: item.gramas,
         descricaoMedidaOriginal: item.descricaoMedidaOriginal,
         refeicaoId: item.refeicaoId,
       },
@@ -211,6 +217,7 @@ export function montarDieta(analise: ResultadoDaAnalise, resolvidos: ItemResolvi
         alimentoId: resolvido.alimentoId,
         quantidade: item.quantidade,
         unidade: item.unidade,
+        pesoGramas: item.gramas,
         descricaoMedidaOriginal: item.descricaoMedidaOriginal,
         refeicaoId: item.refeicaoId,
         medidaCaseira: null,

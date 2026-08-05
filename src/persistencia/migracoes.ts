@@ -61,6 +61,14 @@ function descricaoMedida(valor: Record<string, unknown>): { descricaoMedidaOrigi
     : {};
 }
 
+function pesoGramas(valor: Record<string, unknown>): { pesoGramas?: number | null } {
+  if (!('pesoGramas' in valor)) return {};
+  if (valor.pesoGramas === null) return { pesoGramas: null };
+  return typeof valor.pesoGramas === 'number' && Number.isFinite(valor.pesoGramas)
+    ? { pesoGramas: valor.pesoGramas }
+    : {};
+}
+
 function sanearRefeicao(valor: unknown, indice: number): Refeicao | null {
   if (!ehObjeto(valor)) return null;
   const id = texto(valor.id);
@@ -88,6 +96,7 @@ function sanearBloco(valor: unknown, indice: number): BlocoCalorico | null {
       alimentoId: typeof original.alimentoId === 'string' ? original.alimentoId : null,
       quantidade: numero(original.quantidade, 0),
       unidade: unidade(original.unidade),
+      ...pesoGramas(original),
       ...descricaoMedida(original),
       refeicaoId: refeicaoOriginal,
     },
@@ -96,6 +105,7 @@ function sanearBloco(valor: unknown, indice: number): BlocoCalorico | null {
       alimentoId: typeof atual.alimentoId === 'string' ? atual.alimentoId : null,
       quantidade: numero(atual.quantidade, numero(original.quantidade, 0)),
       unidade: unidade(atual.unidade ?? original.unidade),
+      ...pesoGramas(atual),
       ...(Object.prototype.hasOwnProperty.call(atual, 'descricaoMedidaOriginal')
         ? descricaoMedida(atual)
         : typeof original.descricaoMedidaOriginal === 'string'

@@ -120,6 +120,23 @@ export interface MedidaCaseiraSugerida {
   gramasEquivalentes: number;
 }
 
+function pluralizarMedida(medida: string, quantidade: number): string {
+  if (quantidade <= 1) return medida;
+  const plurais: Record<string, string> = {
+    asa: 'asas', bife: 'bifes', colher: 'colheres', concha: 'conchas', fatia: 'fatias',
+    file: 'files', filé: 'filés', pegador: 'pegadores', pedaço: 'pedaços', scoop: 'scoops',
+    unidade: 'unidades', xícara: 'xícaras',
+  };
+  const partes = medida.split(' ');
+  partes[0] = plurais[partes[0] ?? ''] ?? `${partes[0]}s`;
+  const ultima = partes.at(-1);
+  const adjetivos: Record<string, string> = {
+    cheia: 'cheias', nivelada: 'niveladas', rasa: 'rasas', pequena: 'pequenas', média: 'médias',
+  };
+  if (ultima && adjetivos[ultima]) partes[partes.length - 1] = adjetivos[ultima];
+  return partes.join(' ');
+}
+
 /**
  * Converte uma quantidade em gramas para medidas caseiras aproximadas.
  * As medidas são SEMPRE aproximações; o cálculo principal continua em gramas.
@@ -147,7 +164,7 @@ export function sugerirMedidasCaseiras(
     sugestoes.push({
       medida: porcao.medida,
       quantidade,
-      texto: `≈ ${formatarNumero(quantidade, 1)} ${porcao.medida}`,
+      texto: `aprox. ${formatarNumero(quantidade, 1)} ${pluralizarMedida(porcao.medida, quantidade)}`,
       gramasEquivalentes: arredondarMeioParaCima(quantidade * gramasPorMedida, 2),
     });
   }

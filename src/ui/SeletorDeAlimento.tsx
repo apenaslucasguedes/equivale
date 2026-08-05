@@ -11,6 +11,7 @@ import type { ReactNode } from 'react';
 import type { Alimento, Categoria } from '../domain/types';
 import { ROTULO_CATEGORIA } from '../domain/types';
 import type { RepositorioDeAlimentos } from '../data/alimentos/repositorio';
+import { iconeDoAlimento } from './iconeDoAlimento';
 
 export interface PropsDoSeletor {
   repositorio: RepositorioDeAlimentos;
@@ -18,6 +19,7 @@ export interface PropsDoSeletor {
   aoDescreverResultado?: (alimento: Alimento) => ReactNode;
   aoEscolher: (alimento: Alimento) => void;
   rotuloDaBusca?: string;
+  categoriaInicial?: Categoria | null;
 }
 
 export function SeletorDeAlimento({
@@ -25,9 +27,10 @@ export function SeletorDeAlimento({
   aoDescreverResultado,
   aoEscolher,
   rotuloDaBusca = 'Pesquisar alimento',
+  categoriaInicial = null,
 }: PropsDoSeletor) {
   const [consulta, setConsulta] = useState('');
-  const [categoria, setCategoria] = useState<Categoria | null>(null);
+  const [categoria, setCategoria] = useState<Categoria | null>(categoriaInicial);
   const consultaAdiada = useDeferredValue(consulta);
 
   const categorias = useMemo(
@@ -105,7 +108,10 @@ export function SeletorDeAlimento({
             <li key={alimento.id}>
               <button type="button" className="resultado" onClick={() => aoEscolher(alimento)}>
                 <span style={{ minWidth: 0 }}>
-                  <span className="resultado__nome">{alimento.nome}</span>
+                  <span className="resultado__nome">
+                    <span aria-hidden="true">{iconeDoAlimento(alimento.nome, alimento.categoria)} </span>
+                    {alimento.nome}
+                  </span>
                   <span className="resultado__detalhe">
                     {ROTULO_CATEGORIA[alimento.categoria] ?? alimento.categoria}
                     {alimento.preparo ? ` · ${alimento.preparo}` : ''} · {alimento.kcalPor100g} kcal

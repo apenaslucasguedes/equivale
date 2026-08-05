@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
-      registerType: 'prompt',
+      registerType: 'autoUpdate',
       injectRegister: null,
       includeAssets: [
         'brand/favicon.svg',
@@ -50,6 +50,8 @@ export default defineConfig({
       workbox: {
         globPatterns: ['**/*.{js,css,html,png,svg,json,webmanifest}'],
         navigateFallback: '/equivale/index.html',
+        skipWaiting: true,
+        clientsClaim: true,
         cleanupOutdatedCaches: true,
         // Sem runtimeCaching de rede: o app não faz requisições externas.
       },

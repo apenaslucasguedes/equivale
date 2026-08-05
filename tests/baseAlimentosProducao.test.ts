@@ -13,6 +13,22 @@ const repositorio = new RepositorioEmMemoria(async () => base);
 repositorio.definirBase(base);
 
 describe('base nutricional de produção v1', () => {
+  it('é gerada do banco geral recebido e inclui os registros ativos rastreáveis', () => {
+    expect(base.alimentos.length).toBe(597);
+    expect(base.alimentos).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          id: 'bk-whopper',
+          nome: 'Burger King WHOPPER®',
+          kcalPor100g: 220.6,
+          porcoesCaseiras: expect.arrayContaining([
+            expect.objectContaining({ medida: 'unidade', quantidade: 1, gramas: 325 }),
+          ]),
+        }),
+      ]),
+    );
+  });
+
   it('carrega uma base real rastreável, não vazia e sem valores calóricos inválidos', () => {
     expect(base.somenteParaTeste).toBe(false);
     expect(base.alimentos.length).toBeGreaterThan(50);
@@ -27,11 +43,21 @@ describe('base nutricional de produção v1', () => {
 
     const patinho = base.alimentos.find((item) => item.aliases.includes('Patinho, sem gordura, grelhado'));
     expect(patinho?.codigoDaFonte).toBe('377');
-    expect(patinho?.preparo).toBe('grelhado');
+    expect(patinho?.preparo).toContain('grelhado');
 
     const crus = base.alimentos.filter((item) => item.nome.includes('Batata, doce'));
     expect(new Set(crus.map((item) => item.preparo))).toContain('cozido');
     expect(new Set(crus.map((item) => item.preparo))).not.toContain('assada');
+  });
+
+  it('preserva a categoria nutricional da TACO para todas as carnes bovinas', () => {
+    const carnesBovinas = base.alimentos.filter(
+      (item) => item.id.startsWith('taco-') && item.nome.startsWith('Carne, bovina,'),
+    );
+    expect(carnesBovinas.length).toBeGreaterThan(0);
+    expect(carnesBovinas.every((item) => item.categoria === 'proteinas')).toBe(true);
+    expect(base.alimentos.find((item) => item.id === 'taco-354-carne-bovina-cupim-cru')?.categoria)
+      .toBe('proteinas');
   });
 
   it('preserva medidas caseiras somente quando há peso documentado', () => {
@@ -43,18 +69,19 @@ describe('base nutricional de produção v1', () => {
     );
   });
 
-  it('não possui ids duplicados nem aliases normalizados conflitantes', () => {
+  it('encontra arroz, macarrão seco e massa de lasanha nas versões cruas', () => {
+    expect(repositorio.buscar('arroz branco cru')[0]?.alimento.id).toBe('taco-004-arroz-tipo-1-cru');
+    expect(repositorio.buscar('macarrão seco')[0]?.alimento.id).toBe('taco-040-macarrao-trigo-cru');
+    expect(repositorio.buscar('massa de lasanha crua')[0]?.alimento.id)
+      .toBe('taco-038-lasanha-massa-fresca-crua');
+  });
+
+  it('não possui ids duplicados e mantém aliases ambíguos como múltiplas opções', () => {
     const ids = base.alimentos.map((item) => item.id);
     expect(new Set(ids).size).toBe(ids.length);
-    const chaves = new Map<string, string>();
-    for (const alimento of base.alimentos) {
-      for (const texto of [alimento.nome, ...alimento.aliases]) {
-        const chave = texto.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
-        const anterior = chaves.get(chave);
-        expect(anterior === undefined || anterior === alimento.id).toBe(true);
-        chaves.set(chave, alimento.id);
-      }
-    }
+    expect(repositorio.buscar('mandioquinha').map(({ alimento }) => alimento.id)).toEqual(
+      expect.arrayContaining(['taco-086-batata-baroa-cozida', 'taco-087-batata-baroa-crua']),
+    );
   });
 
   it('resolve alimentos reais por alias e porção prescrita documentada', () => {

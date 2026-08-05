@@ -2,12 +2,14 @@
 
 import { NOME_DO_ARQUIVO_MODELO, gerarModeloMarkdown } from '../importacao/modelo';
 import { baixarTexto } from '../ui/arquivos';
+import { useLoja } from '../estado/contexto';
 
 export interface PropsDoEstadoVazio {
   aoImportar: () => void;
 }
 
 export function EstadoVazio({ aoImportar }: PropsDoEstadoVazio) {
+  const { alimentos } = useLoja();
   return (
     <div className="vazio">
       <div className="vazio__ilustracao" aria-hidden="true">
@@ -36,7 +38,7 @@ export function EstadoVazio({ aoImportar }: PropsDoEstadoVazio) {
         <button
           type="button"
           className="botao botao--largo"
-          onClick={() => baixarTexto(NOME_DO_ARQUIVO_MODELO, gerarModeloMarkdown(), 'text/markdown')}
+          onClick={() => baixarTexto(NOME_DO_ARQUIVO_MODELO, gerarModeloMarkdown(alimentos.todos()), 'text/markdown')}
         >
           Baixar modelo
         </button>

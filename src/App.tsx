@@ -37,15 +37,9 @@ export function App() {
           <h1 className="cabecalho__nome">
             <img src={`${import.meta.env.BASE_URL}brand/logo-completo.svg`} alt="Equivale" />
           </h1>
-          {estado.planos.length > 0 ? (
-            <SeletorDePlano
-              planos={estado.planos}
-              planoAtivoId={estado.planoAtivoId}
-              aoTrocar={(planoId) => despachar({ tipo: 'planoAtivado', planoId })}
-            />
-          ) : (
+          {estado.planos.length === 0 ? (
             <span className="cabecalho__assinatura">troque, mova, escolha</span>
-          )}
+          ) : null}
         </div>
         <div className="cabecalho__acoes">
           {tela !== 'ajustes' ? (
@@ -101,6 +95,16 @@ export function App() {
             ✕
           </button>
         </div>
+      ) : null}
+
+      {estado.planos.length > 0 ? (
+        <nav className="navegacao-de-planos" aria-label="Escolher plano">
+          <SeletorDePlano
+            planos={estado.planos}
+            planoAtivoId={estado.planoAtivoId}
+            aoTrocar={(planoId) => despachar({ tipo: 'planoAtivado', planoId })}
+          />
+        </nav>
       ) : null}
 
       <main className="conteudo">

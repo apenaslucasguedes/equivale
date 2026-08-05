@@ -8,14 +8,67 @@
   },
   "fonteComplementar": null,
   "tbcaNaoUtilizada": "A versão 7.3 informa CC BY-NC-ND 4.0 e proíbe reprodução total ou parcial; nenhuma página individual foi coletada.",
-  "alimentosGerados": 134,
+  "alimentosGerados": 597,
   "registrosTacoDisponiveis": 597,
   "ocorrenciasInventariadas": 425,
   "nomesNormalizadosInventariados": 416,
   "duplicatasNormalizadas": 9,
-  "aliasesConflitantes": [],
+  "aliasesConflitantes": [
+    {
+      "chave": "abobora japonesa",
+      "ids": [
+        "taco-064-abobora-cabotian-cozida",
+        "taco-065-abobora-cabotian-crua"
+      ]
+    },
+    {
+      "chave": "cabotia",
+      "ids": [
+        "taco-064-abobora-cabotian-cozida",
+        "taco-065-abobora-cabotian-crua"
+      ]
+    },
+    {
+      "chave": "aipim",
+      "ids": [
+        "taco-121-farinha-de-mandioca-crua",
+        "taco-122-farinha-de-mandioca-torrada",
+        "taco-124-fecula-de-mandioca",
+        "taco-129-mandioca-cozida",
+        "taco-130-mandioca-crua",
+        "taco-131-mandioca-farofa-temperada",
+        "taco-132-mandioca-frita"
+      ]
+    },
+    {
+      "chave": "macaxeira",
+      "ids": [
+        "taco-121-farinha-de-mandioca-crua",
+        "taco-122-farinha-de-mandioca-torrada",
+        "taco-124-fecula-de-mandioca",
+        "taco-129-mandioca-cozida",
+        "taco-130-mandioca-crua",
+        "taco-131-mandioca-farofa-temperada",
+        "taco-132-mandioca-frita"
+      ]
+    },
+    {
+      "chave": "batata salsa",
+      "ids": [
+        "taco-086-batata-baroa-cozida",
+        "taco-087-batata-baroa-crua"
+      ]
+    },
+    {
+      "chave": "mandioquinha",
+      "ids": [
+        "taco-086-batata-baroa-cozida",
+        "taco-087-batata-baroa-crua"
+      ]
+    }
+  ],
   "valoresInvalidosOuAusentesExcluidos": [],
-  "medidasCaseirasDisponiveis": 128,
+  "medidasCaseirasDisponiveis": 146,
   "itensComPesoDocumentadoResolvíveis": [
     "Abacate, cru",
     "Abacaxi, cru",

@@ -1,8 +1,15 @@
 /** Gera o arquivo Markdown de modelo oferecido pela ação "Baixar modelo". */
 
+import type { Alimento } from '../domain/types';
+
 export const NOME_DO_ARQUIVO_MODELO = 'modelo-dieta-equivale.md';
 
-export function gerarModeloMarkdown(): string {
+export function gerarModeloMarkdown(alimentos: Alimento[] = []): string {
+  const catalogo = alimentos.length > 0
+    ? `\n  CATÁLOGO EXATO PARA A IA (ID | NOME CANÔNICO | ALIASES)\n  --------------------------------------------------------\n${alimentos
+      .map((alimento) => `  ${alimento.id} | ${alimento.nome} | ${(alimento.aliases ?? []).join('; ') || '—'}`)
+      .join('\n')}\n`
+    : '';
   return `---
 equivaleVersion: 1
 planId: plano-principal
@@ -41,9 +48,14 @@ suggestedDays: seg, ter, qua, qui, sex
      (ex.: "## Pré-treino") e aparecem depois das refeições do dia.
   3. Cada alimento é um item de lista, com campos separados por "|":
 
-     - Alimento | Quantidade e unidade | peso 00 g | 000 kcal | obs: texto
+     - Alimento | Quantidade e unidade | id: ID_EXATO | peso 00 g | 000 kcal | obs: texto
 
      • Alimento (obrigatório) — sempre o primeiro campo.
+     • id: ID_EXATO (recomendado para conteúdo convertido por IA) — copie o ID
+       do catálogo no fim deste comentário. O ID evita falhas causadas por
+       vírgulas, acentos ou variações no nome. Nunca invente nem altere um ID.
+       Se não houver correspondência inequívoca, omita o ID para o Equivale
+       pedir conferência em vez de associar o alimento errado.
      • Quantidade e medida (obrigatório) — sempre o segundo campo. Qualquer
        descrição textual é aceita e preservada: g, ml, pedaço, bife, filé,
        pote, sachê, pacote, xícara, escumadeira, colheres de sopa etc.
@@ -62,6 +74,7 @@ suggestedDays: seg, ter, qua, qui, sex
 
   Este arquivo fica no seu aparelho. A importação é local: nada é enviado
   para a internet.
+${catalogo}
 -->
 
 ## Café da manhã

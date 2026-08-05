@@ -172,7 +172,7 @@ export function TelaImportacao({ aoConcluir, aoCancelar }: PropsDaImportacao) {
           <button
             type="button"
             className="botao botao--largo"
-            onClick={() => baixarTexto(NOME_DO_ARQUIVO_MODELO, gerarModeloMarkdown(), 'text/markdown')}
+            onClick={() => baixarTexto(NOME_DO_ARQUIVO_MODELO, gerarModeloMarkdown(alimentos.todos()), 'text/markdown')}
           >
             Baixar modelo
           </button>

@@ -6,11 +6,13 @@ import { CartaoDeItem } from './CartaoDeItem';
 
 export const PREFIXO_DESTINO = 'refeicao:';
 
+
 export interface PropsDaRefeicao {
   refeicao: Refeicao;
   blocos: BlocoCalorico[];
   configuracoes: Configuracoes;
   aoAbrirItem: (bloco: BlocoCalorico) => void;
+  aoAbrirAcoesDoItem: (bloco: BlocoCalorico) => void;
   arrastando: boolean;
 }
 
@@ -19,6 +21,7 @@ export function BlocoDeRefeicao({
   blocos,
   configuracoes,
   aoAbrirItem,
+  aoAbrirAcoesDoItem,
   arrastando,
 }: PropsDaRefeicao) {
   const { setNodeRef, isOver } = useDroppable({
@@ -54,7 +57,8 @@ export function BlocoDeRefeicao({
               key={bloco.id}
               bloco={bloco}
               configuracoes={configuracoes}
-              aoAbrir={aoAbrirItem}
+              aoAtivar={aoAbrirItem}
+              aoAbrirAcoes={aoAbrirAcoesDoItem}
             />
           ))
         )}

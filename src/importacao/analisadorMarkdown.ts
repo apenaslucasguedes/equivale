@@ -43,6 +43,8 @@ export interface ItemImportado {
   linha: number;
   refeicaoId: string;
   nomeAlimento: string;
+  /** ID exato da base nutricional, quando fornecido pelo modelo/IA. */
+  alimentoIdInformado: string | null;
   quantidade: number;
   unidade: Unidade;
   descricaoMedidaOriginal: string | null;
@@ -250,10 +252,15 @@ export function analisarMarkdown(conteudo: string): ResultadoDaAnalise {
       let gramas: number | null = null;
       let kcalInformada: number | null = null;
       let observacao: string | null = null;
+      let alimentoIdInformado: string | null = null;
 
       for (const campo of campos.slice(2)) {
         const chave = normalizar(campo);
-        if (chave.startsWith('peso')) {
+        if (chave.startsWith('id alimento') || chave.startsWith('alimento id') || chave.startsWith('id ')) {
+          alimentoIdInformado = campo
+            .replace(/^(id\s*(do\s+)?alimento|alimento\s*id|id)\s*:?\s*/i, '')
+            .trim() || null;
+        } else if (chave.startsWith('peso')) {
           const peso = lerPeso(campo);
           if (peso === null) {
             avisos.push({
@@ -294,6 +301,7 @@ export function analisarMarkdown(conteudo: string): ResultadoDaAnalise {
         linha: numeroDaLinha,
         refeicaoId: refeicaoAtual.id,
         nomeAlimento,
+        alimentoIdInformado,
         quantidade: quantidade.quantidade,
         unidade: quantidade.unidade,
         descricaoMedidaOriginal: quantidade.descricaoMedidaOriginal,

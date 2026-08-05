@@ -15,6 +15,15 @@ export function descreverQuantidade(bloco: BlocoCalorico, configuracoes: Configu
   return medidaCaseira ? `${base} · ${medidaCaseira}` : base;
 }
 
+/** Medida, peso (quando distinto) e energia, sem esconder dados da prescrição. */
+export function descreverResumoDoBloco(bloco: BlocoCalorico, configuracoes: Configuracoes): string {
+  const partes = [descreverQuantidade(bloco, configuracoes)];
+  const peso = bloco.atual.pesoGramas;
+  if (peso && bloco.atual.unidade !== 'g') partes.push(`${formatarNumero(peso, 2)} g`);
+  partes.push(descreverEnergia(bloco.kcal));
+  return partes.join(' · ');
+}
+
 export function descreverQuantidadeOriginal(bloco: BlocoCalorico): string {
   const { quantidade, unidade } = bloco.original;
   return `${formatarNumero(quantidade, 2)} ${bloco.original.descricaoMedidaOriginal ?? unidade}`;

@@ -4,7 +4,7 @@
  */
 
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { render, screen, waitFor, within } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { App } from '../src/App';
 import { Loja } from '../src/estado/Loja';
@@ -90,6 +90,8 @@ describe('baixar modelo', () => {
     expect(conteudo).toContain('planId: plano-principal');
     expect(conteudo).toContain('planName: Nome do plano');
     expect(conteudo).toContain('suggestedDays: seg, ter, qua, qui, sex');
+    expect(conteudo).toContain('CATÁLOGO EXATO PARA A IA');
+    expect(conteudo).toContain('TEST_ONLY_arroz_branco_cozido | Arroz branco cozido');
   });
 });
 
@@ -155,10 +157,11 @@ describe('importar arquivo .md', () => {
     );
     await usuario.click(await screen.findByRole('button', { name: 'Importar plano' }));
 
-    expect(await screen.findByText(/1 item ficou a conferir/)).toBeInTheDocument();
+    const avisoDePendencias = await screen.findByText(/1 item ficou a conferir/);
+    expect(avisoDePendencias).toBeInTheDocument();
+    expect(avisoDePendencias.closest('.faixa')).toHaveClass('faixa--pendencias');
 
     await usuario.click(screen.getByRole('button', { name: /^Suco especial da casa/ }));
-    await usuario.click(screen.getByRole('button', { name: /Conferir item/ }));
 
     const gaveta = within(await screen.findByRole('dialog'));
     await usuario.type(gaveta.getByLabelText('Calorias prescritas (kcal)'), '90');
@@ -181,7 +184,7 @@ describe('backup', () => {
     await usuario.click(screen.getByRole('button', { name: 'Usar plano de demonstração' }));
     await usuario.click(await screen.findByRole('button', { name: 'Importar plano' }));
 
-    await usuario.click(await screen.findByRole('button', { name: /^Pão francês/ }));
+    fireEvent.contextMenu(await screen.findByRole('button', { name: /^Pão francês/ }));
     await usuario.click(screen.getByRole('button', { name: /Mover para outra refeição/ }));
     await usuario.click(
       within(await screen.findByRole('dialog')).getByRole('button', { name: /^Ceia/ }),
@@ -253,7 +256,7 @@ describe('arredondamento', () => {
 
     // Substitui por tofu: 150 kcal × 100 ÷ 76 = 197,368… g
     await usuario.click(await screen.findByRole('button', { name: /^Pão francês/ }));
-    await usuario.click(screen.getByRole('button', { name: /Substituir alimento/ }));
+    await usuario.click(screen.getByRole('button', { name: 'Todas' }));
     await usuario.type(screen.getByLabelText('Pesquisar alimento'), 'tofu');
     await usuario.click(within(screen.getByRole('dialog')).getByRole('button', { name: /^Tofu/ }));
     await usuario.click(screen.getByRole('button', { name: 'Substituir' }));

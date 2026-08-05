@@ -41,6 +41,15 @@ describe('resolução das calorias do bloco', () => {
     expect(resolvidos[0]?.kcal).toBeCloseTo(60.8, 6);
   });
 
+  it('usa o ID exato mesmo quando o nome contém outra grafia e vírgulas', () => {
+    const { resolvidos } = resolverTexto(
+      '# D\n## Almoço\n- Nome escrito livremente | 100 g | id: TEST_ONLY_arroz_branco_cozido',
+    );
+    expect(resolvidos[0]?.alimentoId).toBe('TEST_ONLY_arroz_branco_cozido');
+    expect(resolvidos[0]?.origem).toBe('calculada');
+    expect(resolvidos[0]?.kcal).toBeCloseTo(128, 6);
+  });
+
   it('usa medidas caseiras do alimento para converter unidades', () => {
     const { resolvidos } = resolverTexto('# D\n## Café da manhã\n- Pão francês | 2 unidade');
     expect(resolvidos[0]?.origem).toBe('calculada');

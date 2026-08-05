@@ -1,9 +1,14 @@
 /** Substituto do módulo virtual do vite-plugin-pwa durante os testes. */
 
-export function registerSW(_opcoes?: {
+import { vi } from 'vitest';
+
+interface OpcoesDeRegistro {
   immediate?: boolean;
   onNeedRefresh?: () => void;
   onOfflineReady?: () => void;
-}): (recarregar?: boolean) => Promise<void> {
-  return async () => undefined;
+  onRegisteredSW?: (url: string, registro: ServiceWorkerRegistration | undefined) => void;
 }
+
+export const registerSW = vi.fn(
+  (_opcoes?: OpcoesDeRegistro): ((recarregar?: boolean) => Promise<void>) => async () => undefined,
+);

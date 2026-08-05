@@ -146,7 +146,7 @@ describe('sugerirMedidasCaseiras', () => {
 
   it('sugere medidas em passos de meia unidade', () => {
     const sugestoes = sugerirMedidasCaseiras(60, porcoes);
-    expect(sugestoes.map((s) => s.texto)).toContain('≈ 2,5 fatia');
+    expect(sugestoes.map((s) => s.texto)).toContain('aprox. 2,5 fatias');
   });
 
   it('ordena pela aproximação mais próxima das gramas calculadas', () => {

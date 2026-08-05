@@ -2,11 +2,11 @@
 
 ## Resultado
 
-- Alimentos adicionados: **134**
+- Alimentos adicionados: **597**
 - Registros disponíveis na TACO: **597**
 - Nomes inventariados: **416**
 - Itens com peso documentado que podem ser resolvidos: **133**
-- Medidas caseiras documentadas incluídas: **128**
+- Medidas caseiras documentadas incluídas: **146**
 - Nomes ainda sem correspondência confiável: **279**
 
 ## Fontes
