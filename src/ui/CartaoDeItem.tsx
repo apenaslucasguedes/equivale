@@ -23,12 +23,14 @@ export interface PropsDoCartao {
 }
 
 export const PREFIXO_ITEM_DESTINO = 'item:';
+const LIMITE_MOVIMENTO_TOQUE_PX = 10;
 
 
 export function CartaoDeItem({ bloco, configuracoes, aoAtivar, aoAbrirAcoes, estatico = false }: PropsDoCartao) {
   const temporizador = useRef<number | null>(null);
   const toqueCancelado = useRef(false);
   const toqueProlongadoDisparado = useRef(false);
+  const origemDoToque = useRef<{ x: number; y: number } | null>(null);
   const { attributes, listeners, setNodeRef: setDraggableRef, isDragging } = useDraggable({
     id: bloco.id,
     disabled: estatico,
@@ -57,6 +59,7 @@ export function CartaoDeItem({ bloco, configuracoes, aoAtivar, aoAbrirAcoes, est
     cancelarToqueProlongado();
     toqueCancelado.current = false;
     toqueProlongadoDisparado.current = false;
+    origemDoToque.current = { x: evento.clientX, y: evento.clientY };
     temporizador.current = window.setTimeout(() => {
       temporizador.current = null;
       toqueProlongadoDisparado.current = true;
@@ -76,6 +79,12 @@ export function CartaoDeItem({ bloco, configuracoes, aoAtivar, aoAbrirAcoes, est
     toqueCancelado.current = true;
     cancelarToqueProlongado();
   };
+  const acompanharMovimento = (evento: React.PointerEvent<HTMLButtonElement>) => {
+    const origem = origemDoToque.current;
+    if (!origem || (evento.pointerType !== 'touch' && evento.pointerType !== 'pen')) return;
+    const distancia = Math.hypot(evento.clientX - origem.x, evento.clientY - origem.y);
+    if (distancia > LIMITE_MOVIMENTO_TOQUE_PX) cancelarGestual();
+  };
 
   useEffect(() => cancelarToqueProlongado, []);
 
@@ -91,7 +100,7 @@ export function CartaoDeItem({ bloco, configuracoes, aoAtivar, aoAbrirAcoes, est
         onPointerUp={concluirToque}
         onPointerCancel={cancelarGestual}
         onPointerLeave={cancelarGestual}
-        onPointerMove={cancelarGestual}
+        onPointerMove={acompanharMovimento}
         onContextMenu={(evento) => {
           evento.preventDefault();
           cancelarToqueProlongado();

@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
+import { createEvent, fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { App } from '../src/App';
@@ -34,6 +34,21 @@ function refeicao(nome: string) {
   return within(screen.getByRole('region', { name: nome }));
 }
 
+function dispararToque(
+  tipo: 'pointerDown' | 'pointerMove' | 'pointerUp',
+  alvo: Element,
+  clientX: number,
+  clientY: number,
+) {
+  const evento = createEvent[tipo](alvo);
+  Object.defineProperties(evento, {
+    pointerType: { value: 'touch' },
+    clientX: { value: clientX },
+    clientY: { value: clientY },
+  });
+  fireEvent(alvo, evento);
+}
+
 afterEach(() => vi.restoreAllMocks());
 
 describe('arrastar e soltar cartões', () => {
@@ -60,6 +75,17 @@ describe('arrastar e soltar cartões', () => {
       { keys: '[TouchA>]', target: cartao },
       { keys: '[/TouchA]', target: cartao },
     ]);
+
+    expect(await screen.findByRole('dialog')).toHaveTextContent('Substituir alimento');
+  });
+
+  it('tolera o pequeno deslocamento natural do dedo durante um toque curto', async () => {
+    await montar();
+    const cartao = screen.getByRole('button', { name: /^Arroz, 50 g/ });
+
+    dispararToque('pointerDown', cartao, 100, 100);
+    dispararToque('pointerMove', cartao, 103, 104);
+    dispararToque('pointerUp', cartao, 103, 104);
 
     expect(await screen.findByRole('dialog')).toHaveTextContent('Substituir alimento');
   });
