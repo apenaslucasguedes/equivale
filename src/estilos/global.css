@@ -1054,6 +1054,7 @@ textarea { -webkit-tap-highlight-color: rgb(98 189 232 / 16%); }
   margin: var(--espaco-4) auto 0;
   padding-inline: var(--espaco-4);
 }
+.navegacao-de-planos + .conteudo { padding-top: var(--espaco-4); }
 
 .seletor-de-plano__guias { justify-content: center; gap: var(--espaco-2); }
 .seletor-de-plano__guia {
