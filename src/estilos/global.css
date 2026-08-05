@@ -1163,7 +1163,6 @@ textarea { -webkit-tap-highlight-color: rgb(98 189 232 / 16%); }
   font-weight: var(--peso-titulo);
   letter-spacing: -0.025em;
 }
-.refeicao__icone { margin-right: var(--espaco-2); font-size: 1.25em; }
 .refeicao__contagem {
   padding: 3px var(--espaco-2);
   border-radius: 999px;

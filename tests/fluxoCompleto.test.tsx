@@ -55,8 +55,8 @@ describe('fluxo completo', () => {
     expect(await screen.findByRole('region', { name: 'Café da manhã' })).toBeInTheDocument();
     expect(screen.getByRole('region', { name: 'Ceia' })).toBeInTheDocument();
     expect(refeicao('Café da manhã').getByText('Pão francês')).toBeInTheDocument();
-    // O cartão mostra a quantidade como foi prescrita ("1 unidade", peso 50 g).
-    expect(refeicao('Café da manhã').getByText('1 unidade')).toBeInTheDocument();
+    // O cartão mostra medida, peso e calorias sem exigir a abertura dos detalhes.
+    expect(refeicao('Café da manhã').getByText('1 unidade · 50 g · 150 kcal')).toBeInTheDocument();
 
     // -------------------------------------------------- substituição
     await usuario.click(screen.getByRole('button', { name: /^Pão francês, 1 unidade/ }));
@@ -120,7 +120,7 @@ describe('fluxo completo', () => {
 
     expect(await screen.findByRole('region', { name: 'Jantar' })).toBeInTheDocument();
     expect(refeicao('Jantar').getByText('Tofu')).toBeInTheDocument();
-    expect(refeicao('Jantar').getByText('197 g')).toBeInTheDocument();
+    expect(refeicao('Jantar').getByText('197 g · 150 kcal')).toBeInTheDocument();
 
     // --------------------------------------------- restaurar dieta original
     await usuario.click(screen.getByRole('button', { name: 'Abrir ajustes' }));
@@ -132,7 +132,7 @@ describe('fluxo completo', () => {
 
     expect(await screen.findByRole('region', { name: 'Café da manhã' })).toBeInTheDocument();
     expect(refeicao('Café da manhã').getByText('Pão francês')).toBeInTheDocument();
-    expect(refeicao('Café da manhã').getByText('1 unidade')).toBeInTheDocument();
+    expect(refeicao('Café da manhã').getByText('1 unidade · 50 g · 150 kcal')).toBeInTheDocument();
     expect(screen.queryByText('Tofu')).not.toBeInTheDocument();
     expect(screen.queryByText('substituído')).not.toBeInTheDocument();
     expect(screen.queryByText('movido')).not.toBeInTheDocument();

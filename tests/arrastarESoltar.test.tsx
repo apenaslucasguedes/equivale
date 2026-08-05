@@ -51,6 +51,19 @@ describe('arrastar e soltar cartões', () => {
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
   });
 
+  it('abre a substituição diretamente com um toque curto no celular', async () => {
+    const usuario = userEvent.setup();
+    await montar();
+    const cartao = screen.getByRole('button', { name: /^Arroz, 50 g/ });
+
+    await usuario.pointer([
+      { keys: '[TouchA>]', target: cartao },
+      { keys: '[/TouchA]', target: cartao },
+    ]);
+
+    expect(await screen.findByRole('dialog')).toHaveTextContent('Substituir alimento');
+  });
+
   it('abre as opções por toque prolongado e não exibe a observação no cartão', async () => {
     const usuario = userEvent.setup();
     await montar();

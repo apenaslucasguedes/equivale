@@ -9,8 +9,9 @@
 import { useDeferredValue, useMemo, useState } from 'react';
 import type { ReactNode } from 'react';
 import type { Alimento, Categoria } from '../domain/types';
-import { ICONE_CATEGORIA, ROTULO_CATEGORIA } from '../domain/types';
+import { ROTULO_CATEGORIA } from '../domain/types';
 import type { RepositorioDeAlimentos } from '../data/alimentos/repositorio';
+import { iconeDoAlimento } from './iconeDoAlimento';
 
 export interface PropsDoSeletor {
   repositorio: RepositorioDeAlimentos;
@@ -108,7 +109,7 @@ export function SeletorDeAlimento({
               <button type="button" className="resultado" onClick={() => aoEscolher(alimento)}>
                 <span style={{ minWidth: 0 }}>
                   <span className="resultado__nome">
-                    <span aria-hidden="true">{ICONE_CATEGORIA[alimento.categoria]} </span>
+                    <span aria-hidden="true">{iconeDoAlimento(alimento.nome, alimento.categoria)} </span>
                     {alimento.nome}
                   </span>
                   <span className="resultado__detalhe">

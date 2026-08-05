@@ -149,6 +149,8 @@ export interface BlocoCalorico {
     alimentoId: string | null;
     quantidade: number;
     unidade: Unidade;
+    /** Peso explícito informado na prescrição, além da medida caseira. */
+    pesoGramas?: number | null;
     descricaoMedidaOriginal?: string | null;
     refeicaoId: string;
   };
@@ -159,6 +161,7 @@ export interface BlocoCalorico {
     alimentoId: string | null;
     quantidade: number;
     unidade: Unidade;
+    pesoGramas?: number | null;
     descricaoMedidaOriginal?: string | null;
     refeicaoId: string;
     /** Medida caseira aproximada exibida junto à quantidade, quando houver. */

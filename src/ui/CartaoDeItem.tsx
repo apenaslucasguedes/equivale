@@ -10,7 +10,8 @@ import { useEffect, useRef } from 'react';
 import { useDraggable, useDroppable } from '@dnd-kit/core';
 import type { BlocoCalorico, Configuracoes } from '../domain/types';
 import { foiMovido, foiSubstituido } from '../domain/blocos';
-import { descreverQuantidade } from './formatacao';
+import { descreverResumoDoBloco } from './formatacao';
+import { iconeDoAlimento } from './iconeDoAlimento';
 
 export interface PropsDoCartao {
   bloco: BlocoCalorico;
@@ -23,40 +24,11 @@ export interface PropsDoCartao {
 
 export const PREFIXO_ITEM_DESTINO = 'item:';
 
-function iconeDoAlimento(nome: string): string {
-  const alimento = nome.toLocaleLowerCase('pt-BR');
-  if (alimento.includes('café')) return '☕';
-  if (alimento.includes('queijo') || alimento.includes('muçarela') || alimento.includes('mussarela')) return '🧀';
-  if (alimento.includes('banana')) return '🍌';
-  if (alimento.includes('maçã')) return '🍎';
-  if (alimento.includes('mamão')) return '🍈';
-  if (alimento.includes('morango')) return '🍓';
-  if (alimento.includes('uva')) return '🍇';
-  if (alimento.includes('laranja') || alimento.includes('tangerina')) return '🍊';
-  if (alimento.includes('abacaxi')) return '🍍';
-  if (alimento.includes('melancia')) return '🍉';
-  if (alimento.includes('abacate')) return '🥑';
-  if (alimento.includes('ovo')) return '🥚';
-  if (alimento.includes('pão') || alimento.includes('torrada')) return '🥖';
-  if (alimento.includes('leite')) return '🥛';
-  if (alimento.includes('iogurte')) return '🥣';
-  if (alimento.includes('arroz')) return '🍚';
-  if (alimento.includes('feijão')) return '🫘';
-  if (alimento.includes('frango')) return '🍗';
-  if (alimento.includes('carne')) return '🥩';
-  if (alimento.includes('peixe') || alimento.includes('atum') || alimento.includes('sardinha')) return '🐟';
-  if (alimento.includes('salada') || alimento.includes('alface')) return '🥗';
-  if (alimento.includes('brócolis') || alimento.includes('couve')) return '🥦';
-  if (alimento.includes('batata')) return '🥔';
-  if (alimento.includes('milho') || alimento.includes('cuscuz')) return '🌽';
-  if (alimento.includes('suco')) return '🧃';
-  if (alimento.includes('água')) return '💧';
-  if (alimento.includes('castanha') || alimento.includes('amendoim')) return '🥜';
-  return '🍴';
-}
 
 export function CartaoDeItem({ bloco, configuracoes, aoAtivar, aoAbrirAcoes, estatico = false }: PropsDoCartao) {
   const temporizador = useRef<number | null>(null);
+  const toqueCancelado = useRef(false);
+  const toqueProlongadoDisparado = useRef(false);
   const { attributes, listeners, setNodeRef: setDraggableRef, isDragging } = useDraggable({
     id: bloco.id,
     disabled: estatico,
@@ -75,7 +47,7 @@ export function CartaoDeItem({ bloco, configuracoes, aoAtivar, aoAbrirAcoes, est
   const substituido = foiSubstituido(bloco);
   const movido = foiMovido(bloco);
   const pendente = bloco.origemDasCalorias === 'pendente';
-  const quantidade = descreverQuantidade(bloco, configuracoes);
+  const resumo = descreverResumoDoBloco(bloco, configuracoes);
   const cancelarToqueProlongado = () => {
     if (temporizador.current !== null) window.clearTimeout(temporizador.current);
     temporizador.current = null;
@@ -83,10 +55,26 @@ export function CartaoDeItem({ bloco, configuracoes, aoAtivar, aoAbrirAcoes, est
   const iniciarToqueProlongado = (evento: React.PointerEvent<HTMLButtonElement>) => {
     if (evento.pointerType !== 'touch' && evento.pointerType !== 'pen') return;
     cancelarToqueProlongado();
+    toqueCancelado.current = false;
+    toqueProlongadoDisparado.current = false;
     temporizador.current = window.setTimeout(() => {
       temporizador.current = null;
+      toqueProlongadoDisparado.current = true;
       aoAbrirAcoes(bloco);
     }, 500);
+  };
+  const concluirToque = (evento: React.PointerEvent<HTMLButtonElement>) => {
+    if (evento.pointerType !== 'touch' && evento.pointerType !== 'pen') {
+      cancelarToqueProlongado();
+      return;
+    }
+    const deveAtivar = !toqueCancelado.current && !toqueProlongadoDisparado.current;
+    cancelarToqueProlongado();
+    if (deveAtivar) aoAtivar(bloco);
+  };
+  const cancelarGestual = () => {
+    toqueCancelado.current = true;
+    cancelarToqueProlongado();
   };
 
   useEffect(() => cancelarToqueProlongado, []);
@@ -100,10 +88,10 @@ export function CartaoDeItem({ bloco, configuracoes, aoAtivar, aoAbrirAcoes, est
         type="button"
         className="cartao__corpo"
         onPointerDown={iniciarToqueProlongado}
-        onPointerUp={cancelarToqueProlongado}
-        onPointerCancel={cancelarToqueProlongado}
-        onPointerLeave={cancelarToqueProlongado}
-        onPointerMove={cancelarToqueProlongado}
+        onPointerUp={concluirToque}
+        onPointerCancel={cancelarGestual}
+        onPointerLeave={cancelarGestual}
+        onPointerMove={cancelarGestual}
         onContextMenu={(evento) => {
           evento.preventDefault();
           cancelarToqueProlongado();
@@ -119,13 +107,13 @@ export function CartaoDeItem({ bloco, configuracoes, aoAtivar, aoAbrirAcoes, est
           evento.preventDefault();
           aoAtivar(bloco);
         }}
-        aria-label={`${bloco.atual.alimentoNome}, ${quantidade}. Clique para substituir; segure ou clique com o botão direito para abrir as opções.`}
+        aria-label={`${bloco.atual.alimentoNome}, ${resumo}. Clique para substituir; segure ou clique com o botão direito para abrir as opções.`}
       >
         <span className="cartao__titulo">
           <span className="cartao__icone" aria-hidden="true">{iconeDoAlimento(bloco.atual.alimentoNome)}</span>
           <span className="cartao__nome">{bloco.atual.alimentoNome}</span>
         </span>
-        <span className="cartao__quantidade">{quantidade}</span>
+        <span className="cartao__quantidade">{resumo}</span>
         {substituido || movido || pendente ? (
           <span className="cartao__etiquetas">
             {substituido ? <span className="etiqueta etiqueta--alterado">substituído</span> : null}
