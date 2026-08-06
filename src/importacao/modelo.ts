@@ -51,6 +51,10 @@ suggestedDays: seg, ter, qua, qui, sex
      - Alimento | Quantidade e unidade | id: ID_EXATO | peso 00 g | 000 kcal | obs: texto
 
      • Alimento (obrigatório) — sempre o primeiro campo.
+       Para conteúdo convertido por IA, preserve cada alimento específico da
+       prescrição. NÃO use nomes genéricos criados por resumo (como “Fruta” ou
+       “Proteína”) no lugar de um alimento específico. Se a própria prescrição
+       for genérica, preserve o texto e não escolha um alimento por conta própria.
      • id: ID_EXATO (recomendado para conteúdo convertido por IA) — copie o ID
        do catálogo no fim deste comentário. O ID evita falhas causadas por
        vírgulas, acentos ou variações no nome. Nunca invente nem altere um ID.
@@ -61,6 +65,9 @@ suggestedDays: seg, ter, qua, qui, sex
        pote, sachê, pacote, xícara, escumadeira, colheres de sopa etc.
        g e ml são diretamente conversíveis. Outra medida sem peso exige uma
        porção caseira correspondente na base ou o campo "peso 00 g".
+       Se a prescrição disser “à vontade”, “a vontade” ou “livre”, use exatamente:
+       - Tomate | à vontade
+       Esse item aparecerá como “à vontade” e suas calorias não serão contabilizadas.
      • peso 00 g (opcional) — o peso em gramas, quando a unidade não é g/ml.
      • 000 kcal (opcional, mas RECOMENDADO) — as calorias prescritas do item.
        Sem esse campo, o Equivale tenta calcular pela base de alimentos; se não

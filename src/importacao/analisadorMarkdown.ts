@@ -53,6 +53,8 @@ export interface ItemImportado {
   /** Calorias prescritas informadas no arquivo. */
   kcalInformada: number | null;
   observacao: string | null;
+  /** Item prescrito à vontade/livre, sem contabilização calórica. */
+  livre: boolean;
 }
 
 export interface ResultadoDaAnalise {
@@ -110,6 +112,9 @@ interface QuantidadeLida {
 /** Lê "120 g", "1 unidade", "1,5 colher de sopa", "200ml". */
 function lerQuantidade(bruto: string): QuantidadeLida | null {
   const texto = bruto.trim();
+  if (['a vontade', 'livre'].includes(normalizar(texto))) {
+    return { quantidade: 0, unidade: 'à vontade', descricaoMedidaOriginal: 'à vontade' };
+  }
   const casamento = texto.match(/^([\d.,]+)\s*(.*)$/);
   if (!casamento) return null;
 
@@ -308,6 +313,7 @@ export function analisarMarkdown(conteudo: string): ResultadoDaAnalise {
         gramas,
         kcalInformada,
         observacao,
+        livre: quantidade.unidade === 'à vontade',
       });
       return;
     }

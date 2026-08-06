@@ -9,6 +9,7 @@ const ROTULO_ORIGEM: Record<BlocoCalorico['origemDasCalorias'], string> = {
   informada: 'informada no arquivo importado',
   calculada: 'calculada pela base de alimentos',
   pendente: 'ainda não definida — item a conferir',
+  livre: 'não contabilizada — item à vontade',
 };
 
 export interface PropsDosDetalhes {
@@ -59,8 +60,8 @@ export function GavetaDeDetalhes({
       <div className="cartao-info">
         <h3 className="cartao-info__titulo">Bloco calórico</h3>
         <dl className="definicoes">
-          <dt>Energia fixa</dt>
-          <dd>{descreverEnergia(bloco.kcal)}</dd>
+          <dt>Energia</dt>
+          <dd>{bloco.livre ? 'não contabilizada' : descreverEnergia(bloco.kcal)}</dd>
           <dt>Origem</dt>
           <dd>{ROTULO_ORIGEM[bloco.origemDasCalorias]}</dd>
           {bloco.origemDasCalorias === 'pendente' ? (
@@ -79,7 +80,9 @@ export function GavetaDeDetalhes({
           </dd>
         </dl>
         <p className="nota" style={{ marginTop: 8 }}>
-          As calorias deste bloco não mudam ao substituir o alimento nem ao mover entre refeições.
+          {bloco.livre
+            ? 'Este item foi prescrito à vontade e não entra na contagem de calorias.'
+            : 'As calorias deste bloco não mudam ao substituir o alimento nem ao mover entre refeições.'}
         </p>
       </div>
 

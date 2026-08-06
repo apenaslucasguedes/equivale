@@ -241,10 +241,15 @@ suggestedDays: seg, ter, qua, qui, sex
 
 - Pão francês | 1 unidade | peso 50 g | 150 kcal | obs: sem manteiga
 - Mamão papaia | 100 g | 40 kcal
+- Tomate | à vontade
 ```
 
 A ação **Baixar modelo** dentro do aplicativo gera um `.md` já comentado, com o
-front matter incluído.
+front matter e o catálogo exato de IDs incluídos. Ao converter um PDF com IA,
+envie o modelo completo junto com o PDF: a IA deve copiar apenas IDs existentes,
+preservar alimentos específicos e nunca inventar peso ou calorias. Itens escritos
+como `| à vontade`, `| a vontade` ou `| livre` aparecem no plano sem contabilizar
+calorias e sem virar pendência.
 
 #### Front matter (metadados do plano)
 

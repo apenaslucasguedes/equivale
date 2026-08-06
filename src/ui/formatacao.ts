@@ -6,6 +6,7 @@ import { formatarNumero } from '../domain/texto';
 
 /** "120 g", "1 unidade", "85 g · ≈ 1,5 fatia". */
 export function descreverQuantidade(bloco: BlocoCalorico, configuracoes: Configuracoes): string {
+  if (bloco.livre) return 'à vontade';
   const { quantidade, unidade, medidaCaseira } = bloco.atual;
   const unidadeExibida = bloco.atual.descricaoMedidaOriginal ?? unidade;
   const base =
@@ -17,6 +18,7 @@ export function descreverQuantidade(bloco: BlocoCalorico, configuracoes: Configu
 
 /** Medida, peso (quando distinto) e energia, sem esconder dados da prescrição. */
 export function descreverResumoDoBloco(bloco: BlocoCalorico, configuracoes: Configuracoes): string {
+  if (bloco.livre) return 'à vontade';
   const partes = [descreverQuantidade(bloco, configuracoes)];
   const peso = bloco.atual.pesoGramas;
   if (peso && bloco.atual.unidade !== 'g') partes.push(`${formatarNumero(peso, 2)} g`);
@@ -25,6 +27,7 @@ export function descreverResumoDoBloco(bloco: BlocoCalorico, configuracoes: Conf
 }
 
 export function descreverQuantidadeOriginal(bloco: BlocoCalorico): string {
+  if (bloco.livre) return 'à vontade';
   const { quantidade, unidade } = bloco.original;
   return `${formatarNumero(quantidade, 2)} ${bloco.original.descricaoMedidaOriginal ?? unidade}`;
 }

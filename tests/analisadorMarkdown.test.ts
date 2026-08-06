@@ -118,6 +118,23 @@ describe('analisarMarkdown', () => {
     });
   });
 
+  it.each(['à vontade', 'a vontade', 'livre'])(
+    'importa a medida não contabilizada "%s" sem exigir número',
+    (medida) => {
+      const resultado = analisarMarkdown(`# D\n## Almoço\n- Tomate | ${medida}`);
+      expect(resultado.erros).toEqual([]);
+      expect(resultado.itens[0]).toMatchObject({
+        nomeAlimento: 'Tomate',
+        livre: true,
+        quantidade: 0,
+        unidade: 'à vontade',
+        descricaoMedidaOriginal: 'à vontade',
+        gramas: null,
+        kcalInformada: null,
+      });
+    },
+  );
+
   it('registra erro para item sem quantidade', () => {
     const resultado = analisarMarkdown('# Dieta: X\n## Almoço\n- Arroz');
     expect(resultado.itens).toHaveLength(0);
@@ -193,5 +210,12 @@ describe('analisarMarkdown', () => {
     ]);
     expect(resultado.itens.length).toBeGreaterThan(8);
     expect(resultado.itens.every((i) => i.kcalInformada !== null)).toBe(true);
+  });
+
+  it('instrui a IA a usar IDs exatos e representar itens à vontade', () => {
+    const modelo = gerarModeloMarkdown([]);
+    expect(modelo).toContain('NÃO use nomes genéricos');
+    expect(modelo).toContain('Nunca invente nem altere um ID');
+    expect(modelo).toContain('- Tomate | à vontade');
   });
 });

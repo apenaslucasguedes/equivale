@@ -12,6 +12,12 @@ import type { Alimento, Categoria } from '../domain/types';
 import { ROTULO_CATEGORIA } from '../domain/types';
 import type { RepositorioDeAlimentos } from '../data/alimentos/repositorio';
 import { iconeDoAlimento } from './iconeDoAlimento';
+import {
+  alimentoEscolhidoNoSeletor,
+  alimentoVisivelNoSeletor,
+  nomeDoAlimentoNoSeletor,
+  preparoDoAlimentoNoSeletor,
+} from './apresentacaoDeAlimentos';
 
 export interface PropsDoSeletor {
   repositorio: RepositorioDeAlimentos;
@@ -39,7 +45,9 @@ export function SeletorDeAlimento({
   );
 
   const resultados = useMemo(
-    () => repositorio.buscar(consultaAdiada, { categoria, limite: 60 }),
+    () => repositorio.buscar(consultaAdiada, { categoria, limite: 60 }).filter(({ alimento }) =>
+      alimentoVisivelNoSeletor(alimento),
+    ),
     [repositorio, consultaAdiada, categoria],
   );
 
@@ -106,15 +114,19 @@ export function SeletorDeAlimento({
         <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
           {resultados.map(({ alimento }) => (
             <li key={alimento.id}>
-              <button type="button" className="resultado" onClick={() => aoEscolher(alimento)}>
+              <button
+                type="button"
+                className="resultado"
+                onClick={() => aoEscolher(alimentoEscolhidoNoSeletor(alimento))}
+              >
                 <span style={{ minWidth: 0 }}>
                   <span className="resultado__nome">
                     <span aria-hidden="true">{iconeDoAlimento(alimento.nome, alimento.categoria)} </span>
-                    {alimento.nome}
+                    {nomeDoAlimentoNoSeletor(alimento)}
                   </span>
                   <span className="resultado__detalhe">
                     {ROTULO_CATEGORIA[alimento.categoria] ?? alimento.categoria}
-                    {alimento.preparo ? ` · ${alimento.preparo}` : ''} · {alimento.kcalPor100g} kcal
+                    {preparoDoAlimentoNoSeletor(alimento) ? ` · ${preparoDoAlimentoNoSeletor(alimento)}` : ''} · {alimento.kcalPor100g} kcal
                     /100 g
                   </span>
                 </span>

@@ -15,6 +15,7 @@ export function iconeDoAlimento(nome: string, categoria?: Categoria): string {
   if (alimento.includes('abacaxi')) return '🍍';
   if (alimento.includes('melancia')) return '🍉';
   if (alimento.includes('abacate')) return '🥑';
+  if (alimento.includes('tomate')) return '🍅';
   if (alimento.includes('ovo')) return '🥚';
   if (alimento.includes('pão') || alimento.includes('torrada')) return '🥖';
   if (alimento.includes('leite')) return '🥛';

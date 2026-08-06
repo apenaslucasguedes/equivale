@@ -91,6 +91,7 @@ function sanearBloco(valor: unknown, indice: number): BlocoCalorico | null {
 
   return {
     id,
+    ...(valor.livre === true ? { livre: true } : {}),
     original: {
       alimentoNome: texto(original.alimentoNome, 'Item sem nome'),
       alimentoId: typeof original.alimentoId === 'string' ? original.alimentoId : null,
@@ -116,7 +117,7 @@ function sanearBloco(valor: unknown, indice: number): BlocoCalorico | null {
     },
     kcal: Math.max(0, numero(valor.kcal, 0)),
     origemDasCalorias:
-      origem === 'calculada' || origem === 'pendente' || origem === 'informada'
+      origem === 'calculada' || origem === 'pendente' || origem === 'informada' || origem === 'livre'
         ? origem
         : 'informada',
     ...(typeof valor.motivoPendencia === 'string' ? { motivoPendencia: valor.motivoPendencia } : {}),
