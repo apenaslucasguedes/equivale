@@ -26,6 +26,7 @@ suggestedDays: <dias sugeridos>
 ## <nome da refeição>
 
 - <alimento> | <quantidade> <unidade> [| id: <ID da base>] [| peso <n> g] [| <n> kcal] [| obs: <texto>]
+- <alimento livre> | à vontade [| id: <ID da base>] [| obs: <texto>]
 - ...
 
 ## <outra refeição>
@@ -167,6 +168,19 @@ barra vertical `|`.
 A quantidade aceita vírgula ou ponto como separador decimal (`1,5` = `1.5`).
 Se a unidade for omitida (`- Aveia | 30`), assume-se **g**.
 
+Quando a prescrição disser **“à vontade”**, **“a vontade”** ou **“livre”**, o
+segundo campo pode conter essa expressão sem número:
+
+```markdown
+- Tomate | à vontade | id: <ID exato do tomate no catálogo>
+- Alface | livre
+```
+
+O item é preservado e exibido como **à vontade**, recebe origem `livre` e **não
+entra na contabilização de calorias**. Não é uma pendência e não exige `peso` ou
+`kcal`. Se houver correspondência exata no catálogo, o `id` ainda pode ser usado
+para identificar corretamente o alimento.
+
 Qualquer descrição textual depois da quantidade é aceita e preservada, por
 exemplo `1 pedaço`, `1 bife`, `1 filé`, `1 pote`, `1 sachê`, `1 pacote`,
 `1 xícara`, `1 escumadeira` ou `4 colheres de sopa`. As unidades históricas
@@ -208,6 +222,32 @@ segue esta ordem:
 3. **Pendente** — nenhuma das duas anteriores. O item **não é descartado**:
    ele aparece na etapa de **conferência**, onde você o vincula manualmente a
    um alimento da base ou informa as calorias.
+4. **Livre** — a medida é `à vontade`, `a vontade` ou `livre`. O item aparece no
+   plano, mas suas calorias são deliberadamente desconsideradas.
+
+### 5.1 Instrução para conversão por IA
+
+O modelo baixado pelo aplicativo inclui, dentro de um comentário HTML, o
+catálogo no formato `ID | NOME CANÔNICO | ALIASES`. Ao pedir que uma IA converta
+um PDF, envie **o modelo completo junto com o PDF** e peça para ela obedecer às
+instruções do comentário. A IA deve:
+
+1. copiar apenas IDs que existam exatamente no catálogo, sem inventar ou editar;
+2. usar o ID somente quando a correspondência com o alimento da prescrição for
+   inequívoca, respeitando também o preparo (cru, cozido, grelhado etc.);
+3. preservar o nome e a quantidade da prescrição, sem resumir alimentos
+   específicos como “Fruta”, “Proteína” ou “Legumes”;
+4. quando a própria prescrição for genérica, manter o texto genérico e omitir o
+   ID, em vez de escolher uma opção arbitrária;
+5. nunca inventar peso ou calorias; copiar esses valores apenas quando estiverem
+   no documento de origem; e
+6. escrever `| à vontade` quando a dieta usar “à vontade” ou “livre”.
+
+O ícone não comprova vínculo nutricional: ele pode ser escolhido apenas pelo
+texto. As calorias automáticas dependem do ID exato (ou de nome/alias exato) **e**
+de uma quantidade convertível em gramas.
+
+### 5.2 Correspondência exata com a base
 
 O Equivale nunca adivinha por semelhança aproximada de nome.
 Nomes e múltiplos aliases são comparados após normalização de caixa, acentos e
@@ -220,7 +260,7 @@ As pendências usam motivos específicos: **Base nutricional não carregada**,
 **Alimento não encontrado na base**, **Medida sem peso conhecido** ou **Mais de
 uma correspondência encontrada**.
 
-## 5.1 Processo auditável da base nutricional
+### 5.3 Processo auditável da base nutricional
 
 Antes de substituir `public/data/alimentos.json`, execute
 `npm run alimentos:auditar -- public/data/alimentos.json caminho/da/dieta.md` e

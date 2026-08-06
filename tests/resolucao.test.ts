@@ -63,6 +63,16 @@ describe('resolução das calorias do bloco', () => {
     expect(resolvidos[0]?.motivo).toBe('Alimento não encontrado na base');
   });
 
+  it('não contabiliza calorias nem deixa pendente um item à vontade', () => {
+    const { analise, resolvidos } = resolverTexto('# D\n## Almoço\n- Tomate | à vontade');
+    expect(analise.itens[0]?.livre).toBe(true);
+    expect(resolvidos[0]).toMatchObject({ origem: 'livre', kcal: 0, motivo: null });
+    expect(contarPendentes(resolvidos)).toBe(0);
+
+    const bloco = montarDieta(analise, resolvidos).blocos[0];
+    expect(bloco).toMatchObject({ livre: true, origemDasCalorias: 'livre', kcal: 0 });
+  });
+
   it('deixa pendente quando a unidade não converte em gramas', () => {
     const { resolvidos } = resolverTexto('# D\n## Almoço\n- Arroz branco cozido | 1 porção');
     expect(resolvidos[0]?.origem).toBe('pendente');

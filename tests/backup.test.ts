@@ -111,6 +111,23 @@ describe('exportação', () => {
 });
 
 describe('restauração', () => {
+  it('preserva um item à vontade na volta completa', () => {
+    const estado = estadoComAlteracoes();
+    const bloco = estado.planos[0]!.dietaAtual.blocos[0]!;
+    bloco.livre = true;
+    bloco.origemDasCalorias = 'livre';
+    bloco.kcal = 0;
+
+    const resultado = interpretarBackup(serializarBackup(estado));
+    expect(resultado.ok).toBe(true);
+    if (!resultado.ok) return;
+    expect(resultado.valor.estado.planos[0]!.dietaAtual.blocos[0]).toMatchObject({
+      livre: true,
+      origemDasCalorias: 'livre',
+      kcal: 0,
+    });
+  });
+
   it('preserva a descrição original de medidas livres na volta completa', () => {
     const estado = estadoComAlteracoes();
     const bloco = estado.planos[0]!.dietaAtual.blocos[0]!;

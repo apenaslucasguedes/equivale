@@ -134,7 +134,7 @@ export const UNIDADES: Unidade[] = [
 ];
 
 /** Como as calorias do bloco foram determinadas na importação. */
-export type OrigemDasCalorias = 'informada' | 'calculada' | 'pendente';
+export type OrigemDasCalorias = 'informada' | 'calculada' | 'pendente' | 'livre';
 
 /**
  * Bloco calórico: a unidade indivisível do Equivale.
@@ -142,6 +142,9 @@ export type OrigemDasCalorias = 'informada' | 'calculada' | 'pendente';
  */
 export interface BlocoCalorico {
   id: string;
+
+  /** Item prescrito à vontade/livre; não participa da contagem de calorias. */
+  livre?: boolean;
 
   /** Estado prescrito, imutável depois da importação. */
   original: {

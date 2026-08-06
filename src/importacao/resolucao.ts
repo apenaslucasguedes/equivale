@@ -114,6 +114,18 @@ export function resolverItens(
       .filter((alimento): alimento is Alimento => alimento !== undefined);
     const alimentoId = idsCorrespondentes.length === 1 ? (idsCorrespondentes[0] ?? null) : null;
 
+    if (item.livre) {
+      return {
+        item,
+        alimentoId,
+        alimentoNome: item.nomeAlimento,
+        kcal: 0,
+        origem: 'livre' as OrigemDasCalorias,
+        motivo: null,
+        opcoesCorrespondencia,
+      };
+    }
+
     if (item.kcalInformada !== null) {
       return {
         item,
@@ -203,6 +215,7 @@ export function montarDieta(analise: ResultadoDaAnalise, resolvidos: ItemResolvi
 
     return {
       id: novoId('bloco'),
+      ...(item.livre ? { livre: true } : {}),
       original: {
         alimentoNome: item.nomeAlimento,
         alimentoId: resolvido.alimentoId,
