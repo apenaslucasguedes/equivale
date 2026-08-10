@@ -13,6 +13,7 @@ export interface PropsDaRefeicao {
   configuracoes: Configuracoes;
   aoAbrirItem: (bloco: BlocoCalorico) => void;
   aoAbrirAcoesDoItem: (bloco: BlocoCalorico) => void;
+  aoAdicionarAlimento?: (refeicaoId: string) => void;
   arrastando: boolean;
 }
 
@@ -22,6 +23,7 @@ export function BlocoDeRefeicao({
   configuracoes,
   aoAbrirItem,
   aoAbrirAcoesDoItem,
+  aoAdicionarAlimento,
   arrastando,
 }: PropsDaRefeicao) {
   const { setNodeRef, isOver } = useDroppable({
@@ -37,9 +39,10 @@ export function BlocoDeRefeicao({
         <h2 className="refeicao__nome" id={`refeicao-${refeicao.id}`}>
           {refeicao.nome}
         </h2>
-        <span className="refeicao__contagem">
-          {blocos.length === 1 ? '1 item' : `${blocos.length} itens`}
-        </span>
+        <div className="refeicao__acoes">
+          <span className="refeicao__contagem">{blocos.length === 1 ? '1 item' : `${blocos.length} itens`}</span>
+          {aoAdicionarAlimento ? <button type="button" className="refeicao__adicionar" aria-label={`Adicionar alimento ao ${refeicao.nome}`} onClick={() => aoAdicionarAlimento(refeicao.id)}>＋</button> : null}
+        </div>
       </header>
 
       <div

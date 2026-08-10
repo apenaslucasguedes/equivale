@@ -1,5 +1,6 @@
 import { describe, expect, it, vi } from 'vitest';
 import { render, screen, within } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { DndContext } from '@dnd-kit/core';
 import { BlocoDeRefeicao } from '../src/ui/BlocoDeRefeicao';
 import { SeletorDeAlimento } from '../src/ui/SeletorDeAlimento';
@@ -8,6 +9,26 @@ import { criarBloco, criarRepositorioSincrono } from './apoio/fabricas';
 import { iconeDoAlimento } from '../src/ui/iconeDoAlimento';
 
 describe('informações e ícones dos alimentos', () => {
+  it('oferece adicionar alimento diretamente no cabeçalho da refeição', async () => {
+    const usuario = userEvent.setup();
+    const adicionar = vi.fn();
+    render(
+      <DndContext>
+        <BlocoDeRefeicao
+          refeicao={{ id: 'cafe-da-manha', nome: 'Café da manhã', ordem: 0 }}
+          blocos={[criarBloco()]}
+          configuracoes={CONFIGURACOES_PADRAO}
+          aoAbrirItem={vi.fn()}
+          aoAbrirAcoesDoItem={vi.fn()}
+          aoAdicionarAlimento={adicionar}
+          arrastando={false}
+        />
+      </DndContext>,
+    );
+    await usuario.click(screen.getByRole('button', { name: 'Adicionar alimento ao Café da manhã' }));
+    expect(adicionar).toHaveBeenCalledWith('cafe-da-manha');
+  });
+
   it.each([
     'Tomate, purê',
     'Tomate, salada',

@@ -38,10 +38,13 @@ import { GavetaDeMover } from '../ui/GavetaDeMover';
 import { GavetaDeDetalhes } from '../ui/GavetaDeDetalhes';
 import { GavetaDeSubstituicao } from '../ui/GavetaDeSubstituicao';
 import { GavetaDeConferencia } from '../ui/GavetaDeConferencia';
+import { GavetaDeConsumo } from '../ui/GavetaDeConsumo';
+import { Confirmacao } from '../ui/Confirmacao';
+import { novoId } from '../domain/identificadores';
 import { normalizar } from '../domain/texto';
 import { formatarNumero } from '../domain/texto';
 
-type GavetaAberta = 'acoes' | 'substituir' | 'mover' | 'detalhes' | 'conferir' | null;
+type GavetaAberta = 'acoes' | 'substituir' | 'ajustar' | 'adicionar' | 'remover' | 'mover' | 'detalhes' | 'conferir' | null;
 
 interface MovimentoParaDesfazer {
   blocoId: string;
@@ -75,6 +78,7 @@ export function TelaInicio({ aoAbrirImportacao }: PropsDaTelaInicio) {
   const [blocoAtivoId, setBlocoAtivoId] = useState<string | null>(null);
   const [selecionadoId, setSelecionadoId] = useState<string | null>(null);
   const [gaveta, setGaveta] = useState<GavetaAberta>(null);
+  const [refeicaoParaAdicionar, setRefeicaoParaAdicionar] = useState<string | null>(null);
   const [movimentoParaDesfazer, setMovimentoParaDesfazer] = useState<MovimentoParaDesfazer | null>(
     null,
   );
@@ -116,6 +120,7 @@ export function TelaInicio({ aoAbrirImportacao }: PropsDaTelaInicio) {
   const fechar = () => {
     setGaveta(null);
     setSelecionadoId(null);
+    setRefeicaoParaAdicionar(null);
   };
 
   const escolherAcao = (acao: AcaoDoItem) => {
@@ -123,6 +128,10 @@ export function TelaInicio({ aoAbrirImportacao }: PropsDaTelaInicio) {
     if (acao === 'restaurar') {
       despachar({ tipo: 'restaurarBloco', blocoId: selecionado.id });
       fechar();
+      return;
+    }
+    if (acao === 'remover') {
+      setGaveta('remover');
       return;
     }
     setGaveta(acao === 'detalhes' ? 'detalhes' : acao);
@@ -203,6 +212,8 @@ export function TelaInicio({ aoAbrirImportacao }: PropsDaTelaInicio) {
   };
 
   const total = somaDeCalorias(dieta.blocos);
+  const totalPrescrito = somaDeCalorias(plano?.dietaOriginal.blocos ?? []);
+  const diferenca = total - totalPrescrito;
 
   return (
     <>
@@ -238,6 +249,7 @@ export function TelaInicio({ aoAbrirImportacao }: PropsDaTelaInicio) {
               configuracoes={estado.configuracoes}
               aoAbrirItem={(bloco) => abrirItem(bloco, bloco.origemDasCalorias === 'pendente' ? 'conferir' : 'substituir')}
               aoAbrirAcoesDoItem={(bloco) => abrirItem(bloco, 'acoes')}
+              aoAdicionarAlimento={(refeicaoId) => { setRefeicaoParaAdicionar(refeicaoId); setGaveta('adicionar'); }}
               arrastando={blocoAtivoId !== null}
             />
           ))}
@@ -273,11 +285,13 @@ export function TelaInicio({ aoAbrirImportacao }: PropsDaTelaInicio) {
         </div>
       ) : null}
 
+      <section className={`resumo-calorico ${diferenca > 0 ? 'resumo-calorico--acima' : 'resumo-calorico--dentro'}`} aria-label="Resumo de calorias do dia">
+        <div><span>Hoje</span><strong>{formatarNumero(total, 0)} kcal</strong></div>
+        <div><span>Prescrito: {formatarNumero(totalPrescrito, 0)} kcal</span><strong>{formatarNumero(totalPrescrito, 0)} kcal</strong></div>
+        <p>{diferenca === 0 ? 'Você está exatamente no valor prescrito.' : diferenca > 0 ? `${formatarNumero(diferenca, 0)} kcal acima do prescrito.` : `${formatarNumero(Math.abs(diferenca), 0)} kcal abaixo do prescrito.`}</p>
+      </section>
       <p className="rodape-discreto">
-        {plano?.nome ?? dieta.titulo} · {dieta.blocos.length} itens · soma dos blocos:{' '}
-        {formatarNumero(total, 0)} kcal
-        <br />
-        Valor de referência da dieta prescrita. O Equivale não define metas nem acompanha consumo.
+        Comparação informativa com a dieta importada. O Equivale não define metas nem julga escolhas.
         <br />
         <button
           type="button"
@@ -346,8 +360,32 @@ export function TelaInicio({ aoAbrirImportacao }: PropsDaTelaInicio) {
             }}
             aoFechar={fechar}
           />
+          <GavetaDeConsumo
+            aberta={gaveta === 'ajustar'}
+            bloco={selecionado}
+            refeicoes={refeicoes}
+            repositorio={alimentos}
+            aoSalvar={(dados) => despachar({ tipo: 'ajustarConsumo', blocoId: selecionado.id, dados })}
+            aoFechar={fechar}
+          />
+          <Confirmacao
+            aberta={gaveta === 'remover'}
+            titulo="Remover do dia?"
+            descricao={`${selecionado.atual.alimentoNome} deixará de contar na soma de hoje. A prescrição original continuará guardada.`}
+            rotuloDeConfirmar="Remover do dia"
+            aoCancelar={fechar}
+            aoConfirmar={() => { despachar({ tipo: 'removerConsumo', blocoId: selecionado.id }); fechar(); }}
+          />
         </>
       ) : null}
+      <GavetaDeConsumo
+        aberta={gaveta === 'adicionar'}
+        refeicoes={refeicoes}
+        refeicaoInicialId={refeicaoParaAdicionar}
+        repositorio={alimentos}
+        aoSalvar={(dados) => despachar({ tipo: 'adicionarConsumo', dados: { ...dados, id: novoId('consumo') } })}
+        aoFechar={fechar}
+      />
     </>
   );
 }

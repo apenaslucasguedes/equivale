@@ -143,6 +143,11 @@ export type OrigemDasCalorias = 'informada' | 'calculada' | 'pendente' | 'livre'
 export interface BlocoCalorico {
   id: string;
 
+  /** Alterações livres do dia; a prescrição continua disponível para restauração. */
+  adicionado?: boolean;
+  removido?: boolean;
+  kcalOriginal?: number;
+
   /** Item prescrito à vontade/livre; não participa da contagem de calorias. */
   livre?: boolean;
 

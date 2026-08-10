@@ -10,8 +10,12 @@ import type {
 } from '../domain/types';
 import { estadoInicial } from '../domain/types';
 import type { DadosDaSubstituicao } from '../domain/blocos';
+import type { DadosDoConsumo, DadosDoNovoConsumo } from '../domain/blocos';
 import {
+  adicionarAlimentoNaDieta,
+  ajustarAlimentoNaDieta,
   moverBlocoNaDieta,
+  removerBlocoDaDieta,
   restaurarBlocoNaDieta,
   substituirAlimentoNaDieta,
 } from '../domain/blocos';
@@ -39,6 +43,9 @@ export type Acao =
   | { tipo: 'substituirAlimento'; blocoId: string; dados: DadosDaSubstituicao }
   | { tipo: 'moverBloco'; blocoId: string; refeicaoId: string; posicao?: number }
   | { tipo: 'restaurarBloco'; blocoId: string }
+  | { tipo: 'ajustarConsumo'; blocoId: string; dados: DadosDoConsumo }
+  | { tipo: 'adicionarConsumo'; dados: DadosDoNovoConsumo }
+  | { tipo: 'removerConsumo'; blocoId: string }
   /** Desfaz as alterações do plano ativo (ou do plano indicado). */
   | { tipo: 'restaurarDieta'; planoId?: string }
   | { tipo: 'resolverPendencia'; blocoId: string; alimentoId: string; nome: string; kcal: number }
@@ -162,6 +169,15 @@ export function redutor(estado: EstadoPersistido, acao: Acao): EstadoPersistido 
 
     case 'restaurarBloco':
       return comDietaAtiva(estado, (dieta) => restaurarBlocoNaDieta(dieta, acao.blocoId));
+
+    case 'ajustarConsumo':
+      return comDietaAtiva(estado, (dieta) => ajustarAlimentoNaDieta(dieta, acao.blocoId, acao.dados));
+
+    case 'adicionarConsumo':
+      return comDietaAtiva(estado, (dieta) => adicionarAlimentoNaDieta(dieta, acao.dados));
+
+    case 'removerConsumo':
+      return comDietaAtiva(estado, (dieta) => removerBlocoDaDieta(dieta, acao.blocoId));
 
     case 'restaurarDieta':
       return restaurarPlano(estado, acao.planoId ?? estado.planoAtivoId);

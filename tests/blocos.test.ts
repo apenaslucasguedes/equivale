@@ -1,5 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
+  adicionarAlimentoNaDieta,
+  ajustarAlimentoNaDieta,
   blocosDaRefeicao,
   contarAlteracoes,
   foiAlterado,
@@ -8,6 +10,7 @@ import {
   moverBlocoNaDieta,
   restaurarBlocoNaDieta,
   restaurarDietaOriginal,
+  removerBlocoDaDieta,
   somaDeCalorias,
   substituirAlimentoNaDieta,
 } from '../src/domain/blocos';
@@ -69,6 +72,41 @@ describe('substituição', () => {
       unidade: 'g',
     });
     expect(depois.blocos[0]?.atual.alimentoNome).toBe('Azeite de oliva');
+  });
+});
+
+describe('registro do que foi consumido', () => {
+  it('ajusta quantidade e calorias sem perder a prescrição original', () => {
+    const dieta = ajustarAlimentoNaDieta(criarDieta(), 'bloco_1', {
+      alimento: { id: 'TEST_ONLY_pao_frances', nome: 'Pão francês' },
+      quantidade: 100,
+      kcal: 300,
+    });
+    expect(dieta.blocos[0]).toMatchObject({
+      kcal: 300,
+      kcalOriginal: 150,
+      atual: { quantidade: 100, unidade: 'g' },
+      original: { quantidade: 50, unidade: 'g' },
+    });
+  });
+
+  it('adiciona um alimento novo à refeição com calorias calculadas', () => {
+    const dieta = adicionarAlimentoNaDieta(criarDieta(), {
+      id: 'extra_1', refeicaoId: 'cafe-da-manha',
+      alimento: { id: 'TEST_ONLY_banana_prata', nome: 'Banana prata' },
+      quantidade: 80, kcal: 78,
+    });
+    expect(dieta.blocos).toHaveLength(2);
+    expect(dieta.blocos[1]).toMatchObject({ adicionado: true, kcal: 78 });
+    expect(somaDeCalorias(dieta.blocos)).toBe(228);
+  });
+
+  it('remove um item e a restauração geral volta à dieta prescrita', () => {
+    const removida = removerBlocoDaDieta(criarDieta(), 'bloco_1');
+    expect(removida.blocos[0]).toMatchObject({ removido: true, kcal: 0, kcalOriginal: 150 });
+    const restaurada = restaurarDietaOriginal(removida);
+    expect(restaurada.blocos[0]).toMatchObject({ kcal: 150, atual: { quantidade: 50 } });
+    expect(restaurada.blocos[0]?.removido).toBeUndefined();
   });
 });
 

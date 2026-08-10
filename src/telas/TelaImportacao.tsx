@@ -21,13 +21,14 @@ import {
   resolverItens,
 } from '../importacao/resolucao';
 import type { ItemResolvido } from '../importacao/resolucao';
-import { NOME_DO_ARQUIVO_MODELO, gerarModeloMarkdown } from '../importacao/modelo';
+import { gerarModeloMarkdown } from '../importacao/modelo';
 import { calcularCaloriasDaQuantidade } from '../domain/equivalencia';
 import { formatarNumero, lerNumero, normalizar } from '../domain/texto';
-import { baixarTexto, lerArquivoComoTexto } from '../ui/arquivos';
+import { lerArquivoComoTexto } from '../ui/arquivos';
 import { Gaveta } from '../ui/Gaveta';
 import { Confirmacao } from '../ui/Confirmacao';
 import { SeletorDeAlimento } from '../ui/SeletorDeAlimento';
+import { GavetaDoModelo } from '../ui/GavetaDoModelo';
 
 type Etapa = 'escolha' | 'previa' | 'conferencia';
 
@@ -47,6 +48,7 @@ export function TelaImportacao({ aoConcluir, aoCancelar }: PropsDaImportacao) {
   const [indiceEmConferencia, setIndiceEmConferencia] = useState<number | null>(null);
   const [kcalManual, setKcalManual] = useState('');
   const [confirmarSubstituicao, setConfirmarSubstituicao] = useState(false);
+  const [mostrarModelo, setMostrarModelo] = useState(false);
 
   const pendentes = useMemo(() => contarPendentes(resolvidos), [resolvidos]);
 
@@ -135,6 +137,7 @@ export function TelaImportacao({ aoConcluir, aoCancelar }: PropsDaImportacao) {
   // ------------------------------------------------------------- etapa 1
   if (etapa === 'escolha') {
     return (
+      <>
       <div>
         <h1 className="vazio__titulo">Importar plano</h1>
         <p className="vazio__texto" style={{ margin: '0 0 16px' }}>
@@ -172,7 +175,7 @@ export function TelaImportacao({ aoConcluir, aoCancelar }: PropsDaImportacao) {
           <button
             type="button"
             className="botao botao--largo"
-            onClick={() => baixarTexto(NOME_DO_ARQUIVO_MODELO, gerarModeloMarkdown(alimentos.todos()), 'text/markdown')}
+            onClick={() => setMostrarModelo(true)}
           >
             Baixar modelo
           </button>
@@ -193,6 +196,8 @@ export function TelaImportacao({ aoConcluir, aoCancelar }: PropsDaImportacao) {
           baixado já vem comentado com todas as regras.
         </p>
       </div>
+      <GavetaDoModelo aberta={mostrarModelo} alimentos={alimentos.todos()} aoFechar={() => setMostrarModelo(false)} />
+      </>
     );
   }
 
