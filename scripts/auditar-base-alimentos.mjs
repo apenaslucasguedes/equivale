@@ -42,9 +42,11 @@ const resultado = {
   quantidadeDeAlimentos: alimentos.length,
   idsDuplicados: [...new Set(alimentos.map(({ id }) => id))]
     .filter((id) => alimentos.filter((alimento) => alimento.id === id).length > 1),
+  // codigoDaFonte pode ser null quando a fonte declarada (ex.: rótulo de fabricante) não tem
+  // um código oficial rastreável — só id, nome, fonte e atualizadoEm são obrigatórios.
   valoresAusentes: alimentos
     .filter((alimento) =>
-      !alimento.id || !alimento.nome || !alimento.fonte || !alimento.codigoDaFonte || !alimento.atualizadoEm,
+      !alimento.id || !alimento.nome || !alimento.fonte || !alimento.atualizadoEm,
     )
     .map(({ id, nome }) => ({ id, nome })),
   valoresCaloricosInvalidos: alimentos
