@@ -147,6 +147,29 @@ preservados; aparecem depois das refeições canônicas, na ordem do arquivo.
 
 Refeições declaradas sem nenhum item não aparecem na tela principal.
 
+### 3.1 Refeições com alternativas na prescrição
+
+Uma refeição tem **um único** conjunto de itens, que o Equivale **soma**. Se a
+prescrição original oferece alternativas (“Opção 1”, “Opção 2”, cardápios
+alternativos), o arquivo deve trazer só uma delas — nunca todas em sequência,
+o que somaria os itens de opções diferentes como se fossem a mesma refeição.
+
+```markdown
+Prescrição original:
+  Café da manhã
+    Opção 1: pão francês + ovos + fruta
+    Opção 2: tapioca + queijo + fruta
+
+Arquivo de importação (escolha a Opção 1; a Opção 2 fica de fora):
+  ## Café da manhã
+  - Pão francês | 1 unidade | peso 50 g | 150 kcal
+  - Ovos | 2 unidades | peso 100 g | 143 kcal
+  - Fruta | 1 porção | obs: prescrição não define qual fruta; conferir
+```
+
+Trocar entre alternativas equivalentes é feito depois, dentro do próprio
+aplicativo — não faz parte deste arquivo.
+
 ---
 
 ## 4. Itens (blocos calóricos)
@@ -240,8 +263,15 @@ instruções do comentário. A IA deve:
 4. quando a própria prescrição for genérica, manter o texto genérico e omitir o
    ID, em vez de escolher uma opção arbitrária;
 5. nunca inventar peso ou calorias; copiar esses valores apenas quando estiverem
-   no documento de origem; e
-6. escrever `| à vontade` quando a dieta usar “à vontade” ou “livre”.
+   no documento de origem;
+6. escrever `| à vontade` quando a dieta usar “à vontade” ou “livre”; e
+7. quando a prescrição trouxer alternativas por refeição (“Opção 1”, “Opção 2”,
+   cardápios alternativos, “ou”), escolher **apenas uma** opção por refeição
+   (a Opção 1, salvo indicação em contrário) e descartar as demais nesta
+   conversão. O formato não representa alternativas — itens de uma mesma
+   refeição são **somados** —, então listar duas opções como se fossem itens
+   da mesma refeição duplica o alimento e infla as calorias. A troca entre
+   opções equivalentes é feita depois, dentro do próprio aplicativo.
 
 O ícone não comprova vínculo nutricional: ele pode ser escolhido apenas pelo
 texto. As calorias automáticas dependem do ID exato (ou de nome/alias exato) **e**

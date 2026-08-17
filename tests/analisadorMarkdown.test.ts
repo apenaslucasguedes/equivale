@@ -218,4 +218,11 @@ describe('analisarMarkdown', () => {
     expect(modelo).toContain('Nunca invente nem altere um ID');
     expect(modelo).toContain('- Tomate | à vontade');
   });
+
+  it('instrui a IA a escolher apenas uma opção quando a prescrição tem alternativas', () => {
+    const modelo = gerarModeloMarkdown([]);
+    expect(modelo).toContain('Opção 1');
+    expect(modelo).toContain('escolha apenas UMA opção por refeição');
+    expect(modelo).toContain('NUNCA liste duas opções alternativas');
+  });
 });
