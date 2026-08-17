@@ -78,6 +78,15 @@ suggestedDays: seg, ter, qua, qui, sex
 
   4. Linhas em branco, comentários e citações (>) são ignorados.
   5. Apague as refeições que não fizerem parte do seu plano.
+  6. Prescrições com alternativas por refeição ("Opção 1", "Opção 2",
+     "Opção 1 ou Opção 2", cardápios alternativos): o Equivale SOMA todos os
+     itens de uma mesma refeição — ele não tem uma sintaxe para "ou". Para
+     conteúdo convertido por IA, escolha apenas UMA opção por refeição (a
+     Opção 1, salvo indicação em contrário) e descarte as demais nesta
+     conversão. NUNCA liste duas opções alternativas como se fossem itens
+     somados da mesma refeição: isso duplica o alimento e infla as calorias
+     da refeição. A troca entre opções equivalentes é feita depois, dentro do
+     próprio aplicativo.
 
   Este arquivo fica no seu aparelho. A importação é local: nada é enviado
   para a internet.
