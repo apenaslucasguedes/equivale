@@ -38,7 +38,7 @@
         {
           "medida": "xícara de chá",
           "quantidade": 0.5,
-          "gramas": 100.0,
+          "gramas": 100,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 15",
           "codigoDaFonte": "g14-cafe-infusao-10"
         }
@@ -70,7 +70,7 @@
         {
           "medida": "xícara de chá",
           "quantidade": 0.5,
-          "gramas": 100.0,
+          "gramas": 100,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 15",
           "codigoDaFonte": "g14-cha-erva-doce-infusao-5"
         }
@@ -90,7 +90,7 @@
         {
           "medida": "xícara de chá",
           "quantidade": 0.5,
-          "gramas": 100.0,
+          "gramas": 100,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 15",
           "codigoDaFonte": "g14-cha-mate-infusao-5"
         }
@@ -110,7 +110,7 @@
         {
           "medida": "xícara de chá",
           "quantidade": 0.5,
-          "gramas": 100.0,
+          "gramas": 100,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 15",
           "codigoDaFonte": "g14-cha-preto-infusao-5"
         }
@@ -132,7 +132,7 @@
         {
           "medida": "xícara de chá",
           "quantidade": 0.5,
-          "gramas": 100.0,
+          "gramas": 100,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 15",
           "codigoDaFonte": "g14-agua-de-coco"
         }
@@ -237,8 +237,8 @@
       "porcoesCaseiras": [
         {
           "medida": "bife pequeno",
-          "quantidade": 1.0,
-          "gramas": 75.0,
+          "quantidade": 1,
+          "gramas": 75,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 1",
           "codigoDaFonte": "g01-acem-cozido-sem-gordura"
         }
@@ -253,7 +253,7 @@
       "aliases": [],
       "categoria": "proteinas",
       "preparo": "sem-gordura, cru",
-      "kcalPor100g": 144.0,
+      "kcalPor100g": 144,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "329",
@@ -289,7 +289,7 @@
       "aliases": [],
       "categoria": "proteinas",
       "preparo": "cozido",
-      "kcalPor100g": 133.0,
+      "kcalPor100g": 133,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "332",
@@ -355,8 +355,8 @@
       "porcoesCaseiras": [
         {
           "medida": "bife pequeno",
-          "quantidade": 1.0,
-          "gramas": 60.0,
+          "quantidade": 1,
+          "gramas": 60,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 1",
           "codigoDaFonte": "g01-capa-de-contra-file-sem-gordura-grelhado"
         }
@@ -413,8 +413,8 @@
       "porcoesCaseiras": [
         {
           "medida": "colher de sopa",
-          "quantidade": 1.0,
-          "gramas": 20.0,
+          "quantidade": 1,
+          "gramas": 20,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
           "codigoDaFonte": "g02-arroz-integral-cozido"
         }
@@ -448,8 +448,8 @@
       "porcoesCaseiras": [
         {
           "medida": "colher de sopa rasa",
-          "quantidade": 1.0,
-          "gramas": 20.0,
+          "quantidade": 1,
+          "gramas": 20,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
           "codigoDaFonte": "g02-arroz-branco-cozido"
         }
@@ -656,7 +656,7 @@
       "aliases": [],
       "categoria": "cereais-paes-massas-tuberculos",
       "preparo": null,
-      "kcalPor100g": 386.0,
+      "kcalPor100g": 386,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "27",
@@ -668,7 +668,7 @@
       "aliases": [],
       "categoria": "cereais-paes-massas-tuberculos",
       "preparo": null,
-      "kcalPor100g": 333.0,
+      "kcalPor100g": 333,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "28",
@@ -692,12 +692,12 @@
       "aliases": [],
       "categoria": "acucares-e-doces",
       "preparo": null,
-      "kcalPor100g": 401.0,
+      "kcalPor100g": 401,
       "porcoesCaseiras": [
         {
           "medida": "colher de sopa",
-          "quantidade": 1.0,
-          "gramas": 22.0,
+          "quantidade": 1,
+          "gramas": 22,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 12",
           "codigoDaFonte": "g12-achocolatado-po"
         }
@@ -716,7 +716,7 @@
       "porcoesCaseiras": [
         {
           "medida": "colher de sopa cheia",
-          "quantidade": 2.0,
+          "quantidade": 2,
           "gramas": 99.9,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 7",
           "codigoDaFonte": "g06-abacate-cru"
@@ -736,8 +736,8 @@
       "porcoesCaseiras": [
         {
           "medida": "fatia média",
-          "quantidade": 1.0,
-          "gramas": 80.0,
+          "quantidade": 1,
+          "gramas": 80,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
           "codigoDaFonte": "g05-abacaxi-cru"
         }
@@ -780,8 +780,8 @@
       "porcoesCaseiras": [
         {
           "medida": "unidade",
-          "quantidade": 11.0,
-          "gramas": 130.0,
+          "quantidade": 11,
+          "gramas": 130,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
           "codigoDaFonte": "g05-acerola-crua"
         }
@@ -824,8 +824,8 @@
       "porcoesCaseiras": [
         {
           "medida": "unidade pequena",
-          "quantidade": 2.0,
-          "gramas": 75.0,
+          "quantidade": 2,
+          "gramas": 75,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
           "codigoDaFonte": "g05-ameixa-crua"
         }
@@ -852,7 +852,7 @@
       "aliases": [],
       "categoria": "frutas",
       "preparo": "cru",
-      "kcalPor100g": 97.0,
+      "kcalPor100g": 97,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "174",
@@ -876,11 +876,11 @@
       "aliases": [],
       "categoria": "frutas",
       "preparo": "congelado",
-      "kcalPor100g": 58.0,
+      "kcalPor100g": 58,
       "porcoesCaseiras": [
         {
           "medida": "copo tulipa cheio",
-          "quantidade": 1.0,
+          "quantidade": 1,
           "gramas": 99.9,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 7",
           "codigoDaFonte": "g06-acai-polpa-congelada"
@@ -896,12 +896,12 @@
       "aliases": [],
       "categoria": "frutas",
       "preparo": "cru",
-      "kcalPor100g": 128.0,
+      "kcalPor100g": 128,
       "porcoesCaseiras": [
         {
           "medida": "fatia",
-          "quantidade": 1.0,
-          "gramas": 30.0,
+          "quantidade": 1,
+          "gramas": 30,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
           "codigoDaFonte": "g05-banana-da-terra-crua"
         }
@@ -944,8 +944,8 @@
       "porcoesCaseiras": [
         {
           "medida": "pedaço",
-          "quantidade": 1.0,
-          "gramas": 45.0,
+          "quantidade": 1,
+          "gramas": 45,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
           "codigoDaFonte": "g05-banana-maca-crua"
         }
@@ -984,8 +984,8 @@
       "porcoesCaseiras": [
         {
           "medida": "metade",
-          "quantidade": 1.0,
-          "gramas": 35.0,
+          "quantidade": 1,
+          "gramas": 35,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
           "codigoDaFonte": "g05-banana-ouro-crua"
         }
@@ -1018,8 +1018,8 @@
       "porcoesCaseiras": [
         {
           "medida": "pedaço",
-          "quantidade": 1.0,
-          "gramas": 40.0,
+          "quantidade": 1,
+          "gramas": 40,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
           "codigoDaFonte": "g05-banana-prata-crua"
         }
@@ -1050,8 +1050,8 @@
       "porcoesCaseiras": [
         {
           "medida": "unidade média",
-          "quantidade": 1.0,
-          "gramas": 100.0,
+          "quantidade": 1,
+          "gramas": 100,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
           "codigoDaFonte": "g05-caju-cru"
         }
@@ -1102,7 +1102,7 @@
       "aliases": [],
       "categoria": "hortalicas",
       "preparo": "cozido",
-      "kcalPor100g": 15.0,
+      "kcalPor100g": 15,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "70",
@@ -1118,8 +1118,8 @@
       "porcoesCaseiras": [
         {
           "medida": "colher de sopa rasa",
-          "quantidade": 4.0,
-          "gramas": 80.0,
+          "quantidade": 4,
+          "gramas": 80,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 9",
           "codigoDaFonte": "g09-abobrinha-italiana-crua"
         }
@@ -1162,12 +1162,12 @@
       ],
       "categoria": "hortalicas",
       "preparo": "cozido",
-      "kcalPor100g": 48.0,
+      "kcalPor100g": 48,
       "porcoesCaseiras": [
         {
           "medida": "colher de sopa",
           "quantidade": 1.5,
-          "gramas": 50.0,
+          "gramas": 50,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 3",
           "codigoDaFonte": "g02-abobora-cabotian-japonesa-cozida"
         }
@@ -1221,7 +1221,7 @@
       "aliases": [],
       "categoria": "hortalicas",
       "preparo": "refogado",
-      "kcalPor100g": 29.0,
+      "kcalPor100g": 29,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "68",
@@ -1249,8 +1249,8 @@
       "porcoesCaseiras": [
         {
           "medida": "colher de sopa",
-          "quantidade": 2.0,
-          "gramas": 60.0,
+          "quantidade": 2,
+          "gramas": 60,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 8",
           "codigoDaFonte": "g08-acelga-crua"
         }
@@ -1269,8 +1269,8 @@
       "porcoesCaseiras": [
         {
           "medida": "folha",
-          "quantidade": 10.0,
-          "gramas": 50.0,
+          "quantidade": 10,
+          "gramas": 50,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 8",
           "codigoDaFonte": "g08-agriao-cru"
         }
@@ -1289,8 +1289,8 @@
       "porcoesCaseiras": [
         {
           "medida": "colher de sopa",
-          "quantidade": 4.0,
-          "gramas": 60.0,
+          "quantidade": 4,
+          "gramas": 60,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 8",
           "codigoDaFonte": "g08-aipo-cru"
         }
@@ -1381,8 +1381,8 @@
       "porcoesCaseiras": [
         {
           "medida": "porções",
-          "quantidade": 2.0,
-          "gramas": 30.0,
+          "quantidade": 2,
+          "gramas": 30,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 8",
           "codigoDaFonte": "g09-alho-poro-cru"
         }
@@ -1397,7 +1397,7 @@
       "aliases": [],
       "categoria": "hortalicas",
       "preparo": "cru",
-      "kcalPor100g": 18.0,
+      "kcalPor100g": 18,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "84",
@@ -1475,8 +1475,8 @@
       "porcoesCaseiras": [
         {
           "medida": "colher de sopa",
-          "quantidade": 2.0,
-          "gramas": 70.0,
+          "quantidade": 2,
+          "gramas": 70,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 3",
           "codigoDaFonte": "g02-beterraba-cozida"
         }
@@ -1507,8 +1507,8 @@
       "porcoesCaseiras": [
         {
           "medida": "colher de sopa",
-          "quantidade": 4.0,
-          "gramas": 50.0,
+          "quantidade": 4,
+          "gramas": 50,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 9",
           "codigoDaFonte": "g09-brocolis-cozido"
         }
@@ -1547,7 +1547,7 @@
       "aliases": [],
       "categoria": "proteinas",
       "preparo": "cozido",
-      "kcalPor100g": 90.0,
+      "kcalPor100g": 90,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "284",
@@ -1587,8 +1587,8 @@
       "porcoesCaseiras": [
         {
           "medida": "unidade média",
-          "quantidade": 1.0,
-          "gramas": 55.0,
+          "quantidade": 1,
+          "gramas": 55,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
           "codigoDaFonte": "g05-caqui-chocolate-cru"
         }
@@ -1607,8 +1607,8 @@
       "porcoesCaseiras": [
         {
           "medida": "unidade média",
-          "quantidade": 1.0,
-          "gramas": 95.0,
+          "quantidade": 1,
+          "gramas": 95,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
           "codigoDaFonte": "g05-carambola-crua"
         }
@@ -1689,8 +1689,8 @@
       "porcoesCaseiras": [
         {
           "medida": "bife pequeno",
-          "quantidade": 1.0,
-          "gramas": 85.0,
+          "quantidade": 1,
+          "gramas": 85,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 1",
           "codigoDaFonte": "g01-contra-file-sem-gordura-cru"
         }
@@ -1711,8 +1711,8 @@
       "porcoesCaseiras": [
         {
           "medida": "bife pequeno",
-          "quantidade": 1.0,
-          "gramas": 60.0,
+          "quantidade": 1,
+          "gramas": 60,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 1",
           "codigoDaFonte": "g01-contra-file-sem-gordura-grelhado"
         }
@@ -1727,7 +1727,7 @@
       "aliases": [],
       "categoria": "proteinas",
       "preparo": "assado",
-      "kcalPor100g": 373.0,
+      "kcalPor100g": 373,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "347",
@@ -1757,8 +1757,8 @@
       "porcoesCaseiras": [
         {
           "medida": "bife pequeno",
-          "quantidade": 1.0,
-          "gramas": 65.0,
+          "quantidade": 1,
+          "gramas": 65,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 1",
           "codigoDaFonte": "g01-coxao-duro-sem-gordura-cozido"
         }
@@ -1773,7 +1773,7 @@
       "aliases": [],
       "categoria": "proteinas",
       "preparo": "sem-gordura, cru",
-      "kcalPor100g": 148.0,
+      "kcalPor100g": 148,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "350",
@@ -1791,8 +1791,8 @@
       "porcoesCaseiras": [
         {
           "medida": "bife pequeno",
-          "quantidade": 1.0,
-          "gramas": 65.0,
+          "quantidade": 1,
+          "gramas": 65,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 1",
           "codigoDaFonte": "g01-coxao-mole-sem-gordura-cozido"
         }
@@ -1915,7 +1915,7 @@
       "aliases": [],
       "categoria": "proteinas",
       "preparo": "cru",
-      "kcalPor100g": 141.0,
+      "kcalPor100g": 141,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "355",
@@ -1927,7 +1927,7 @@
       "aliases": [],
       "categoria": "proteinas",
       "preparo": "grelhado",
-      "kcalPor100g": 225.0,
+      "kcalPor100g": 225,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "356",
@@ -1945,8 +1945,8 @@
       "porcoesCaseiras": [
         {
           "medida": "bife pequeno",
-          "quantidade": 1.0,
-          "gramas": 65.0,
+          "quantidade": 1,
+          "gramas": 65,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 1",
           "codigoDaFonte": "g01-lagarto-bovino-cozido"
         }
@@ -2015,8 +2015,8 @@
       "porcoesCaseiras": [
         {
           "medida": "bife pequeno",
-          "quantidade": 1.0,
-          "gramas": 70.0,
+          "quantidade": 1,
+          "gramas": 70,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 1",
           "codigoDaFonte": "g01-maminha-grelhada"
         }
@@ -2061,8 +2061,8 @@
       "porcoesCaseiras": [
         {
           "medida": "bife pequeno",
-          "quantidade": 1.0,
-          "gramas": 70.0,
+          "quantidade": 1,
+          "gramas": 70,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
           "codigoDaFonte": "g01-musculo-sem-gordura-cozido"
         }
@@ -2143,8 +2143,8 @@
       "porcoesCaseiras": [
         {
           "medida": "bife pequeno",
-          "quantidade": 1.0,
-          "gramas": 60.0,
+          "quantidade": 1,
+          "gramas": 60,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
           "codigoDaFonte": "g01-patinho-sem-gordura-grelhado"
         }
@@ -2201,8 +2201,8 @@
       "porcoesCaseiras": [
         {
           "medida": "fatia",
-          "quantidade": 1.0,
-          "gramas": 90.0,
+          "quantidade": 1,
+          "gramas": 90,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
           "codigoDaFonte": "g01-picanha-com-gordura-grelhada"
         }
@@ -2235,8 +2235,8 @@
       "porcoesCaseiras": [
         {
           "medida": "fatia pequena",
-          "quantidade": 1.0,
-          "gramas": 60.0,
+          "quantidade": 1,
+          "gramas": 60,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
           "codigoDaFonte": "g01-picanha-sem-gordura-grelhada"
         }
@@ -2275,7 +2275,7 @@
       "aliases": [],
       "categoria": "hortalicas",
       "preparo": "cru",
-      "kcalPor100g": 34.0,
+      "kcalPor100g": 34,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "104",
@@ -2335,7 +2335,7 @@
       "aliases": [],
       "categoria": "proteinas",
       "preparo": "cozido",
-      "kcalPor100g": 116.0,
+      "kcalPor100g": 116,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "282",
@@ -2375,8 +2375,8 @@
       "porcoesCaseiras": [
         {
           "medida": "ramo",
-          "quantidade": 10.0,
-          "gramas": 65.0,
+          "quantidade": 10,
+          "gramas": 65,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 9",
           "codigoDaFonte": "g09-cebolinha-crua"
         }
@@ -2395,8 +2395,8 @@
       "porcoesCaseiras": [
         {
           "medida": "rodela",
-          "quantidade": 6.0,
-          "gramas": 60.0,
+          "quantidade": 6,
+          "gramas": 60,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 8",
           "codigoDaFonte": "g09-cenoura-cozida"
         }
@@ -2415,8 +2415,8 @@
       "porcoesCaseiras": [
         {
           "medida": "rodela",
-          "quantidade": 6.0,
-          "gramas": 30.0,
+          "quantidade": 6,
+          "gramas": 30,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 8",
           "codigoDaFonte": "g09-cenoura-crua"
         }
@@ -2431,7 +2431,7 @@
       "aliases": [],
       "categoria": "industrializados",
       "preparo": "com-gordura",
-      "kcalPor100g": 315.0,
+      "kcalPor100g": 315,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "522",
@@ -2507,8 +2507,8 @@
       "porcoesCaseiras": [
         {
           "medida": "colher de servir",
-          "quantidade": 1.0,
-          "gramas": 50.0,
+          "quantidade": 1,
+          "gramas": 50,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 9",
           "codigoDaFonte": "g09-chuchu-cozido"
         }
@@ -2523,7 +2523,7 @@
       "aliases": [],
       "categoria": "hortalicas",
       "preparo": "cru",
-      "kcalPor100g": 17.0,
+      "kcalPor100g": 17,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "113",
@@ -2539,8 +2539,8 @@
       "porcoesCaseiras": [
         {
           "medida": "unidade",
-          "quantidade": 10.0,
-          "gramas": 55.0,
+          "quantidade": 10,
+          "gramas": 55,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
           "codigoDaFonte": "g05-ciriguela-crua"
         }
@@ -2615,7 +2615,7 @@
       "aliases": [],
       "categoria": "proteinas",
       "preparo": "cru",
-      "kcalPor100g": 101.0,
+      "kcalPor100g": 101,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "291",
@@ -2627,7 +2627,7 @@
       "aliases": [],
       "categoria": "proteinas",
       "preparo": "cru",
-      "kcalPor100g": 94.0,
+      "kcalPor100g": 94,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "292",
@@ -2691,8 +2691,8 @@
       "porcoesCaseiras": [
         {
           "medida": "colher de sopa",
-          "quantidade": 3.0,
-          "gramas": 54.0,
+          "quantidade": 3,
+          "gramas": 54,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 9",
           "codigoDaFonte": "g09-couve-flor-cozida"
         }
@@ -2843,8 +2843,8 @@
       "porcoesCaseiras": [
         {
           "medida": "unidade média",
-          "quantidade": 2.0,
-          "gramas": 100.0,
+          "quantidade": 2,
+          "gramas": 100,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
           "codigoDaFonte": "g05-figo-cru"
         }
@@ -2962,7 +2962,7 @@
         {
           "medida": "unidade",
           "quantidade": 1.5,
-          "gramas": 80.0,
+          "gramas": 80,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 1",
           "codigoDaFonte": "g01-coxa-de-frango-sem-pele-cozida"
         }
@@ -3091,8 +3091,8 @@
       "porcoesCaseiras": [
         {
           "medida": "file pequeno",
-          "quantidade": 1.0,
-          "gramas": 65.0,
+          "quantidade": 1,
+          "gramas": 65,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 1",
           "codigoDaFonte": "g01-peito-de-frango-sem-pele-cozido"
         }
@@ -3126,8 +3126,8 @@
       "porcoesCaseiras": [
         {
           "medida": "file pequeno",
-          "quantidade": 1.0,
-          "gramas": 65.0,
+          "quantidade": 1,
+          "gramas": 65,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 1",
           "codigoDaFonte": "g01-peito-de-frango-sem-pele-grelhado"
         }
@@ -3192,7 +3192,7 @@
       "aliases": [],
       "categoria": "frutas",
       "preparo": "cru",
-      "kcalPor100g": 67.0,
+      "kcalPor100g": 67,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "196",
@@ -3248,7 +3248,7 @@
         {
           "medida": "unidade média",
           "quantidade": 0.5,
-          "gramas": 80.0,
+          "gramas": 80,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
           "codigoDaFonte": "g05-goiaba-branca-com-casca-crua"
         }
@@ -3263,7 +3263,7 @@
       "aliases": [],
       "categoria": "frutas",
       "preparo": null,
-      "kcalPor100g": 269.0,
+      "kcalPor100g": 269,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "198",
@@ -3292,7 +3292,7 @@
         {
           "medida": "unidade média",
           "quantidade": 0.5,
-          "gramas": 80.0,
+          "gramas": 80,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
           "codigoDaFonte": "g05-goiaba-vermelha-com-casca-crua"
         }
@@ -3311,8 +3311,8 @@
       "porcoesCaseiras": [
         {
           "medida": "copo americano",
-          "quantidade": 1.0,
-          "gramas": 65.0,
+          "quantidade": 1,
+          "gramas": 65,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
           "codigoDaFonte": "g05-graviola-crua"
         }
@@ -3355,8 +3355,8 @@
       "porcoesCaseiras": [
         {
           "medida": "unidade",
-          "quantidade": 14.0,
-          "gramas": 70.0,
+          "quantidade": 14,
+          "gramas": 70,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
           "codigoDaFonte": "g05-jabuticaba-crua"
         }
@@ -3375,8 +3375,8 @@
       "porcoesCaseiras": [
         {
           "medida": "bago",
-          "quantidade": 4.0,
-          "gramas": 45.0,
+          "quantidade": 4,
+          "gramas": 45,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
           "codigoDaFonte": "g05-jaca-crua"
         }
@@ -3403,7 +3403,7 @@
       "aliases": [],
       "categoria": "frutas",
       "preparo": "cru",
-      "kcalPor100g": 41.0,
+      "kcalPor100g": 41,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "206",
@@ -3443,8 +3443,8 @@
       "porcoesCaseiras": [
         {
           "medida": "unidade média",
-          "quantidade": 1.0,
-          "gramas": 90.0,
+          "quantidade": 1,
+          "gramas": 90,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
           "codigoDaFonte": "g05-kiwi-cru"
         }
@@ -3499,8 +3499,8 @@
       "porcoesCaseiras": [
         {
           "medida": "metade",
-          "quantidade": 1.0,
-          "gramas": 90.0,
+          "quantidade": 1,
+          "gramas": 90,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
           "codigoDaFonte": "g05-laranja-baia-crua"
         }
@@ -3522,7 +3522,7 @@
         {
           "medida": "copo médio",
           "quantidade": 0.5,
-          "gramas": 115.0,
+          "gramas": 115,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
           "codigoDaFonte": "g05-suco-de-laranja-baia"
         }
@@ -3541,8 +3541,8 @@
       "porcoesCaseiras": [
         {
           "medida": "metade",
-          "quantidade": 1.0,
-          "gramas": 85.0,
+          "quantidade": 1,
+          "gramas": 85,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
           "codigoDaFonte": "g05-laranja-da-terra-crua"
         }
@@ -3559,12 +3559,12 @@
       ],
       "categoria": "frutas",
       "preparo": null,
-      "kcalPor100g": 41.0,
+      "kcalPor100g": 41,
       "porcoesCaseiras": [
         {
           "medida": "copo médio",
           "quantidade": 0.5,
-          "gramas": 110.0,
+          "gramas": 110,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
           "codigoDaFonte": "g05-suco-de-laranja-terra"
         }
@@ -3583,8 +3583,8 @@
       "porcoesCaseiras": [
         {
           "medida": "metade",
-          "quantidade": 1.0,
-          "gramas": 90.0,
+          "quantidade": 1,
+          "gramas": 90,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
           "codigoDaFonte": "g05-laranja-lima-crua"
         }
@@ -3606,7 +3606,7 @@
         {
           "medida": "copo médio",
           "quantidade": 0.5,
-          "gramas": 110.0,
+          "gramas": 110,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
           "codigoDaFonte": "g05-suco-de-laranja-lima"
         }
@@ -3625,8 +3625,8 @@
       "porcoesCaseiras": [
         {
           "medida": "metade",
-          "quantidade": 1.0,
-          "gramas": 115.0,
+          "quantidade": 1,
+          "gramas": 115,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
           "codigoDaFonte": "g05-laranja-pera-crua"
         }
@@ -3648,7 +3648,7 @@
         {
           "medida": "copo americano",
           "quantidade": 0.75,
-          "gramas": 135.0,
+          "gramas": 135,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
           "codigoDaFonte": "g05-suco-de-laranja-pera"
         }
@@ -3693,8 +3693,8 @@
       "porcoesCaseiras": [
         {
           "medida": "colher de sopa rasa",
-          "quantidade": 1.0,
-          "gramas": 18.0,
+          "quantidade": 1,
+          "gramas": 18,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
           "codigoDaFonte": "g02-lasanha-massa-cozida"
         }
@@ -3730,8 +3730,8 @@
       "porcoesCaseiras": [
         {
           "medida": "copo",
-          "quantidade": 1.0,
-          "gramas": 200.0,
+          "quantidade": 1,
+          "gramas": 200,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 7",
           "codigoDaFonte": "g07-leite-de-coco"
         }
@@ -3764,8 +3764,8 @@
       "porcoesCaseiras": [
         {
           "medida": "xícara de chá",
-          "quantidade": 1.0,
-          "gramas": 200.0,
+          "quantidade": 1,
+          "gramas": 200,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
           "codigoDaFonte": "g05-suco-de-limao-cravo"
         }
@@ -3787,7 +3787,7 @@
         {
           "medida": "copo tulipa",
           "quantidade": 0.5,
-          "gramas": 140.0,
+          "gramas": 140,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
           "codigoDaFonte": "g05-suco-de-limao-galego"
         }
@@ -3806,8 +3806,8 @@
       "porcoesCaseiras": [
         {
           "medida": "unidade grande",
-          "quantidade": 1.0,
-          "gramas": 90.0,
+          "quantidade": 1,
+          "gramas": 90,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
           "codigoDaFonte": "g05-limao-tahiti-cru"
         }
@@ -3950,7 +3950,7 @@
         {
           "medida": "colher de sopa cheia",
           "quantidade": 2.5,
-          "gramas": 100.0,
+          "gramas": 100,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
           "codigoDaFonte": "g05-mamao-formosa-cru"
         }
@@ -3969,8 +3969,8 @@
       "porcoesCaseiras": [
         {
           "medida": "colher de sopa cheia",
-          "quantidade": 3.0,
-          "gramas": 100.0,
+          "quantidade": 3,
+          "gramas": 100,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
           "codigoDaFonte": "g05-mamao-papaia-cru"
         }
@@ -4005,8 +4005,8 @@
       "porcoesCaseiras": [
         {
           "medida": "colher de sopa rasa",
-          "quantidade": 1.0,
-          "gramas": 18.0,
+          "quantidade": 1,
+          "gramas": 18,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
           "codigoDaFonte": "g02-mandioca-cozida"
         }
@@ -4070,8 +4070,8 @@
       "porcoesCaseiras": [
         {
           "medida": "banda",
-          "quantidade": 1.0,
-          "gramas": 60.0,
+          "quantidade": 1,
+          "gramas": 60,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
           "codigoDaFonte": "g05-manga-haden-crua"
         }
@@ -4090,8 +4090,8 @@
       "porcoesCaseiras": [
         {
           "medida": "banda",
-          "quantidade": 1.0,
-          "gramas": 55.0,
+          "quantidade": 1,
+          "gramas": 55,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
           "codigoDaFonte": "g05-manga-palmer-crua"
         }
@@ -4112,8 +4112,8 @@
       "porcoesCaseiras": [
         {
           "medida": "pedaço",
-          "quantidade": 1.0,
-          "gramas": 80.0,
+          "quantidade": 1,
+          "gramas": 80,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
           "codigoDaFonte": "g05-manga-tommy-crua"
         }
@@ -4188,7 +4188,7 @@
       "aliases": [],
       "categoria": "frutas",
       "preparo": null,
-      "kcalPor100g": 42.0,
+      "kcalPor100g": 42,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "234",
@@ -4204,8 +4204,8 @@
       "porcoesCaseiras": [
         {
           "medida": "pedaço pequeno",
-          "quantidade": 1.0,
-          "gramas": 28.0,
+          "quantidade": 1,
+          "gramas": 28,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 12",
           "codigoDaFonte": "g12-maria-mole"
         }
@@ -4284,8 +4284,8 @@
       "porcoesCaseiras": [
         {
           "medida": "colher de sopa",
-          "quantidade": 1.0,
-          "gramas": 23.0,
+          "quantidade": 1,
+          "gramas": 23,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 12",
           "codigoDaFonte": "g12-mel-de-abelha"
         }
@@ -4316,8 +4316,8 @@
       "porcoesCaseiras": [
         {
           "medida": "fatia grande",
-          "quantidade": 1.0,
-          "gramas": 125.0,
+          "quantidade": 1,
+          "gramas": 125,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
           "codigoDaFonte": "g05-melancia-crua"
         }
@@ -4337,7 +4337,7 @@
         {
           "medida": "fatia",
           "quantidade": 1.5,
-          "gramas": 135.0,
+          "gramas": 135,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
           "codigoDaFonte": "g05-melao-cru"
         }
@@ -4358,8 +4358,8 @@
       "porcoesCaseiras": [
         {
           "medida": "file pequeno",
-          "quantidade": 1.0,
-          "gramas": 80.0,
+          "quantidade": 1,
+          "gramas": 80,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 1",
           "codigoDaFonte": "g01-file-de-merluza-assado"
         }
@@ -4403,7 +4403,7 @@
         {
           "medida": "unidade média",
           "quantidade": 0.5,
-          "gramas": 70.0,
+          "gramas": 70,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
           "codigoDaFonte": "g05-mexerica-murcote-crua"
         }
@@ -4422,8 +4422,8 @@
       "porcoesCaseiras": [
         {
           "medida": "unidade grande",
-          "quantidade": 1.0,
-          "gramas": 110.0,
+          "quantidade": 1,
+          "gramas": 110,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
           "codigoDaFonte": "g05-mexerica-rio-crua"
         }
@@ -4468,8 +4468,8 @@
       "porcoesCaseiras": [
         {
           "medida": "colher de sopa",
-          "quantidade": 3.0,
-          "gramas": 45.0,
+          "quantidade": 3,
+          "gramas": 45,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 3",
           "codigoDaFonte": "g02-milho-em-lata"
         }
@@ -4501,7 +4501,7 @@
         {
           "medida": "unidade",
           "quantidade": 12.5,
-          "gramas": 150.0,
+          "gramas": 150,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
           "codigoDaFonte": "g05-morango-cru"
         }
@@ -4520,8 +4520,8 @@
       "porcoesCaseiras": [
         {
           "medida": "fatia",
-          "quantidade": 3.0,
-          "gramas": 45.0,
+          "quantidade": 3,
+          "gramas": 45,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
           "codigoDaFonte": "g01-mortadela"
         }
@@ -4567,7 +4567,7 @@
         {
           "medida": "colher de sopa cheia",
           "quantidade": 0.5,
-          "gramas": 15.0,
+          "gramas": 15,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
           "codigoDaFonte": "g02-nhoque-de-batata-cozido"
         }
@@ -4646,8 +4646,8 @@
       "porcoesCaseiras": [
         {
           "medida": "colher de sopa",
-          "quantidade": 5.0,
-          "gramas": 100.0,
+          "quantidade": 5,
+          "gramas": 100,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 9",
           "codigoDaFonte": "g09-pepino-cru"
         }
@@ -4662,12 +4662,12 @@
       "aliases": [],
       "categoria": "frutas",
       "preparo": "cru",
-      "kcalPor100g": 205.0,
+      "kcalPor100g": 205,
       "porcoesCaseiras": [
         {
           "medida": "unidade da parte comestivel(is)",
-          "quantidade": 10.0,
-          "gramas": 45.0,
+          "quantidade": 10,
+          "gramas": 45,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 7",
           "codigoDaFonte": "g06-pequi-cru"
         }
@@ -4718,7 +4718,7 @@
       "aliases": [],
       "categoria": "proteinas",
       "preparo": "frito",
-      "kcalPor100g": 223.0,
+      "kcalPor100g": 223,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "305",
@@ -4754,7 +4754,7 @@
       "aliases": [],
       "categoria": "proteinas",
       "preparo": null,
-      "kcalPor100g": 142.0,
+      "kcalPor100g": 142,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "309",
@@ -4782,8 +4782,8 @@
       "porcoesCaseiras": [
         {
           "medida": "colher de sopa",
-          "quantidade": 2.0,
-          "gramas": 45.0,
+          "quantidade": 2,
+          "gramas": 45,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 9",
           "codigoDaFonte": "g09-pimentao-amarelo-cru"
         }
@@ -4803,7 +4803,7 @@
         {
           "medida": "colher de sopa",
           "quantidade": 2.5,
-          "gramas": 60.0,
+          "gramas": 60,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 9",
           "codigoDaFonte": "g09-pimentao-verde-cru"
         }
@@ -4822,8 +4822,8 @@
       "porcoesCaseiras": [
         {
           "medida": "colher de sopa",
-          "quantidade": 2.0,
-          "gramas": 50.0,
+          "quantidade": 2,
+          "gramas": 50,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 9",
           "codigoDaFonte": "g09-pimentao-vermelho-cru"
         }
@@ -4842,8 +4842,8 @@
       "porcoesCaseiras": [
         {
           "medida": "unidade pequena",
-          "quantidade": 1.0,
-          "gramas": 45.0,
+          "quantidade": 1,
+          "gramas": 45,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 6",
           "codigoDaFonte": "g05-pinha-crua"
         }
@@ -4910,8 +4910,8 @@
       "porcoesCaseiras": [
         {
           "medida": "unidade",
-          "quantidade": 10.0,
-          "gramas": 100.0,
+          "quantidade": 10,
+          "gramas": 100,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 6",
           "codigoDaFonte": "g05-pitanga-crua"
         }
@@ -5016,8 +5016,8 @@
       "porcoesCaseiras": [
         {
           "medida": "fatia pequena",
-          "quantidade": 1.0,
-          "gramas": 60.0,
+          "quantidade": 1,
+          "gramas": 60,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 1",
           "codigoDaFonte": "g01-lombo-suino-assado"
         }
@@ -5063,7 +5063,7 @@
         {
           "medida": "pedaço",
           "quantidade": 1.5,
-          "gramas": 63.0,
+          "gramas": 63,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
           "codigoDaFonte": "g01-pernil-suino-assado"
         }
@@ -5090,7 +5090,7 @@
       "aliases": [],
       "categoria": "proteinas",
       "preparo": "cru",
-      "kcalPor100g": 93.0,
+      "kcalPor100g": 93,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "314",
@@ -5182,7 +5182,7 @@
       "aliases": [],
       "categoria": "cereais-paes-massas-tuberculos",
       "preparo": null,
-      "kcalPor100g": 253.0,
+      "kcalPor100g": 253,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "50",
@@ -5196,12 +5196,12 @@
       ],
       "categoria": "cereais-paes-massas-tuberculos",
       "preparo": null,
-      "kcalPor100g": 292.0,
+      "kcalPor100g": 292,
       "porcoesCaseiras": [
         {
           "medida": "fatia",
-          "quantidade": 1.0,
-          "gramas": 28.0,
+          "quantidade": 1,
+          "gramas": 28,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 11",
           "codigoDaFonte": "g11-pao-de-milho-forma"
         }
@@ -5235,7 +5235,7 @@
         {
           "medida": "unidade",
           "quantidade": 0.5,
-          "gramas": 25.0,
+          "gramas": 25,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 11",
           "codigoDaFonte": "g11-pao-frances"
         }
@@ -5250,7 +5250,7 @@
       "aliases": [],
       "categoria": "cereais-paes-massas-tuberculos",
       "preparo": null,
-      "kcalPor100g": 311.0,
+      "kcalPor100g": 311,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "54",
@@ -5278,8 +5278,8 @@
       "porcoesCaseiras": [
         {
           "medida": "metade",
-          "quantidade": 1.0,
-          "gramas": 65.0,
+          "quantidade": 1,
+          "gramas": 65,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
           "codigoDaFonte": "g05-pera-park-crua"
         }
@@ -5298,8 +5298,8 @@
       "porcoesCaseiras": [
         {
           "medida": "metade",
-          "quantidade": 1.0,
-          "gramas": 75.0,
+          "quantidade": 1,
+          "gramas": 75,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
           "codigoDaFonte": "g05-pera-williams-crua"
         }
@@ -5318,8 +5318,8 @@
       "porcoesCaseiras": [
         {
           "medida": "unidade média",
-          "quantidade": 2.0,
-          "gramas": 110.0,
+          "quantidade": 2,
+          "gramas": 110,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 5",
           "codigoDaFonte": "g05-pessego-aurora-cru"
         }
@@ -5422,8 +5422,8 @@
       "porcoesCaseiras": [
         {
           "medida": "colher de sopa cheia",
-          "quantidade": 5.0,
-          "gramas": 90.0,
+          "quantidade": 5,
+          "gramas": 90,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 9",
           "codigoDaFonte": "g09-rabanete-cru"
         }
@@ -5438,7 +5438,7 @@
       "aliases": [],
       "categoria": "acucares-e-doces",
       "preparo": null,
-      "kcalPor100g": 352.0,
+      "kcalPor100g": 352,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "510",
@@ -5454,8 +5454,8 @@
       "porcoesCaseiras": [
         {
           "medida": "colher de sopa",
-          "quantidade": 6.0,
-          "gramas": 60.0,
+          "quantidade": 6,
+          "gramas": 60,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 8",
           "codigoDaFonte": "g08-repolho-branco-cru"
         }
@@ -5474,8 +5474,8 @@
       "porcoesCaseiras": [
         {
           "medida": "concha",
-          "quantidade": 1.0,
-          "gramas": 50.0,
+          "quantidade": 1,
+          "gramas": 50,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 8",
           "codigoDaFonte": "g08-repolho-roxo-cru"
         }
@@ -5506,8 +5506,8 @@
       "porcoesCaseiras": [
         {
           "medida": "unidade pequena",
-          "quantidade": 1.0,
-          "gramas": 70.0,
+          "quantidade": 1,
+          "gramas": 70,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 6",
           "codigoDaFonte": "g05-roma-crua"
         }
@@ -5526,8 +5526,8 @@
       "porcoesCaseiras": [
         {
           "medida": "folha",
-          "quantidade": 20.0,
-          "gramas": 120.0,
+          "quantidade": 20,
+          "gramas": 120,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 8",
           "codigoDaFonte": "g08-rucula-crua"
         }
@@ -5582,8 +5582,8 @@
       "porcoesCaseiras": [
         {
           "medida": "file pequeno",
-          "quantidade": 1.0,
-          "gramas": 80.0,
+          "quantidade": 1,
+          "gramas": 80,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
           "codigoDaFonte": "g01-salmao-sem-pele-fresco-grelhado"
         }
@@ -5602,8 +5602,8 @@
       "porcoesCaseiras": [
         {
           "medida": "colher de chá",
-          "quantidade": 6.0,
-          "gramas": 24.0,
+          "quantidade": 6,
+          "gramas": 24,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 8",
           "codigoDaFonte": "g08-salsa-crua"
         }
@@ -5630,7 +5630,7 @@
       "aliases": [],
       "categoria": "proteinas",
       "preparo": "em-conserva",
-      "kcalPor100g": 285.0,
+      "kcalPor100g": 285,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "319",
@@ -5642,7 +5642,7 @@
       "aliases": [],
       "categoria": "proteinas",
       "preparo": "frito",
-      "kcalPor100g": 257.0,
+      "kcalPor100g": 257,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "320",
@@ -5720,8 +5720,8 @@
       "porcoesCaseiras": [
         {
           "medida": "fatia",
-          "quantidade": 3.0,
-          "gramas": 60.0,
+          "quantidade": 3,
+          "gramas": 60,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 7",
           "codigoDaFonte": "g07-queijo-tofu-soja"
         }
@@ -5764,8 +5764,8 @@
       "porcoesCaseiras": [
         {
           "medida": "unidade",
-          "quantidade": 2.0,
-          "gramas": 15.0,
+          "quantidade": 2,
+          "gramas": 15,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 6",
           "codigoDaFonte": "g05-tamarindo-cru"
         }
@@ -5784,8 +5784,8 @@
       "porcoesCaseiras": [
         {
           "medida": "unidade grande",
-          "quantidade": 1.0,
-          "gramas": 110.0,
+          "quantidade": 1,
+          "gramas": 110,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 6",
           "codigoDaFonte": "g05-tangerina-ponca-crua"
         }
@@ -5888,8 +5888,8 @@
       "porcoesCaseiras": [
         {
           "medida": "fatia",
-          "quantidade": 4.0,
-          "gramas": 20.0,
+          "quantidade": 4,
+          "gramas": 20,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 11",
           "codigoDaFonte": "g11-torrada-pao-frances"
         }
@@ -5952,7 +5952,7 @@
       "aliases": [],
       "categoria": "frutas",
       "preparo": "cru",
-      "kcalPor100g": 262.0,
+      "kcalPor100g": 262,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "253",
@@ -5988,7 +5988,7 @@
       "aliases": [],
       "categoria": "frutas",
       "preparo": "cru",
-      "kcalPor100g": 37.0,
+      "kcalPor100g": 37,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "254",
@@ -6016,8 +6016,8 @@
       "porcoesCaseiras": [
         {
           "medida": "bago",
-          "quantidade": 10.0,
-          "gramas": 80.0,
+          "quantidade": 10,
+          "gramas": 80,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 6",
           "codigoDaFonte": "g05-uva-italia-crua"
         }
@@ -6036,8 +6036,8 @@
       "porcoesCaseiras": [
         {
           "medida": "bago",
-          "quantidade": 10.0,
-          "gramas": 80.0,
+          "quantidade": 10,
+          "gramas": 80,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 6",
           "codigoDaFonte": "g05-uva-rubi-crua"
         }
@@ -6214,8 +6214,8 @@
       "porcoesCaseiras": [
         {
           "medida": "colher de sopa",
-          "quantidade": 1.0,
-          "gramas": 20.0,
+          "quantidade": 1,
+          "gramas": 20,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 12",
           "codigoDaFonte": "g12-leite-condensado"
         }
@@ -6326,7 +6326,7 @@
       "aliases": [],
       "categoria": "laticinios",
       "preparo": null,
-      "kcalPor100g": 453.0,
+      "kcalPor100g": 453,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "464",
@@ -6378,8 +6378,8 @@
       "porcoesCaseiras": [
         {
           "medida": "colher de servir/arroz",
-          "quantidade": 2.0,
-          "gramas": 76.0,
+          "quantidade": 2,
+          "gramas": 76,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 3",
           "codigoDaFonte": "g03-ervilha-enlatada-drenada"
         }
@@ -6400,8 +6400,8 @@
       "porcoesCaseiras": [
         {
           "medida": "concha rasa",
-          "quantidade": 1.0,
-          "gramas": 80.0,
+          "quantidade": 1,
+          "gramas": 80,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 3",
           "codigoDaFonte": "g03-feijao-carioca-cozido"
         }
@@ -6416,7 +6416,7 @@
       "aliases": [],
       "categoria": "leguminosas",
       "preparo": "cru",
-      "kcalPor100g": 329.0,
+      "kcalPor100g": 329,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "562",
@@ -6430,12 +6430,12 @@
       ],
       "categoria": "leguminosas",
       "preparo": "cozido",
-      "kcalPor100g": 78.0,
+      "kcalPor100g": 78,
       "porcoesCaseiras": [
         {
           "medida": "colher de arroz/servir",
-          "quantidade": 2.0,
-          "gramas": 80.0,
+          "quantidade": 2,
+          "gramas": 80,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 3",
           "codigoDaFonte": "g03-feijao-fradinho-cozido"
         }
@@ -6488,12 +6488,12 @@
       ],
       "categoria": "leguminosas",
       "preparo": "cozido",
-      "kcalPor100g": 77.0,
+      "kcalPor100g": 77,
       "porcoesCaseiras": [
         {
           "medida": "colher de arroz/servir",
-          "quantidade": 2.0,
-          "gramas": 70.0,
+          "quantidade": 2,
+          "gramas": 70,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 3",
           "codigoDaFonte": "g03-feijao-preto-cozido"
         }
@@ -6556,7 +6556,7 @@
       "aliases": [],
       "categoria": "leguminosas",
       "preparo": "cru",
-      "kcalPor100g": 337.0,
+      "kcalPor100g": 337,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "572",
@@ -6632,8 +6632,8 @@
       "porcoesCaseiras": [
         {
           "medida": "colher de arroz/servir",
-          "quantidade": 2.0,
-          "gramas": 60.0,
+          "quantidade": 2,
+          "gramas": 60,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 3",
           "codigoDaFonte": "g03-lentilha-cozida"
         }
@@ -6696,7 +6696,7 @@
       "aliases": [],
       "categoria": "proteinas",
       "preparo": null,
-      "kcalPor100g": 268.0,
+      "kcalPor100g": 268,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "484",
@@ -6834,8 +6834,8 @@
       "porcoesCaseiras": [
         {
           "medida": "colher de sopa",
-          "quantidade": 5.0,
-          "gramas": 80.0,
+          "quantidade": 5,
+          "gramas": 80,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 1",
           "codigoDaFonte": "g01-atum-conservado-em-oleo"
         }
@@ -6871,7 +6871,7 @@
         {
           "medida": "colher de arroz/servir",
           "quantidade": 0.5,
-          "gramas": 30.0,
+          "gramas": 30,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
           "codigoDaFonte": "g02-batata-baroa-cozida"
         }
@@ -6889,7 +6889,7 @@
       ],
       "categoria": "hortalicas",
       "preparo": "cru",
-      "kcalPor100g": 101.0,
+      "kcalPor100g": 101,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "87",
@@ -6908,7 +6908,7 @@
         {
           "medida": "fatia média",
           "quantidade": 0.5,
-          "gramas": 30.0,
+          "gramas": 30,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
           "codigoDaFonte": "g02-batata-doce-cozida"
         }
@@ -6954,7 +6954,7 @@
         {
           "medida": "colher de sopa",
           "quantidade": 1.5,
-          "gramas": 45.0,
+          "gramas": 45,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
           "codigoDaFonte": "g02-batata-inglesa-cozida"
         }
@@ -7117,8 +7117,8 @@
       "porcoesCaseiras": [
         {
           "medida": "colher de sopa",
-          "quantidade": 2.0,
-          "gramas": 20.0,
+          "quantidade": 2,
+          "gramas": 20,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 12",
           "codigoDaFonte": "g12-acucar-refinado"
         }
@@ -7307,7 +7307,7 @@
       "aliases": [],
       "categoria": "leguminosas",
       "preparo": null,
-      "kcalPor100g": 404.0,
+      "kcalPor100g": 404,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "581",
@@ -7385,8 +7385,8 @@
       "porcoesCaseiras": [
         {
           "medida": "unidade",
-          "quantidade": 8.0,
-          "gramas": 20.0,
+          "quantidade": 8,
+          "gramas": 20,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 10",
           "codigoDaFonte": "g10-castanha-de-caju-torrada-salgada"
         }
@@ -7401,7 +7401,7 @@
       "aliases": [],
       "categoria": "gorduras",
       "preparo": "cru",
-      "kcalPor100g": 643.0,
+      "kcalPor100g": 643,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "589",
@@ -7467,8 +7467,8 @@
       "porcoesCaseiras": [
         {
           "medida": "unidade",
-          "quantidade": 3.0,
-          "gramas": 16.0,
+          "quantidade": 3,
+          "gramas": 16,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 10",
           "codigoDaFonte": "g10-noz-crua"
         }
@@ -7501,8 +7501,8 @@
       "porcoesCaseiras": [
         {
           "medida": "unidade pequena",
-          "quantidade": 4.0,
-          "gramas": 75.0,
+          "quantidade": 4,
+          "gramas": 75,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 10",
           "codigoDaFonte": "g10-pupunha-cozida"
         }
@@ -7517,7 +7517,7 @@
       "aliases": [],
       "categoria": "gorduras",
       "preparo": null,
-      "kcalPor100g": 884.0,
+      "kcalPor100g": 884,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "259",
@@ -7529,12 +7529,12 @@
       "aliases": [],
       "categoria": "gorduras",
       "preparo": null,
-      "kcalPor100g": 884.0,
+      "kcalPor100g": 884,
       "porcoesCaseiras": [
         {
           "medida": "colher de sopa",
-          "quantidade": 1.0,
-          "gramas": 8.0,
+          "quantidade": 1,
+          "gramas": 8,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
           "codigoDaFonte": "g04-azeite-de-oliva-extra-virgem"
         }
@@ -7549,7 +7549,7 @@
       "aliases": [],
       "categoria": "gorduras",
       "preparo": null,
-      "kcalPor100g": 726.0,
+      "kcalPor100g": 726,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "261",
@@ -7621,7 +7621,7 @@
       "aliases": [],
       "categoria": "gorduras",
       "preparo": null,
-      "kcalPor100g": 884.0,
+      "kcalPor100g": 884,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "267",
@@ -7633,12 +7633,12 @@
       "aliases": [],
       "categoria": "gorduras",
       "preparo": null,
-      "kcalPor100g": 884.0,
+      "kcalPor100g": 884,
       "porcoesCaseiras": [
         {
           "medida": "colher de sopa",
-          "quantidade": 1.0,
-          "gramas": 8.0,
+          "quantidade": 1,
+          "gramas": 8,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
           "codigoDaFonte": "g04-oleo-de-canola"
         }
@@ -7653,12 +7653,12 @@
       "aliases": [],
       "categoria": "gorduras",
       "preparo": null,
-      "kcalPor100g": 884.0,
+      "kcalPor100g": 884,
       "porcoesCaseiras": [
         {
           "medida": "colher de sopa",
-          "quantidade": 1.0,
-          "gramas": 8.0,
+          "quantidade": 1,
+          "gramas": 8,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
           "codigoDaFonte": "g04-oleo-de-girassol"
         }
@@ -7673,12 +7673,12 @@
       "aliases": [],
       "categoria": "gorduras",
       "preparo": null,
-      "kcalPor100g": 884.0,
+      "kcalPor100g": 884,
       "porcoesCaseiras": [
         {
           "medida": "colher de sopa",
-          "quantidade": 1.0,
-          "gramas": 8.0,
+          "quantidade": 1,
+          "gramas": 8,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
           "codigoDaFonte": "g04-oleo-de-milho"
         }
@@ -7693,7 +7693,7 @@
       "aliases": [],
       "categoria": "gorduras",
       "preparo": null,
-      "kcalPor100g": 884.0,
+      "kcalPor100g": 884,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "271",
@@ -7705,12 +7705,12 @@
       "aliases": [],
       "categoria": "gorduras",
       "preparo": null,
-      "kcalPor100g": 884.0,
+      "kcalPor100g": 884,
       "porcoesCaseiras": [
         {
           "medida": "colher de sopa",
-          "quantidade": 1.0,
-          "gramas": 8.0,
+          "quantidade": 1,
+          "gramas": 8,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 4",
           "codigoDaFonte": "g04-oleo-de-soja"
         }
@@ -7837,7 +7837,7 @@
       "aliases": [],
       "categoria": "receitas",
       "preparo": null,
-      "kcalPor100g": 165.0,
+      "kcalPor100g": 165,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "528",
@@ -7903,8 +7903,8 @@
       "porcoesCaseiras": [
         {
           "medida": "colher de arroz/servir",
-          "quantidade": 1.0,
-          "gramas": 20.0,
+          "quantidade": 1,
+          "gramas": 20,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
           "codigoDaFonte": "g02-cuscuz-de-milho-cozido"
         }
@@ -8039,7 +8039,7 @@
       "aliases": [],
       "categoria": "receitas",
       "preparo": null,
-      "kcalPor100g": 123.0,
+      "kcalPor100g": 123,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "548",
@@ -8111,7 +8111,7 @@
       "aliases": [],
       "categoria": "proteinas",
       "preparo": "frito",
-      "kcalPor100g": 283.0,
+      "kcalPor100g": 283,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "386",
@@ -8239,8 +8239,8 @@
       "porcoesCaseiras": [
         {
           "medida": "unidade",
-          "quantidade": 3.0,
-          "gramas": 150.0,
+          "quantidade": 3,
+          "gramas": 150,
           "fonte": "Lista de Substituições - Lucas Guedes(2).pdf, p. 2",
           "codigoDaFonte": "g01-quibe-assado"
         }
@@ -8307,7 +8307,7 @@
       ],
       "categoria": "cereais-paes-massas-tuberculos",
       "preparo": null,
-      "kcalPor100g": 410.0,
+      "kcalPor100g": 410,
       "porcoesCaseiras": [],
       "fonte": "Tabela Brasileira de Composição de Alimentos (TACO), 4ª edição revisada e ampliada",
       "codigoDaFonte": "16",
@@ -8351,8 +8351,8 @@
       "porcoesCaseiras": [
         {
           "medida": "unidade",
-          "quantidade": 1.0,
-          "gramas": 142.0,
+          "quantidade": 1,
+          "gramas": 142,
           "fonte": "Tabela Nutricional Burger King Brasil",
           "codigoDaFonte": "BK-BATATA-FRITA-GRANDE"
         }
@@ -8371,8 +8371,8 @@
       "porcoesCaseiras": [
         {
           "medida": "unidade",
-          "quantidade": 1.0,
-          "gramas": 112.0,
+          "quantidade": 1,
+          "gramas": 112,
           "fonte": "Tabela Nutricional Burger King Brasil",
           "codigoDaFonte": "BK-BATATA-FRITA-MEDIA"
         }
@@ -8391,8 +8391,8 @@
       "porcoesCaseiras": [
         {
           "medida": "unidade",
-          "quantidade": 1.0,
-          "gramas": 78.0,
+          "quantidade": 1,
+          "gramas": 78,
           "fonte": "Tabela Nutricional Burger King Brasil",
           "codigoDaFonte": "BK-BATATA-FRITA-PEQUENA"
         }
@@ -8411,8 +8411,8 @@
       "porcoesCaseiras": [
         {
           "medida": "unidade",
-          "quantidade": 1.0,
-          "gramas": 130.0,
+          "quantidade": 1,
+          "gramas": 130,
           "fonte": "Tabela Nutricional Burger King Brasil",
           "codigoDaFonte": "BK-CHEESEBURGER"
         }
@@ -8427,12 +8427,12 @@
       "aliases": [],
       "categoria": "industrializados",
       "preparo": null,
-      "kcalPor100g": 281.0,
+      "kcalPor100g": 281,
       "porcoesCaseiras": [
         {
           "medida": "unidade",
-          "quantidade": 1.0,
-          "gramas": 137.0,
+          "quantidade": 1,
+          "gramas": 137,
           "fonte": "Tabela Nutricional Burger King Brasil",
           "codigoDaFonte": "BK-CHICKEN-JR"
         }
@@ -8451,8 +8451,8 @@
       "porcoesCaseiras": [
         {
           "medida": "unidade",
-          "quantidade": 1.0,
-          "gramas": 103.0,
+          "quantidade": 1,
+          "gramas": 103,
           "fonte": "Tabela Nutricional Burger King Brasil",
           "codigoDaFonte": "BK-PAO-CARNE-QUEIJO"
         }
@@ -8471,8 +8471,8 @@
       "porcoesCaseiras": [
         {
           "medida": "unidade",
-          "quantidade": 1.0,
-          "gramas": 325.0,
+          "quantidade": 1,
+          "gramas": 325,
           "fonte": "Tabela Nutricional Burger King Brasil",
           "codigoDaFonte": "BK-WHOPPER"
         }
@@ -8491,8 +8491,8 @@
       "porcoesCaseiras": [
         {
           "medida": "unidade",
-          "quantidade": 1.0,
-          "gramas": 339.0,
+          "quantidade": 1,
+          "gramas": 339,
           "fonte": "Tabela Nutricional Burger King Brasil",
           "codigoDaFonte": "BK-WHOPPER-PLANTAS"
         }
@@ -8500,6 +8500,527 @@
       "fonte": "Tabela Nutricional Burger King Brasil",
       "codigoDaFonte": "BK-WHOPPER-PLANTAS",
       "atualizadoEm": "2026-05-29"
+    },
+    {
+      "id": "rotulo-leite-integral-uht",
+      "nome": "Leite, de vaca, integral, UHT (caixinha)",
+      "aliases": [
+        "leite de caixinha",
+        "leite comum",
+        "leite longa vida",
+        "leite tipo A/UHT",
+        "leite integral"
+      ],
+      "categoria": "laticinios",
+      "preparo": null,
+      "kcalPor100g": 57.5,
+      "porcoesCaseiras": [
+        {
+          "medida": "1 copo (200ml)",
+          "quantidade": 1,
+          "gramas": 200,
+          "fonte": "Rótulo nutricional — Leite Integral UHT Piracanjuba",
+          "codigoDaFonte": null
+        }
+      ],
+      "fonte": "Rótulo nutricional — Leite Integral UHT Piracanjuba, valor médio de mercado (115 kcal por porção de 200ml)",
+      "codigoDaFonte": null,
+      "atualizadoEm": "2026-08-15"
+    },
+    {
+      "id": "rotulo-leite-semidesnatado-uht",
+      "nome": "Leite, de vaca, semidesnatado, UHT (caixinha)",
+      "aliases": [
+        "leite semidesnatado",
+        "leite meia gordura",
+        "leite tipo B UHT",
+        "leite semidesnatado de caixinha"
+      ],
+      "categoria": "laticinios",
+      "preparo": null,
+      "kcalPor100g": 42,
+      "porcoesCaseiras": [
+        {
+          "medida": "1 copo (200ml)",
+          "quantidade": 1,
+          "gramas": 200,
+          "fonte": "Rótulo nutricional — Leite Semidesnatado UHT Piracanjuba",
+          "codigoDaFonte": null
+        }
+      ],
+      "fonte": "Rótulo nutricional — Leite Semidesnatado UHT Piracanjuba, valor médio de mercado",
+      "codigoDaFonte": null,
+      "atualizadoEm": "2026-08-15"
+    },
+    {
+      "id": "rotulo-leite-desnatado-uht",
+      "nome": "Leite, de vaca, desnatado, UHT (caixinha)",
+      "aliases": [
+        "leite desnatado",
+        "leite magro",
+        "leite zero gordura",
+        "leite desnatado de caixinha"
+      ],
+      "categoria": "laticinios",
+      "preparo": null,
+      "kcalPor100g": 34,
+      "porcoesCaseiras": [
+        {
+          "medida": "1 copo (200ml)",
+          "quantidade": 1,
+          "gramas": 200,
+          "fonte": "Rótulo nutricional — Leite Desnatado UHT Piracanjuba",
+          "codigoDaFonte": null
+        }
+      ],
+      "fonte": "Rótulo nutricional — Leite Desnatado UHT Piracanjuba, valor médio de mercado (68 kcal por porção de 200ml)",
+      "codigoDaFonte": null,
+      "atualizadoEm": "2026-08-15"
+    },
+    {
+      "id": "rotulo-pao-de-forma-tradicional",
+      "nome": "Pão, de forma, tradicional (branco)",
+      "aliases": [
+        "pão de forma",
+        "pão de forma branco",
+        "pão fatiado",
+        "pão de forma comum"
+      ],
+      "categoria": "cereais-paes-massas-tuberculos",
+      "preparo": null,
+      "kcalPor100g": 123,
+      "porcoesCaseiras": [
+        {
+          "medida": "1 fatia",
+          "quantidade": 1,
+          "gramas": 25,
+          "fonte": "Estimativa de mercado (peso médio de fatia de pão de forma comercial)",
+          "codigoDaFonte": null
+        }
+      ],
+      "fonte": "Rótulo nutricional — Pão de Forma 100% Nutrição Tradicional, Wickbold",
+      "codigoDaFonte": null,
+      "atualizadoEm": "2026-08-15"
+    },
+    {
+      "id": "rotulo-pao-de-hamburguer",
+      "nome": "Pão, de hambúrguer, tradicional",
+      "aliases": [
+        "pão de hambúrguer",
+        "pão para lanche",
+        "pão de hambúrguer comum"
+      ],
+      "categoria": "cereais-paes-massas-tuberculos",
+      "preparo": null,
+      "kcalPor100g": 134,
+      "porcoesCaseiras": [
+        {
+          "medida": "1 unidade",
+          "quantidade": 1,
+          "gramas": 50,
+          "fonte": "Estimativa de mercado (peso médio de unidade comercial)",
+          "codigoDaFonte": null
+        }
+      ],
+      "fonte": "Rótulo nutricional — Pão de Hambúrguer, Pullman",
+      "codigoDaFonte": null,
+      "atualizadoEm": "2026-08-15"
+    },
+    {
+      "id": "rotulo-cafe-soluvel",
+      "nome": "Café, solúvel, em pó (instantâneo)",
+      "aliases": [
+        "café instantâneo",
+        "café solúvel",
+        "nescafé",
+        "café em pó solúvel"
+      ],
+      "categoria": "industrializados",
+      "preparo": null,
+      "kcalPor100g": 354,
+      "porcoesCaseiras": [],
+      "fonte": "TBCA — Tabela Brasileira de Composição de Alimentos (USP/FoRC), \"Bebida, café, solúvel, em pó\", versão 7.1 (2020)",
+      "codigoDaFonte": "BRC0051L",
+      "atualizadoEm": "2026-08-15"
+    },
+    {
+      "id": "rotulo-achocolatado-liquido-pronto",
+      "nome": "Achocolatado, líquido, pronto para beber (caixinha)",
+      "aliases": [
+        "achocolatado pronto",
+        "toddynho",
+        "bebida achocolatada pronta",
+        "achocolatado de caixinha"
+      ],
+      "categoria": "bebidas",
+      "preparo": null,
+      "kcalPor100g": 92.5,
+      "porcoesCaseiras": [
+        {
+          "medida": "1 caixinha (200ml)",
+          "quantidade": 1,
+          "gramas": 200,
+          "fonte": "Rótulo nutricional — Toddynho Tradicional",
+          "codigoDaFonte": null
+        }
+      ],
+      "fonte": "Rótulo nutricional — Toddynho Tradicional (185 kcal por porção de 200ml), valor médio de mercado",
+      "codigoDaFonte": null,
+      "atualizadoEm": "2026-08-15"
+    },
+    {
+      "id": "rotulo-ketchup",
+      "nome": "Ketchup",
+      "aliases": [
+        "catchup",
+        "molho de tomate temperado",
+        "condimento ketchup"
+      ],
+      "categoria": "industrializados",
+      "preparo": null,
+      "kcalPor100g": 102,
+      "porcoesCaseiras": [],
+      "fonte": "Rótulo nutricional — Ketchup Heinz, valor de mercado",
+      "codigoDaFonte": null,
+      "atualizadoEm": "2026-08-15"
+    },
+    {
+      "id": "rotulo-mostarda-condimento",
+      "nome": "Mostarda, condimento (amarela)",
+      "aliases": [
+        "mostarda amarela",
+        "molho de mostarda",
+        "condimento mostarda"
+      ],
+      "categoria": "industrializados",
+      "preparo": null,
+      "kcalPor100g": 66,
+      "porcoesCaseiras": [],
+      "fonte": "Rótulo nutricional — Mostarda Amarela, Hemmer",
+      "codigoDaFonte": null,
+      "atualizadoEm": "2026-08-15"
+    },
+    {
+      "id": "rotulo-molho-ingles",
+      "nome": "Molho inglês (Worcestershire)",
+      "aliases": [
+        "molho inglês",
+        "worcestershire sauce",
+        "molho de carne inglês"
+      ],
+      "categoria": "industrializados",
+      "preparo": null,
+      "kcalPor100g": 42,
+      "porcoesCaseiras": [],
+      "fonte": "Rótulo nutricional — Molho Inglês, valor médio de mercado",
+      "codigoDaFonte": null,
+      "atualizadoEm": "2026-08-15"
+    },
+    {
+      "id": "rotulo-vinagre-de-alcool",
+      "nome": "Vinagre, de álcool",
+      "aliases": [
+        "vinagre branco",
+        "vinagre de mesa",
+        "vinagre comum",
+        "vinagre de álcool tradicional"
+      ],
+      "categoria": "industrializados",
+      "preparo": null,
+      "kcalPor100g": 20,
+      "porcoesCaseiras": [],
+      "fonte": "FatSecret (dado genérico de rótulo) — Vinagre, valor médio de mercado (3 kcal por colher de sopa de 15ml)",
+      "codigoDaFonte": null,
+      "atualizadoEm": "2026-08-15"
+    },
+    {
+      "id": "rotulo-bicarbonato-de-sodio",
+      "nome": "Bicarbonato de sódio, alimentício",
+      "aliases": [
+        "bicarbonato de sódio",
+        "bicarbonato",
+        "bicarbonato de sódio culinário"
+      ],
+      "categoria": "industrializados",
+      "preparo": null,
+      "kcalPor100g": 0,
+      "porcoesCaseiras": [],
+      "fonte": "Rótulo nutricional — Bicarbonato de Sódio Alimentício, valor de mercado",
+      "codigoDaFonte": null,
+      "atualizadoEm": "2026-08-15"
+    },
+    {
+      "id": "rotulo-sal-de-cozinha-refinado",
+      "nome": "Sal, de cozinha, refinado",
+      "aliases": [
+        "sal de cozinha",
+        "sal comum",
+        "sal refinado",
+        "sal iodado"
+      ],
+      "categoria": "industrializados",
+      "preparo": null,
+      "kcalPor100g": 0,
+      "porcoesCaseiras": [],
+      "fonte": "Rótulo nutricional — Sal Refinado, Cisne",
+      "codigoDaFonte": null,
+      "atualizadoEm": "2026-08-15"
+    },
+    {
+      "id": "rotulo-geleia-de-morango",
+      "nome": "Geleia, de morango",
+      "aliases": [
+        "geleia de fruta",
+        "geléia de morango",
+        "geleia para pão",
+        "geleia de morango tradicional"
+      ],
+      "categoria": "acucares-e-doces",
+      "preparo": null,
+      "kcalPor100g": 250,
+      "porcoesCaseiras": [],
+      "fonte": "Rótulo nutricional — Geleia de Morango, Ritter, valor médio de mercado",
+      "codigoDaFonte": null,
+      "atualizadoEm": "2026-08-15"
+    },
+    {
+      "id": "rotulo-pasta-de-amendoim-integral",
+      "nome": "Pasta de amendoim, integral (100% amendoim)",
+      "aliases": [
+        "manteiga de amendoim",
+        "pasta de amendoim",
+        "peanut butter",
+        "pasta de amendoim natural"
+      ],
+      "categoria": "gorduras",
+      "preparo": null,
+      "kcalPor100g": 553,
+      "porcoesCaseiras": [
+        {
+          "medida": "1 colher de sopa",
+          "quantidade": 1,
+          "gramas": 15,
+          "fonte": "Rótulo nutricional — Pasta de Amendoim Original, Dr. Peanut",
+          "codigoDaFonte": null
+        }
+      ],
+      "fonte": "Rótulo nutricional — Pasta de Amendoim Original (100% amendoim), Dr. Peanut",
+      "codigoDaFonte": null,
+      "atualizadoEm": "2026-08-15"
+    },
+    {
+      "id": "rotulo-iogurte-grego-tradicional",
+      "nome": "Iogurte, grego, tradicional, integral",
+      "aliases": [
+        "iogurte grego",
+        "greek yogurt",
+        "iogurte grego integral",
+        "iogurte tipo grego"
+      ],
+      "categoria": "laticinios",
+      "preparo": null,
+      "kcalPor100g": 155,
+      "porcoesCaseiras": [],
+      "fonte": "Rótulo nutricional — Iogurte Grego Tradicional, Vigor",
+      "codigoDaFonte": null,
+      "atualizadoEm": "2026-08-15"
+    },
+    {
+      "id": "rotulo-queijo-cottage",
+      "nome": "Queijo, tipo cottage",
+      "aliases": [
+        "queijo cottage",
+        "cottage cheese",
+        "queijo cottage light"
+      ],
+      "categoria": "laticinios",
+      "preparo": null,
+      "kcalPor100g": 92,
+      "porcoesCaseiras": [
+        {
+          "medida": "2 colheres de sopa",
+          "quantidade": 1,
+          "gramas": 50,
+          "fonte": "Rótulo nutricional — Queijo Tipo Cottage, Tirolez",
+          "codigoDaFonte": null
+        }
+      ],
+      "fonte": "Rótulo nutricional — Queijo Tipo Cottage, Tirolez (46 kcal por porção de 50g)",
+      "codigoDaFonte": null,
+      "atualizadoEm": "2026-08-15"
+    },
+    {
+      "id": "rotulo-salsicha-hot-dog",
+      "nome": "Salsicha, tipo hot dog, crua",
+      "aliases": [
+        "salsicha",
+        "salsicha hot dog",
+        "salsicha de cachorro-quente",
+        "salsicha para cachorro-quente"
+      ],
+      "categoria": "proteinas",
+      "preparo": null,
+      "kcalPor100g": 266,
+      "porcoesCaseiras": [],
+      "fonte": "Rótulo nutricional — Salsicha Hot Dog (não aquecida), Sadia",
+      "codigoDaFonte": null,
+      "atualizadoEm": "2026-08-15"
+    },
+    {
+      "id": "rotulo-barra-de-cereal-aveia-frutas",
+      "nome": "Barra de cereal, aveia com frutas",
+      "aliases": [
+        "barra de cereal",
+        "cereal bar",
+        "barrinha de cereal",
+        "barra de cereal de aveia"
+      ],
+      "categoria": "cereais-paes-massas-tuberculos",
+      "preparo": null,
+      "kcalPor100g": 356,
+      "porcoesCaseiras": [
+        {
+          "medida": "1 unidade",
+          "quantidade": 1,
+          "gramas": 22,
+          "fonte": "Estimativa de mercado (peso médio de unidade comercial)",
+          "codigoDaFonte": null
+        }
+      ],
+      "fonte": "Rótulo nutricional — Barra de Cereal Aveia com Banana e Mel, Nutry",
+      "codigoDaFonte": null,
+      "atualizadoEm": "2026-08-15"
+    },
+    {
+      "id": "rotulo-suco-de-uva-industrializado",
+      "nome": "Suco, de uva, integral, industrializado (caixinha)",
+      "aliases": [
+        "suco de uva de caixinha",
+        "suco de uva pronto",
+        "suco de uva integral industrializado"
+      ],
+      "categoria": "bebidas",
+      "preparo": null,
+      "kcalPor100g": 58,
+      "porcoesCaseiras": [
+        {
+          "medida": "1 copo (200ml)",
+          "quantidade": 1,
+          "gramas": 200,
+          "fonte": "Rótulo nutricional — Suco de Uva Integral, Maguary",
+          "codigoDaFonte": null
+        }
+      ],
+      "fonte": "Rótulo nutricional — Suco de Uva Integral, Maguary, valor médio de mercado",
+      "codigoDaFonte": null,
+      "atualizadoEm": "2026-08-15"
+    },
+    {
+      "id": "rotulo-suco-de-laranja-industrializado",
+      "nome": "Suco, de laranja, industrializado (caixinha)",
+      "aliases": [
+        "suco de laranja de caixinha",
+        "suco de laranja pronto",
+        "suco de laranja industrializado"
+      ],
+      "categoria": "bebidas",
+      "preparo": null,
+      "kcalPor100g": 40,
+      "porcoesCaseiras": [
+        {
+          "medida": "1 copo (200ml)",
+          "quantidade": 1,
+          "gramas": 200,
+          "fonte": "Rótulo nutricional — Suco de Laranja, Del Valle",
+          "codigoDaFonte": null
+        }
+      ],
+      "fonte": "Rótulo nutricional — Suco de Laranja, Del Valle, valor médio de mercado",
+      "codigoDaFonte": null,
+      "atualizadoEm": "2026-08-15"
+    },
+    {
+      "id": "rotulo-pipoca-microondas-manteiga",
+      "nome": "Pipoca, de micro-ondas, sabor manteiga",
+      "aliases": [
+        "pipoca de microondas",
+        "pipoca micro-ondas",
+        "pipoca amanteigada",
+        "pipoca de saquinho"
+      ],
+      "categoria": "cereais-paes-massas-tuberculos",
+      "preparo": "Preparada em micro-ondas conforme instruções da embalagem",
+      "kcalPor100g": 396,
+      "porcoesCaseiras": [
+        {
+          "medida": "1/2 xícara de chá (pronta)",
+          "quantidade": 1,
+          "gramas": 25,
+          "fonte": "Rótulo nutricional — Pipoca para Micro-ondas Sabor Manteiga, Yoki",
+          "codigoDaFonte": null
+        }
+      ],
+      "fonte": "Rótulo nutricional — Pipoca para Micro-ondas Sabor Manteiga, Yoki",
+      "codigoDaFonte": null,
+      "atualizadoEm": "2026-08-15"
+    },
+    {
+      "id": "rotulo-nuggets-de-frango",
+      "nome": "Nuggets, de frango, empanado",
+      "aliases": [
+        "nuggets de frango",
+        "empanado de frango",
+        "nuggets"
+      ],
+      "categoria": "proteinas",
+      "preparo": "Assado ou frito conforme instruções da embalagem",
+      "kcalPor100g": 205,
+      "porcoesCaseiras": [],
+      "fonte": "Rótulo nutricional — Nuggets Tradicionais, Sadia",
+      "codigoDaFonte": null,
+      "atualizadoEm": "2026-08-15"
+    },
+    {
+      "id": "rotulo-oleo-de-coco-extra-virgem",
+      "nome": "Óleo, de coco, extra virgem",
+      "aliases": [
+        "óleo de coco",
+        "coconut oil",
+        "óleo de coco extravirgem"
+      ],
+      "categoria": "gorduras",
+      "preparo": null,
+      "kcalPor100g": 831,
+      "porcoesCaseiras": [
+        {
+          "medida": "1 colher de sopa",
+          "quantidade": 1,
+          "gramas": 13,
+          "fonte": "Rótulo nutricional — Óleo de Coco Extra Virgem, Copra",
+          "codigoDaFonte": null
+        }
+      ],
+      "fonte": "Rótulo nutricional — Óleo de Coco Extra Virgem, Copra (108 kcal por colher de sopa de 13ml)",
+      "codigoDaFonte": null,
+      "atualizadoEm": "2026-08-15"
+    },
+    {
+      "id": "rotulo-refresco-em-po-laranja-diluido",
+      "nome": "Refresco, em pó, sabor laranja, diluído",
+      "aliases": [
+        "suco de pó",
+        "tang",
+        "refresco em pó",
+        "suco em pó diluído",
+        "refresco em pó sabor laranja"
+      ],
+      "categoria": "bebidas",
+      "preparo": "Pó diluído em água conforme instruções da embalagem",
+      "kcalPor100g": 6,
+      "porcoesCaseiras": [],
+      "fonte": "Rótulo nutricional — Refresco em Pó sabor Laranja, Tang, já diluído conforme instruções da embalagem",
+      "codigoDaFonte": null,
+      "atualizadoEm": "2026-08-15"
     }
   ]
 }

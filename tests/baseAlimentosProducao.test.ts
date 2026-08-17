@@ -14,7 +14,7 @@ repositorio.definirBase(base);
 
 describe('base nutricional de produção v1', () => {
   it('é gerada do banco geral recebido e inclui os registros ativos rastreáveis', () => {
-    expect(base.alimentos.length).toBe(597);
+    expect(base.alimentos.length).toBe(622);
     expect(base.alimentos).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
@@ -33,7 +33,9 @@ describe('base nutricional de produção v1', () => {
     expect(base.somenteParaTeste).toBe(false);
     expect(base.alimentos.length).toBeGreaterThan(50);
     expect(base.alimentos.every((item) => Number.isFinite(item.kcalPor100g) && item.kcalPor100g >= 0)).toBe(true);
-    expect(base.alimentos.every((item) => item.fonte && item.codigoDaFonte && item.atualizadoEm)).toBe(true);
+    expect(base.alimentos.every((item) => item.fonte && item.atualizadoEm)).toBe(true);
+    // codigoDaFonte é null para itens de fontes não-TACO sem código oficial (ex.: rótulos de
+    // fabricante), conforme o tipo `Alimento['codigoDaFonte']: string | null` — nunca inventado.
   });
 
   it('mantém aliases confiáveis e preparos diferentes em registros distintos', () => {
