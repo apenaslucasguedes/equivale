@@ -59,6 +59,17 @@ export interface DadosDaSubstituicao {
   medidaCaseira?: string | null;
 }
 
+export interface DadosDoConsumo {
+  alimento: Pick<Alimento, 'id' | 'nome'>;
+  quantidade: number;
+  kcal: number;
+}
+
+export interface DadosDoNovoConsumo extends DadosDoConsumo {
+  id: string;
+  refeicaoId: string;
+}
+
 /**
  * Devolve um NOVO bloco com o alimento trocado. Preserva id, kcal e original.
  * Não valida a categoria de propósito: qualquer alimento pode substituir
@@ -94,8 +105,9 @@ export function moverBlocoPara(bloco: BlocoCalorico, refeicaoDestinoId: string):
 // -------------------------------------------------------------- restauração
 
 export function restaurarBloco(bloco: BlocoCalorico): BlocoCalorico {
+  const { adicionado: _adicionado, removido: _removido, kcalOriginal, ...resto } = bloco;
   return {
-    ...bloco,
+    ...resto,
     atual: {
       alimentoId: bloco.original.alimentoId,
       alimentoNome: bloco.original.alimentoNome,
@@ -106,6 +118,7 @@ export function restaurarBloco(bloco: BlocoCalorico): BlocoCalorico {
       refeicaoId: bloco.original.refeicaoId,
       medidaCaseira: null,
     },
+    kcal: kcalOriginal ?? bloco.kcal,
   };
 }
 
@@ -132,6 +145,50 @@ export function substituirAlimentoNaDieta(
   dados: DadosDaSubstituicao,
 ): Dieta {
   return mapearBloco(dieta, blocoId, (bloco) => substituirAlimentoDoBloco(bloco, dados));
+}
+
+/** Registra a quantidade realmente consumida, sem apagar a prescrição. */
+export function ajustarAlimentoNaDieta(dieta: Dieta, blocoId: string, dados: DadosDoConsumo): Dieta {
+  if (!Number.isFinite(dados.quantidade) || dados.quantidade <= 0 || !Number.isFinite(dados.kcal) || dados.kcal < 0) return dieta;
+  return mapearBloco(dieta, blocoId, (bloco) => ({
+    ...bloco,
+    kcalOriginal: bloco.kcalOriginal ?? bloco.kcal,
+    kcal: dados.kcal,
+    removido: undefined,
+    atual: {
+      ...bloco.atual,
+      alimentoId: dados.alimento.id,
+      alimentoNome: dados.alimento.nome,
+      quantidade: dados.quantidade,
+      unidade: 'g',
+      pesoGramas: dados.quantidade,
+      descricaoMedidaOriginal: null,
+      medidaCaseira: null,
+    },
+  }));
+}
+
+export function adicionarAlimentoNaDieta(dieta: Dieta, dados: DadosDoNovoConsumo): Dieta {
+  if (!dieta.refeicoes.some((refeicao) => refeicao.id === dados.refeicaoId)) return dieta;
+  if (!Number.isFinite(dados.quantidade) || dados.quantidade <= 0 || !Number.isFinite(dados.kcal) || dados.kcal < 0) return dieta;
+  const ordem = blocosDaRefeicao(dieta, dados.refeicaoId).length;
+  const estado = { alimentoId: dados.alimento.id, alimentoNome: dados.alimento.nome, quantidade: dados.quantidade, unidade: 'g' as const, pesoGramas: dados.quantidade, refeicaoId: dados.refeicaoId };
+  return { ...dieta, blocos: [...dieta.blocos, {
+    id: dados.id, adicionado: true, kcalOriginal: 0,
+    original: estado, atual: { ...estado, medidaCaseira: null },
+    kcal: dados.kcal, origemDasCalorias: 'calculada',
+    observacao: 'Adicionado ao registro do dia.', ordem,
+  }] };
+}
+
+export function removerBlocoDaDieta(dieta: Dieta, blocoId: string): Dieta {
+  const bloco = dieta.blocos.find((item) => item.id === blocoId);
+  if (!bloco) return dieta;
+  if (bloco.adicionado) return { ...dieta, blocos: dieta.blocos.filter((item) => item.id !== blocoId) };
+  return mapearBloco(dieta, blocoId, (item) => ({
+    ...item, kcalOriginal: item.kcalOriginal ?? item.kcal, kcal: 0, removido: true,
+    atual: { ...item.atual, quantidade: 0, pesoGramas: 0 },
+  }));
 }
 
 /**
@@ -177,5 +234,5 @@ export function restaurarBlocoNaDieta(dieta: Dieta, blocoId: string): Dieta {
  * intacta — nenhum bloco é apagado.
  */
 export function restaurarDietaOriginal(dieta: Dieta): Dieta {
-  return { ...dieta, blocos: dieta.blocos.map(restaurarBloco) };
+  return { ...dieta, blocos: dieta.blocos.filter((bloco) => !bloco.adicionado).map(restaurarBloco) };
 }

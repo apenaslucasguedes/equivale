@@ -79,6 +79,12 @@ describe('baixar modelo', () => {
     montar(new RepositorioDeEstado(new ArmazenamentoEmMemoria()));
 
     await usuario.click(await screen.findByRole('button', { name: 'Baixar modelo' }));
+    expect(await screen.findByRole('dialog', { name: 'Prepare sua dieta com IA' })).toBeInTheDocument();
+    expect(screen.getByText(/Abra o ChatGPT/i)).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: '1. Baixar modelo' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Copiar prompt' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Ir para importar plano' })).toBeInTheDocument();
+    await usuario.click(screen.getByRole('button', { name: '1. Baixar modelo' }));
 
     expect(downloads).toHaveLength(1);
     expect(downloads[0]?.nome).toBe('modelo-dieta-equivale.md');
@@ -92,6 +98,14 @@ describe('baixar modelo', () => {
     expect(conteudo).toContain('suggestedDays: seg, ter, qua, qui, sex');
     expect(conteudo).toContain('CATÁLOGO EXATO PARA A IA');
     expect(conteudo).toContain('TEST_ONLY_arroz_branco_cozido | Arroz branco cozido');
+  });
+  it('leva diretamente para a importação ao concluir o tutorial', async () => {
+    const usuario = userEvent.setup();
+    montar(new RepositorioDeEstado(new ArmazenamentoEmMemoria()));
+    await usuario.click(await screen.findByRole('button', { name: 'Baixar modelo' }));
+    await usuario.click(await screen.findByRole('button', { name: 'Ir para importar plano' }));
+    expect(await screen.findByRole('heading', { name: 'Importar plano' })).toBeInTheDocument();
+    expect(screen.queryByRole('dialog', { name: 'Prepare sua dieta com IA' })).not.toBeInTheDocument();
   });
 });
 

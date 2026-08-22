@@ -9,6 +9,7 @@ import { TelaInicio } from './telas/TelaInicio';
 import { TelaImportacao } from './telas/TelaImportacao';
 import { TelaAjustes } from './telas/TelaAjustes';
 import { SeletorDePlano } from './ui/SeletorDePlano';
+import { Confirmacao } from './ui/Confirmacao';
 
 type Tela = 'inicio' | 'importar' | 'ajustes';
 
@@ -16,6 +17,7 @@ export function App() {
   const { estado, despachar, carregando, alimentos, aviso, descartarAviso } = useLoja();
   const { atualizacaoDisponivel, aplicarAtualizacao, descartar } = useAtualizacao();
   const [tela, setTela] = useState<Tela>('inicio');
+  const [confirmarRestauracao, setConfirmarRestauracao] = useState(false);
 
   const emDemonstracao = estado.configuracoes.modoDemonstracao || alimentos.somenteParaTeste();
   const plano = planoAtivo(estado);
@@ -42,6 +44,9 @@ export function App() {
           ) : null}
         </div>
         <div className="cabecalho__acoes">
+          {tela === 'inicio' && plano ? (
+            <button type="button" className="botao botao--icone" onClick={() => setConfirmarRestauracao(true)} aria-label="Restaurar dieta do dia" title="Restaurar dieta do dia">↺</button>
+          ) : null}
           {tela !== 'ajustes' ? (
             <button
               type="button"
@@ -125,6 +130,7 @@ export function App() {
           <EstadoVazio aoImportar={() => setTela('importar')} />
         )}
       </main>
+      <Confirmacao aberta={confirmarRestauracao} titulo="Começar um novo dia?" descricao="Todas as substituições, quantidades, itens adicionados, removidos e movimentações deste plano serão desfeitos. A dieta importada será restaurada." rotuloDeConfirmar="Restaurar dieta" aoCancelar={() => setConfirmarRestauracao(false)} aoConfirmar={() => { despachar({ tipo: 'restaurarDieta' }); setConfirmarRestauracao(false); }} />
     </div>
   );
 }

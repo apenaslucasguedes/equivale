@@ -92,6 +92,11 @@ function sanearBloco(valor: unknown, indice: number): BlocoCalorico | null {
   return {
     id,
     ...(valor.livre === true ? { livre: true } : {}),
+    ...(valor.adicionado === true ? { adicionado: true } : {}),
+    ...(valor.removido === true ? { removido: true } : {}),
+    ...(typeof valor.kcalOriginal === 'number' && Number.isFinite(valor.kcalOriginal)
+      ? { kcalOriginal: Math.max(0, valor.kcalOriginal) }
+      : {}),
     original: {
       alimentoNome: texto(original.alimentoNome, 'Item sem nome'),
       alimentoId: typeof original.alimentoId === 'string' ? original.alimentoId : null,

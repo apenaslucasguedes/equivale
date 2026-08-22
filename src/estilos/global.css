@@ -854,6 +854,34 @@ textarea {
   line-height: 1.5;
 }
 
+.resumo-calorico { display: grid; grid-template-columns: 1fr 1fr; gap: var(--espaco-3); margin-top: var(--espaco-7); padding: var(--espaco-5); border: 1px solid #b8dfaa; border-radius: var(--raio-lg); background: var(--cor-verde-suave); box-shadow: var(--sombra); }
+.resumo-calorico--acima { border-color: #e3aaa3; background: var(--cor-perigo-suave); }
+.resumo-calorico > div { display: flex; flex-direction: column; gap: 2px; }
+.resumo-calorico span { color: var(--cor-texto-secundario); font-size: var(--texto-xs); font-weight: 650; text-transform: uppercase; }
+.resumo-calorico strong { color: var(--cor-texto); font-size: 1.35rem; font-variant-numeric: tabular-nums; }
+.resumo-calorico p { grid-column: 1 / -1; margin: 0; color: var(--cor-texto-secundario); font-size: var(--texto-sm); }
+.resumo-calorico .botao { grid-column: 1 / -1; }
+.tutorial-ia { display: grid; gap: var(--espaco-3); }
+.tutorial-ia__passo { display: grid; grid-template-columns: 32px 1fr; gap: var(--espaco-3); padding: var(--espaco-4); border: 1px solid var(--cor-borda); border-radius: var(--raio-md); background: var(--cor-superficie); }
+.tutorial-ia__passo--final { border-color: #b8dfaa; background: var(--cor-verde-suave); }
+.tutorial-ia__numero { display: grid; width: 30px; height: 30px; place-items: center; border-radius: 50%; background: var(--cor-azul-suave); color: var(--cor-azul-acao); font-size: var(--texto-sm); font-weight: 800; }
+.tutorial-ia__passo h3 { margin: 3px 0 var(--espaco-1); font-size: var(--texto-base); }
+.tutorial-ia__passo p { margin: 0 0 var(--espaco-3); color: var(--cor-texto-secundario); font-size: var(--texto-sm); line-height: 1.45; }
+.tutorial-ia__passo .botao { min-height: 40px; }
+.prompt-ia { margin: var(--espaco-4) 0; padding: var(--espaco-4); border: 1px solid var(--cor-borda); border-radius: var(--raio-md); background: var(--cor-superficie-sutil); }
+.tutorial-ia .prompt-ia { margin: var(--espaco-2) 0 0; }
+.prompt-ia p { margin: 0 0 var(--espaco-3); white-space: pre-line; font-size: var(--texto-sm); line-height: 1.55; }
+.acoes-em-linha { display: grid; grid-template-columns: 1fr 1fr; gap: var(--espaco-2); margin-bottom: var(--espaco-4); }
+.formulario-consumo { margin-top: var(--espaco-4); }
+.consumo__alimento { display: flex; align-items: center; justify-content: space-between; gap: var(--espaco-3); margin-bottom: var(--espaco-4); padding: var(--espaco-3); border-radius: var(--raio-md); background: var(--cor-verde-suave); }
+.consumo__alimento div { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.consumo__alimento span { color: var(--cor-texto-secundario); font-size: var(--texto-xs); }
+.consumo__alimento strong { overflow-wrap: anywhere; }
+.calculo-consumo { display: flex; align-items: baseline; justify-content: space-between; padding: var(--espaco-4); border-radius: var(--raio-md); background: var(--cor-azul-suave); }
+.calculo-consumo strong { font-size: 1.35rem; }
+.calculo-consumo span { color: var(--cor-texto-secundario); font-size: var(--texto-xs); }
+@media (max-width: 430px) { .acoes-em-linha { grid-template-columns: 1fr; } }
+
 /* ---------------------------------------------------------------- tabela */
 
 .linha-conferencia {
@@ -1172,6 +1200,9 @@ textarea { -webkit-tap-highlight-color: rgb(98 189 232 / 16%); }
   font-size: 11px;
   font-weight: 650;
 }
+.refeicao__acoes { display: flex; align-items: center; gap: var(--espaco-2); }
+.refeicao__adicionar { display: grid; width: 32px; height: 32px; padding: 0; place-items: center; border: 1px solid #b8dfaa; border-radius: 50%; background: var(--cor-verde-suave); color: #356f20; font: inherit; font-size: 20px; font-weight: 700; line-height: 1; cursor: pointer; }
+.refeicao__adicionar:hover { background: #dff3d6; transform: scale(1.04); }
 .refeicao__lista { gap: var(--espaco-2); padding: 0; border-radius: var(--raio-md); }
 .refeicao__lista--destino { padding: var(--espaco-2); margin: calc(var(--espaco-2) * -1); border-color: var(--cor-azul-acao); background: var(--cor-azul-suave); }
 .refeicao__vazia { min-height: 56px; margin: 0; display: grid; place-items: center; border-radius: var(--raio-md); }

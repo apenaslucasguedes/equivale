@@ -57,6 +57,10 @@ describe('fluxo completo', () => {
     expect(refeicao('Café da manhã').getByText('Pão francês')).toBeInTheDocument();
     // O cartão mostra medida, peso e calorias sem exigir a abertura dos detalhes.
     expect(refeicao('Café da manhã').getByText('1 unidade · 50 g · 150 kcal')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Restaurar dieta do dia' })).toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: 'Adicionar alimento' })).not.toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Adicionar alimento ao Café da manhã' })).toBeInTheDocument();
+    expect(screen.getByText(/Prescrito.*kcal/)).toBeInTheDocument();
 
     // -------------------------------------------------- substituição
     await usuario.click(screen.getByRole('button', { name: /^Pão francês, 1 unidade/ }));

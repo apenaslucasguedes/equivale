@@ -5,7 +5,7 @@ import { foiAlterado } from '../domain/blocos';
 import { Gaveta } from './Gaveta';
 import { descreverEnergia, descreverQuantidade } from './formatacao';
 
-export type AcaoDoItem = 'substituir' | 'mover' | 'detalhes' | 'restaurar' | 'conferir';
+export type AcaoDoItem = 'substituir' | 'ajustar' | 'remover' | 'mover' | 'detalhes' | 'restaurar' | 'conferir';
 
 export interface PropsDasAcoes {
   aberta: boolean;
@@ -53,6 +53,18 @@ export function GavetaDeAcoes({
             </button>
           </li>
         ) : null}
+        <li>
+          <button type="button" className="opcao" onClick={() => aoEscolher('ajustar')}>
+            <span className="opcao__icone" aria-hidden="true">✎</span>
+            <span className="opcao__texto">Registrar quantidade real<span className="opcao__descricao">Recalcular as calorias pelo peso realmente consumido</span></span>
+          </button>
+        </li>
+        <li>
+          <button type="button" className="opcao" onClick={() => aoEscolher('remover')}>
+            <span className="opcao__icone" aria-hidden="true">−</span>
+            <span className="opcao__texto">Remover do dia<span className="opcao__descricao">Retirar da soma de hoje sem alterar a prescrição</span></span>
+          </button>
+        </li>
         <li>
           <button type="button" className="opcao" onClick={() => aoEscolher('substituir')}>
             <span className="opcao__icone" aria-hidden="true">

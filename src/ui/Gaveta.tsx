@@ -17,7 +17,12 @@ const SELETOR_FOCAVEL =
 
 export function Gaveta({ aberta, titulo, subtitulo, aoFechar, children, rodape }: PropsDaGaveta) {
   const painel = useRef<HTMLDivElement>(null);
+  const aoFecharRef = useRef(aoFechar);
   const idDoTitulo = useId();
+
+  useEffect(() => {
+    aoFecharRef.current = aoFechar;
+  }, [aoFechar]);
 
   useEffect(() => {
     if (!aberta) return;
@@ -28,7 +33,7 @@ export function Gaveta({ aberta, titulo, subtitulo, aoFechar, children, rodape }
     const aoTeclar = (evento: KeyboardEvent) => {
       if (evento.key === 'Escape') {
         evento.stopPropagation();
-        aoFechar();
+        aoFecharRef.current();
         return;
       }
       if (evento.key !== 'Tab' || !painel.current) return;
@@ -53,7 +58,7 @@ export function Gaveta({ aberta, titulo, subtitulo, aoFechar, children, rodape }
       document.body.style.overflow = overflowAnterior;
       anterior?.focus?.();
     };
-  }, [aberta, aoFechar]);
+  }, [aberta]);
 
   if (!aberta) return null;
 
